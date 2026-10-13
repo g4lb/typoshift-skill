@@ -9,7 +9,7 @@ Thanks for helping. The most valuable contributions are:
 ## Development setup
 
 ```bash
-git clone https://github.com/g4lb/typoshift.git && cd typoshift
+git clone https://github.com/g4lb/typoshift-skill.git && cd typoshift-skill
 python3 -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -e '.[dev]'
 pytest                      # the full test suite
