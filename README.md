@@ -144,7 +144,11 @@ cd typoshift-skill
 python3 -m pip install .
 ```
 
-**From PyPI:** not published yet. Once it is, use `pip install typoshift`.
+**From PyPI** (once the first release is published):
+
+```bash
+pipx install typoshift      # or: python3 -m pip install --user typoshift
+```
 
 Check the installation:
 
