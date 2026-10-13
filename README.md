@@ -3,41 +3,51 @@
 **Type in the wrong language. Get the right words.**
 
 [![CI](https://github.com/g4lb/typoshift-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/g4lb/typoshift-skill/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue)](pyproject.toml)
+[![skills.sh](https://img.shields.io/badge/skills.sh-g4lb%2Ftyposhift--skill-black)](https://skills.sh/g4lb/typoshift-skill/typoshift)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-TypoShift detects text typed with the wrong keyboard layout and rebuilds what you meant to type. It
-ships as a Python library, a CLI and a Claude Code integration (a skill plus an automatic
-`UserPromptSubmit` hook). It runs fully offline, has no runtime dependencies, and never sends your
-text anywhere.
+A Claude Code skill that fixes prompts typed with the wrong keyboard layout.
 
 ```text
-$ typoshift fix "פךקשדק גקהקךםפ איק מקסא כקשאורק"
-please develop the next feature
+/typoshift פךקשדק גקהקךםפ איק מקסא כקשאורק
+→ Read as: "please develop the next feature" (typed on he, meant en-US)
 ```
 
 You meant to type English, but the keyboard was on Hebrew. TypoShift finds the physical key behind
 each character (`פ` is on the `P` key, `ך` on `L`, ...) and reads those keys in the layout you
-intended.
+intended. It works across 20 layouts, including Hebrew, Russian, Ukrainian, Arabic and Greek.
 
-## Contents
+The skill is light: one standard-library Python script and about 70 KB of data. It needs no install
+and no network, and runs in milliseconds.
 
-- [Why](#why)
-- [What it is (and is not)](#what-it-is-and-is-not)
-- [Before and after](#before-and-after)
-- [Supported layouts](#supported-layouts)
-- [Installation](#installation)
-- [Claude Code integration](#claude-code-integration)
-- [CLI usage](#cli-usage)
-- [Python API](#python-api)
-- [Configuration](#configuration)
-- [How it works](#how-it-works)
-- [Accuracy and performance](#accuracy-and-performance)
-- [Safety](#safety)
-- [Limitations](#limitations)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+## Install
+
+**The skill** (from [skills.sh](https://skills.sh/g4lb/typoshift-skill/typoshift)):
+
+```bash
+npx skills add g4lb/typoshift-skill -a claude-code          # add -g for all your projects
+```
+
+Then use `/typoshift <text>`. Claude also uses the skill on its own when a message looks like a
+layout mistake. It needs only `python3` (3.8+), which is already on macOS and Linux; on Windows it
+uses `py`.
+
+**The skill plus automatic correction** (Claude Code plugin):
+
+```text
+/plugin install typoshift --marketplace g4lb/typoshift-skill
+```
+
+On older Claude Code versions: `/plugin marketplace add g4lb/typoshift-skill`, then
+`/plugin install typoshift@typoshift`.
+
+The plugin adds a `UserPromptSubmit` hook. It checks every prompt and, when part of it was typed on
+the wrong layout, gives Claude the reconstruction. You don't need to type `/typoshift`. The hook
+uses the full detection engine bundled in the plugin, so it needs `python3` 3.11+ on PATH but no pip
+install.
+
+**Manual:** copy `skills/typoshift/` into `~/.claude/skills/` (all projects) or `.claude/skills/`
+(one project).
 
 ## Why
 
@@ -118,132 +128,65 @@ Polish.
 **Tip:** enable only the layouts you actually use. Fewer layouts mean fewer competing candidates.
 `typoshift config init --detect` reads your OS keyboard settings on macOS, Windows and GNOME/X11.
 
-## Installation
+## How the skill works
 
-TypoShift needs Python 3.11 or newer and has no runtime dependencies.
-
-**From GitHub (macOS / Linux):**
-
-```bash
-pipx install git+https://github.com/g4lb/typoshift-skill.git     # recommended: isolated CLI
-# or
-python3 -m pip install --user git+https://github.com/g4lb/typoshift-skill.git
-```
-
-**From GitHub (Windows, PowerShell):**
-
-```powershell
-py -m pip install --user git+https://github.com/g4lb/typoshift-skill.git
-```
-
-**From a clone:**
-
-```bash
-git clone https://github.com/g4lb/typoshift-skill.git
-cd typoshift-skill
-python3 -m pip install .
-```
-
-**From PyPI** (once the first release is published):
-
-```bash
-pipx install typoshift      # or: python3 -m pip install --user typoshift
-```
-
-Check the installation:
-
-```bash
-typoshift doctor
-```
-
-No step needs administrator rights.
-
-## Claude Code integration
-
-**As a Claude Code plugin** (skill + automatic hook, no pip needed; requires `python3` 3.11+ on PATH):
+1. `scripts/typoshift.py candidates` lists every reconstruction of the text: one per pair of
+   "typed on" and "meant" layouts.
+   - Code, URLs, paths, e-mail addresses and identifiers are left alone.
+   - Words that are already common in their own language are not converted.
+   - Candidates are ranked by how many of their converted words are common words in the
+     target language.
+2. Claude reads the short list and picks the reading that makes sense. That decision is language
+   understanding, which Claude does far better than any word list.
+   - **One clear reading:** Claude states it in one line and carries on.
+   - **Ambiguous:** Claude asks you first.
+   - **Destructive** (delete, force-push, deploy, and similar): Claude always confirms first.
 
 ```text
-/plugin install typoshift --marketplace g4lb/typoshift-skill
+$ python3 skills/typoshift/scripts/typoshift.py candidates <<< "ghbdtn rfr ltkf&"
+1. en-US -> ru: привет как дела?  [3/3 common words]  (same as en-US->uk)
+2. en-US -> he: עינגאמ רכר ךאלכ&  [0/3 common words]
+...
 ```
 
-On older Claude Code versions: `/plugin marketplace add g4lb/typoshift-skill`, then
-`/plugin install typoshift@typoshift`. Use either the plugin or `typoshift install claude` below,
-not both, or the hook runs twice.
+## Automatic correction (the hook)
 
-**With the pip-installed CLI:**
+The plugin's hook, and the optional `typoshift install claude` command, run the full TypoShift
+engine on every prompt. That engine has its own language models and calibrated confidence. Claude
+Code hooks [cannot replace a prompt](https://code.claude.com/docs/en/hooks.md), so the hook adds
+context next to your unchanged prompt:
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "UserPromptSubmit",
+    "additionalContext": "[TypoShift] Part of this prompt looks like it was typed with the wrong keyboard layout. ... Reconstructed prompt:\nplease develop the next feature ..."
+  },
+  "systemMessage": "TypoShift read as \"please develop the next feature\" (he→en-US, confidence 0.999)"
+}
+```
+
+- **High-confidence reconstructions** are given to Claude as your intended prompt.
+- **Uncertain ones** are flagged as "do not act without asking".
+- **Destructive actions** are always confirmed.
+- **Correct prompts** produce no output.
+
+The hook always exits 0 and never blocks a prompt. It was tested in a live Claude Code session.
+
+## Optional: Python CLI and library
+
+The engine behind the hook is also a dependency-free Python package (Python 3.11+). It is useful for
+scripting, for other editors, or for the hook without the plugin:
 
 ```bash
-typoshift install claude                    # user level: ~/.claude
-typoshift install claude --scope project    # this project: ./.claude
-typoshift install claude --dry-run          # show what would change
+pipx install git+https://github.com/g4lb/typoshift-skill.git
+typoshift fix "פךקשדק גקהקךםפ איק מקסא כקשאורק"     # please develop the next feature
+typoshift install claude                             # skill + hook, without the plugin system
 ```
 
-This installs two things.
-
-1. **The `/typoshift` skill** goes to `~/.claude/skills/typoshift/` (or `./.claude/skills/typoshift/`).
-   Use it explicitly:
-
-   ```text
-   /typoshift פךקשדק גקהקךםפ איק מקסא כקשאורק
-   ```
-
-   Claude runs the engine, states the reconstruction, and continues with your request. If the
-   result is uncertain, it asks you first. The skill also tells Claude how to recognize layout
-   mistakes on its own.
-
-2. **An automatic `UserPromptSubmit` hook** in `~/.claude/settings.json` (user scope) or
-   `.claude/settings.local.json` (project scope). Claude Code hooks
-   [cannot replace a prompt](https://code.claude.com/docs/en/hooks.md), so the hook does not try to.
-   When it finds a mistake it adds context next to your unchanged prompt:
-
-   ```json
-   {
-     "hookSpecificOutput": {
-       "hookEventName": "UserPromptSubmit",
-       "additionalContext": "[TypoShift] Part of this prompt looks like it was typed with the wrong keyboard layout. ... Reconstructed prompt:\nplease develop the next feature ..."
-     },
-     "systemMessage": "TypoShift read as \"please develop the next feature\" (he→en-US, confidence 0.999)"
-   }
-   ```
-
-   - **High-confidence reconstructions** are given to Claude as your intended prompt, so it doesn't
-     ask you to confirm.
-   - **Uncertain ones** are flagged as "do not act without asking".
-   - **Destructive actions** (delete, drop, force-push, deploy, and similar) are always confirmed
-     first.
-   - **Correct prompts** produce no output at all.
-
-   The hook always exits 0. If anything goes wrong it prints a note to stderr (visible only in
-   Claude Code's verbose mode) and never blocks the prompt.
-
-The installer:
-
-- keeps your existing settings and hooks;
-- is idempotent;
-- refuses to touch a `settings.json` that isn't valid JSON;
-- backs up the previous file to `settings.json.typoshift.bak`;
-- writes atomically and handles interpreter paths that contain spaces;
-- never replaces a `typoshift` skill it didn't create (unless you pass `--force`).
-
-To remove everything it added:
-
-```bash
-typoshift uninstall claude                  # add --scope project / --dry-run as needed
-```
-
-**From [skills.sh](https://skills.sh)** (skill only, no automatic hook):
-
-```bash
-npx skills add g4lb/typoshift-skill -a claude-code        # add -g for all projects
-```
-
-The skill runs the engine through `typoshift` if it is installed, otherwise through `uvx` or
-`pipx run` (Python 3.11+ required). For automatic correction of every prompt, also install the
-CLI and run `typoshift install claude`.
-
-**Without pip** (running from a clone), use `python3 integrations/claude-code/install.py`, or point a
-hook at `integrations/claude-code/hooks/typoshift_hook.py`. **Manually**, copy
-`integrations/claude-code/SKILL.md` and `reference.md` into `~/.claude/skills/typoshift/`.
+`typoshift install claude` keeps your existing settings and hooks, is idempotent, makes a backup,
+and refuses to touch invalid JSON. `typoshift uninstall claude` removes only what it added. Use
+either the plugin or `typoshift install claude`, not both, or the hook runs twice.
 
 ## CLI usage
 
@@ -355,7 +298,7 @@ max_prompt_chars = 20000
 `typoshift config set mode suggest` changes one setting. Every option is documented in
 [docs/CONFIGURATION.md](docs/CONFIGURATION.md).
 
-## How it works
+## How the engine works
 
 ```text
 prompt
@@ -386,7 +329,7 @@ agents and editors can be added the same way. Details are in [docs/ARCHITECTURE.
 - **Confidence** is fitted by `tools/calibrate.py` on 24,000 synthetic samples. Its feature weights
   are never set by hand.
 
-## Accuracy and performance
+## Accuracy and performance (engine / hook)
 
 These are measured numbers, reproducible with `python benchmarks/run_benchmark.py`. Full results,
 including every failure, are in [benchmarks/results/latest.md](benchmarks/results/latest.md).

@@ -15,6 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "skill"
+FILES = ("SKILL.md", "reference.md", "scripts/typoshift.py", "scripts/layouts.json", "scripts/common_words.json",
+         "scripts/LICENSE-data.txt")
 TARGETS = [
     ROOT / "skills" / "typoshift",  # Claude Code plugin (.claude-plugin/plugin.json) and skills.sh
     ROOT / ".claude" / "skills" / "typoshift",
@@ -24,6 +26,7 @@ TARGETS = [
 if __name__ == "__main__":
     for target in TARGETS:
         target.mkdir(parents=True, exist_ok=True)
-        for name in ("SKILL.md", "reference.md"):
+        for name in FILES:
+            (target / name).parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(SOURCE / name, target / name)
         print(f"synced {target.relative_to(ROOT)}")

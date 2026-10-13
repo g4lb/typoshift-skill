@@ -6,6 +6,15 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- The skill is now self-contained and light. `skills/typoshift/scripts/typoshift.py` uses only the
+  standard library and Python 3.8+, and the skill totals about 70 KB with layouts and common words.
+  It lists the reconstructions and Claude picks the one that makes sense. The skill no longer needs
+  the Python package.
+- Added a Claude Code plugin (`.claude-plugin/`) that bundles the skill and the automatic hook.
+- Installable from skills.sh: `npx skills add g4lb/typoshift-skill`.
+
 ## [0.1.0] - 2026-10-13
 
 Initial release.

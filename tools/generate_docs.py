@@ -15,6 +15,7 @@ Usage::
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -149,6 +150,37 @@ def reference_md() -> str:
     return "\n".join(out)
 
 
+def skill_layouts_json() -> str:
+    """Compact layout data for the self-contained skill script."""
+    reg = builtin_registry()
+    data = {}
+    for lay in reg:
+        entry = {"name": lay.name, "script": lay.script, "languages": list(lay.languages),
+                 "keys": {k: list(v) for k, v in lay.keys.items()}}
+        if lay.dead_keys:
+            entry["dead_keys"] = {k: sorted(v) for k, v in lay.dead_keys.items()}
+        if lay.sequences:
+            entry["sequences"] = {k: list(v) for k, v in lay.sequences.items()}
+        data[lay.id] = entry
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
+COMMON_WORDS = 400
+
+
+def skill_common_words_json() -> str:
+    """The most frequent words per language (from the bundled CC BY-SA language data)."""
+    sys.path.insert(0, str(ROOT / "src"))
+    from typoshift.langmodel import available_languages, load_language
+
+    data = {"_source": "FrequencyWords (OpenSubtitles 2018), CC BY-SA 4.0 - see LICENSE-data.txt"}
+    for lang in available_languages():
+        model = load_language(lang)
+        words = sorted(model.lexicon, key=model.lexicon.__getitem__)[:COMMON_WORDS]
+        data[lang] = " ".join(words)
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--check", action="store_true")
@@ -156,6 +188,10 @@ def main() -> int:
     targets = {
         ROOT / "docs" / "LAYOUTS.md": layouts_md(),
         ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "skill" / "reference.md": reference_md(),
+        ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "skill" / "scripts" / "layouts.json":
+            skill_layouts_json(),
+        ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "skill" / "scripts" / "common_words.json":
+            skill_common_words_json(),
     }
     stale = []
     for path, text in targets.items():

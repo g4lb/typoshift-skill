@@ -17,7 +17,7 @@ PACKAGE_SKILL = ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "s
 def test_skill_copies_are_identical():
     for copy in (ROOT / "skills" / "typoshift", ROOT / ".claude" / "skills" / "typoshift",
                  ROOT / "integrations" / "claude-code"):
-        for name in ("SKILL.md", "reference.md"):
+        for name in ("SKILL.md", "reference.md", "scripts/typoshift.py", "scripts/layouts.json"):
             assert (copy / name).read_text(encoding="utf-8") == (PACKAGE_SKILL / name).read_text(encoding="utf-8"), \
                 f"{copy / name} is out of sync; run tools/sync_skill.py"
 

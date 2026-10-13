@@ -1,0 +1,10 @@
+layouts.json is generated from xkeyboard-config (https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config)
+and xorgproto keysymdef.h; both are under permissive X11/MIT-style licenses. Full notices:
+https://github.com/g4lb/typoshift-skill/tree/main/tools/xkb
+
+common_words.json lists the most frequent words per language from FrequencyWords by Hermit Dave
+(https://github.com/hermitdave/FrequencyWords), derived from OpenSubtitles 2018. It is licensed
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Changes: lower-cased, filtered to
+letters typeable on each language's keyboard layout, truncated.
+
+typoshift.py and everything else in this skill: MIT License, Copyright (c) 2026 galb.

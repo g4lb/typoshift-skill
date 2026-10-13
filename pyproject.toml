@@ -52,6 +52,7 @@ typoshift = [
     "data/lang/*.json.gz",
     "data/lang/LICENSE",
     "integrations/claude_code/skill/*.md",
+    "integrations/claude_code/skill/scripts/*",
     "py.typed",
 ]
 
@@ -62,7 +63,7 @@ addopts = "-ra"
 [tool.ruff]
 line-length = 120
 target-version = "py311"
-extend-exclude = ["tools/cache"]
+extend-exclude = ["tools/cache", "skills", ".claude", "integrations/claude-code/scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "S", "BLE"]
