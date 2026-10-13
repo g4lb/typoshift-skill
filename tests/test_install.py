@@ -184,7 +184,8 @@ def test_symlinked_settings_written_through_with_mode(tmp_path):
     assert link.is_symlink()
     data = json.loads(real.read_text(encoding="utf-8"))
     assert data["theme"] == "dark" and ours(data)
-    assert oct(real.stat().st_mode & 0o777) == oct(0o644)
+    if os.name != "nt":  # Windows has no POSIX permission bits
+        assert oct(real.stat().st_mode & 0o777) == oct(0o644)
 
 
 def test_uninstall_keeps_user_files_in_skill_dir():
