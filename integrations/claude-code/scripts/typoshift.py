@@ -202,8 +202,21 @@ def _split(text):
     out = []
     for part in re.split(r"(\s+)", text):
         if part:
-            out.append((part, bool(not part.isspace() and PROTECTED_CHUNK.search(part.strip("\"'()[]{}.,;:!?")))))
+            protected = not part.isspace() and bool(
+                PROTECTED_CHUNK.search(part.strip("\"'()[]{}.,;:!?")) or mixed_script(part))
+            out.append((part, protected))
     return out
+
+
+def mixed_script(chunk):
+    """Words that mix scripts on purpose ("ה-README", "הAPI"). A single leading Latin capital is
+    what Shift types on the Hebrew layout, so that alone does not count."""
+    found = [(i, script_of(c)) for i, c in enumerate(chunk) if unicodedata.category(c)[0] == "L"]
+    scripts = {sc for _, sc in found}
+    if len(scripts) < 2:
+        return False
+    latin = [i for i, sc in found if sc == "Latin"]
+    return not (len(scripts) == 2 and latin == [found[0][0]] and chunk[latin[0]].isupper())
 
 
 def candidates(text, layouts, allowed, common=None):
@@ -301,6 +314,8 @@ def main(argv=None):
     if not found:
         print("no reconstruction changes any letters")
         return 0
+    if not any(c["common_word_hits"] for c in found):
+        print("note: no candidate turns any word into a common word; probably no layout mistake")
     for n, cand in enumerate(found, 1):
         same = f"  (same as {', '.join(cand['equivalent'])})" if cand["equivalent"] else ""
         hits = f"  [{cand['common_word_hits']}/{cand['changed_words']} common words]"
