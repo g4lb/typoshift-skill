@@ -2,7 +2,7 @@
 name: typoshift
 description: Reconstructs text typed with the wrong keyboard layout (for example Hebrew, Russian, Arabic or Greek letters typed while the user meant English, or English letters typed while they meant Hebrew or Russian) by mapping each character back to the physical key that produced it. Use when a message contains gibberish in another script that looks like a keyboard-layout mistake, when a "[TypoShift]" note appears in the context, or when the user runs /typoshift.
 argument-hint: "[text typed with the wrong keyboard layout]"
-allowed-tools: Bash(typoshift *), Bash(python3 -m typoshift *), Bash(python -m typoshift *), Bash(py -m typoshift *)
+allowed-tools: Bash(typoshift *), Bash(python3 -m typoshift *), Bash(python -m typoshift *), Bash(py -m typoshift *), Bash(uvx *), Bash(pipx run *)
 ---
 
 # TypoShift: keyboard-layout mistake reconstruction
@@ -40,7 +40,16 @@ paths, URLs, identifiers, hashes and secrets.
    ```
 
    If `typoshift` is not on PATH, try `python3 -m typoshift`. On Windows, try
-   `py -m typoshift`.
+   `py -m typoshift`. If TypoShift is not installed at all (for example, the
+   skill came from skills.sh), run it on demand with the same arguments and
+   heredoc. Both commands need Python 3.11+:
+
+   - `uvx --from git+https://github.com/g4lb/typoshift-skill typoshift fix ...`
+   - `pipx run --spec git+https://github.com/g4lb/typoshift-skill typoshift fix ...`
+
+   Afterwards, tell the user once that `pipx install typoshift` followed by
+   `typoshift install claude` adds the CLI and the automatic hook, which fixes
+   prompts without `/typoshift`.
 
 2. Read the JSON result. Use `suggested_text` (or `corrected`), `confidence`,
    `source_layout`, `target_layout`, `suggestions` and `requires_confirmation`.

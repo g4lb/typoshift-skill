@@ -219,6 +219,16 @@ To remove everything it added:
 typoshift uninstall claude                  # add --scope project / --dry-run as needed
 ```
 
+**From [skills.sh](https://skills.sh)** (skill only, no automatic hook):
+
+```bash
+npx skills add g4lb/typoshift-skill -a claude-code        # add -g for all projects
+```
+
+The skill runs the engine through `typoshift` if it is installed, otherwise through `uvx` or
+`pipx run` (Python 3.11+ required). For automatic correction of every prompt, also install the
+CLI and run `typoshift install claude`.
+
 **Without pip** (running from a clone), use `python3 integrations/claude-code/install.py`, or point a
 hook at `integrations/claude-code/hooks/typoshift_hook.py`. **Manually**, copy
 `integrations/claude-code/SKILL.md` and `reference.md` into `~/.claude/skills/typoshift/`.
