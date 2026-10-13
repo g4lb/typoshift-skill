@@ -15,7 +15,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "skill"
-TARGETS = [ROOT / ".claude" / "skills" / "typoshift", ROOT / "integrations" / "claude-code"]
+TARGETS = [
+    ROOT / "skills" / "typoshift",  # Claude Code plugin (.claude-plugin/plugin.json) and skills.sh
+    ROOT / ".claude" / "skills" / "typoshift",
+    ROOT / "integrations" / "claude-code",
+]
 
 if __name__ == "__main__":
     for target in TARGETS:

@@ -1,0 +1,24 @@
+{
+  "name": "typoshift",
+  "owner": {
+    "name": "g4lb",
+    "email": "galevgi@gmail.com"
+  },
+  "metadata": {
+    "description": "TypoShift — type in the wrong language, get the right words."
+  },
+  "plugins": [
+    {
+      "name": "typoshift",
+      "source": "./",
+      "description": "Fixes prompts typed with the wrong keyboard layout by physical key position: /typoshift skill plus an automatic hook. Offline.",
+      "version": "0.1.0",
+      "author": {
+        "name": "g4lb",
+        "email": "galevgi@gmail.com"
+      },
+      "license": "MIT",
+      "category": "productivity"
+    }
+  ]
+}

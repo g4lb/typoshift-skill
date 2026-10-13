@@ -1,0 +1,17 @@
+{
+  "name": "typoshift",
+  "displayName": "TypoShift — wrong keyboard layout fixer",
+  "version": "0.1.0",
+  "description": "Type in the wrong language. Get the right words. Detects prompts typed with the wrong keyboard layout (Hebrew, Russian, Ukrainian, Arabic, Greek and 15 more) and rebuilds the intended text by physical key position. Includes the /typoshift skill and an automatic UserPromptSubmit hook. Offline; no translation.",
+  "author": {
+    "name": "g4lb",
+    "email": "galevgi@gmail.com",
+    "url": "https://github.com/g4lb"
+  },
+  "homepage": "https://github.com/g4lb/typoshift-skill",
+  "repository": "https://github.com/g4lb/typoshift-skill",
+  "documentationUrl": "https://github.com/g4lb/typoshift-skill#readme",
+  "supportUrl": "https://github.com/g4lb/typoshift-skill/issues",
+  "license": "MIT",
+  "keywords": ["keyboard", "layout", "typo", "hebrew", "russian", "arabic", "multilingual", "productivity"]
+}

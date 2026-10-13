@@ -160,6 +160,18 @@ No step needs administrator rights.
 
 ## Claude Code integration
 
+**As a Claude Code plugin** (skill + automatic hook, no pip needed; requires `python3` 3.11+ on PATH):
+
+```text
+/plugin install typoshift --marketplace g4lb/typoshift-skill
+```
+
+On older Claude Code versions: `/plugin marketplace add g4lb/typoshift-skill`, then
+`/plugin install typoshift@typoshift`. Use either the plugin or `typoshift install claude` below,
+not both, or the hook runs twice.
+
+**With the pip-installed CLI:**
+
 ```bash
 typoshift install claude                    # user level: ~/.claude
 typoshift install claude --scope project    # this project: ./.claude

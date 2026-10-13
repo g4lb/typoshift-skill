@@ -15,7 +15,8 @@ PACKAGE_SKILL = ROOT / "src" / "typoshift" / "integrations" / "claude_code" / "s
 
 
 def test_skill_copies_are_identical():
-    for copy in (ROOT / ".claude" / "skills" / "typoshift", ROOT / "integrations" / "claude-code"):
+    for copy in (ROOT / "skills" / "typoshift", ROOT / ".claude" / "skills" / "typoshift",
+                 ROOT / "integrations" / "claude-code"):
         for name in ("SKILL.md", "reference.md"):
             assert (copy / name).read_text(encoding="utf-8") == (PACKAGE_SKILL / name).read_text(encoding="utf-8"), \
                 f"{copy / name} is out of sync; run tools/sync_skill.py"
@@ -50,3 +51,24 @@ def test_quick_benchmark_guards_regressions():
     overall = json.loads(proc.stdout[: proc.stdout.index("}\n") + 1])
     assert overall["false_positive_rate"] <= 0.02
     assert overall["precision"] >= 0.9
+
+
+def test_plugin_manifests():
+    plugin = json.loads((ROOT / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
+    market = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8"))
+    hooks = json.loads((ROOT / "hooks" / "hooks.json").read_text(encoding="utf-8"))
+    from typoshift import __version__
+
+    assert plugin["name"] == "typoshift" and plugin["version"] == __version__
+    assert market["plugins"][0]["version"] == __version__
+    [handler] = hooks["hooks"]["UserPromptSubmit"][0]["hooks"]
+    assert "${CLAUDE_PLUGIN_ROOT}/integrations/claude-code/hooks/typoshift_hook.py" in handler["command"]
+
+
+def test_plugin_hook_script_runs_from_checkout():
+    hook = ROOT / "integrations" / "claude-code" / "hooks" / "typoshift_hook.py"
+    payload = json.dumps({"hook_event_name": "UserPromptSubmit", "prompt": "פךקשדק גקהקךםפ איק מקסא כקשאורק"})
+    proc = subprocess.run([sys.executable, str(hook)], input=payload, capture_output=True, text=True,
+                          encoding="utf-8")
+    assert proc.returncode == 0
+    assert "please develop the next feature" in json.loads(proc.stdout)["hookSpecificOutput"]["additionalContext"]

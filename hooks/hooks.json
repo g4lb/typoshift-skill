@@ -1,0 +1,16 @@
+{
+  "description": "TypoShift: on every prompt, add a reconstruction when part of it was typed with the wrong keyboard layout. Context only; never blocks or replaces the prompt.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/integrations/claude-code/hooks/typoshift_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
