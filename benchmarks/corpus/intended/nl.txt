@@ -1,0 +1,30 @@
+bedankt
+ga door
+draai de tests
+ja, ga je gang
+ziet er goed uit
+probeer het opnieuw
+Repareer de inlogtest die faalt.
+Waarom mislukt het bouwen op de hoofdtak?
+Schrijf tests voor de betaaldienst.
+Leg uit wat deze functie doet.
+De pagina laadt heel traag, kun je kijken waarom?
+Voeg foutafhandeling toe bij het uploaden van bestanden.
+Geef deze variabele een duidelijkere naam.
+Kun je mijn wijzigingen bekijken voordat we ze samenvoegen?
+Ik denk dat er hier ergens een geheugenlek zit.
+Splits dit bestand op in kleinere modules.
+Wat betekent deze foutmelding precies?
+Het uitklapmenu sluit niet als ik ernaast klik.
+Verander alsjeblieft de publieke interface niet.
+Controleer of we lege invoer goed afhandelen.
+Werk de documentatie bij voor het nieuwe gedrag.
+Lokaal slagen de tests, maar op de server niet.
+Zorg ervoor dat wachtwoorden nooit in de logboeken belanden.
+Bedankt, die uitleg hielp echt.
+Wacht even, ik moet eerst iets nakijken.
+Hoe was je weekend?
+Kun je stap voor stap uitleggen hoe het inloggen werkt, vanaf het moment dat de gebruiker op de knop drukt?
+Sinds het samenvoegen van gisteren falen de integratietests, zoek uit welke wijziging dat veroorzaakt en stel een oplossing voor.
+Voordat we naar productie gaan, draai alle tests, loop de logboeken door en laat het weten als er iets vreemds is.
+Bedankt dat je gisteren zo lang bent gebleven, de uitrol ging soepel en de klanten zijn nu al tevreden.

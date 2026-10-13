@@ -1,0 +1,30 @@
+dzięki
+kontynuuj
+uruchom testy
+tak, śmiało
+wygląda dobrze
+spróbuj jeszcze raz
+Napraw test logowania, który się wywala.
+Dlaczego kompilacja nie przechodzi na głównej gałęzi?
+Napisz testy dla usługi płatności.
+Wyjaśnij mi, co robi ta funkcja.
+Strona ładuje się strasznie wolno, możesz zerknąć?
+Dodaj obsługę błędów przy wysyłaniu plików.
+Zmień nazwę tej zmiennej na bardziej czytelną.
+Możesz przejrzeć moje zmiany przed scaleniem?
+Wydaje mi się, że gdzieś tu wycieka pamięć.
+Podziel ten plik na mniejsze moduły.
+Co dokładnie oznacza ten komunikat o błędzie?
+Rozwijane menu nie zamyka się po kliknięciu obok.
+Proszę, nie zmieniaj publicznego interfejsu.
+Sprawdź, czy dobrze obsługujemy puste pole.
+Zaktualizuj dokumentację zgodnie z nowym zachowaniem.
+U mnie testy przechodzą, ale na serwerze już nie.
+Upewnij się, że hasła nie trafiają do dzienników.
+Dzięki, to wyjaśnienie bardzo mi pomogło.
+Chwileczkę, muszę najpierw coś sprawdzić.
+Jak minął weekend?
+Możesz mi wytłumaczyć krok po kroku, jak działa logowanie, od chwili kliknięcia przycisku przez użytkownika?
+Od wczorajszego scalenia sypią się testy integracyjne, znajdź zmianę, która to spowodowała, i zaproponuj poprawkę.
+Zanim wypuścimy wersję produkcyjną, odpal wszystkie testy, przejrzyj dzienniki i daj znać, jeśli coś wygląda podejrzanie.
+Dzięki, że zostałeś wczoraj tak długo, wydanie poszło gładko, a klienci są już zadowoleni.

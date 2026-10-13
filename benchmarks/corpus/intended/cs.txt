@@ -1,0 +1,30 @@
+díky
+pokračuj
+spusť testy
+ano, do toho
+vypadá to dobře
+zkus to znovu
+Oprav test přihlášení, který padá.
+Proč na hlavní větvi selhává sestavení?
+Napiš testy pro platební službu.
+Vysvětli mi, co dělá tahle funkce.
+Stránka se načítá strašně pomalu, můžeš se podívat?
+Přidej ošetření chyb při nahrávání souborů.
+Přejmenuj tu proměnnou na něco srozumitelnějšího.
+Můžeš projít moje změny před sloučením?
+Myslím, že tady někde uniká paměť.
+Rozděl tenhle soubor na menší moduly.
+Co přesně znamená tahle chybová hláška?
+Rozbalovací nabídka se nezavře, když kliknu mimo ni.
+Prosím, neměň veřejné rozhraní.
+Zkontroluj, jestli správně řešíme prázdný vstup.
+Aktualizuj dokumentaci podle nového chování.
+U mě testy procházejí, ale na serveru ne.
+Ujisti se, že se hesla nedostanou do záznamů.
+Díky, to vysvětlení mi hodně pomohlo.
+Počkej, musím si nejdřív něco ověřit.
+Jak sis užil víkend?
+Můžeš mi krok za krokem vysvětlit, jak funguje přihlášení od chvíle, kdy uživatel klikne na tlačítko?
+Od včerejšího sloučení padají integrační testy, najdi změnu, která to způsobila, a navrhni opravu.
+Než to nasadíme do ostrého provozu, spusť všechny testy, projdi záznamy a dej vědět, jestli něco vypadá divně.
+Díky, že jsi včera zůstal tak dlouho, vydání proběhlo hladce a zákazníci jsou už spokojení.

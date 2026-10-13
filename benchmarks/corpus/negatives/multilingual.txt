@@ -1,0 +1,150 @@
+תעדכן את ה-README ותריץ את הטסטים
+תעשה commit עם הודעה ברורה
+תפתח PR לענף main
+יש באג ב-API של ההתחברות
+תריץ npm install ואז תבנה מחדש
+ה-build נכשל ב-CI, תבדוק למה
+תוסיף unit tests לפונקציה הזאת
+תעשה refactor לקומפוננטה של ה-Header
+תבדוק את ה-logs בשרת של staging
+אני מקבל שגיאת CORS כשאני קורא ל-backend
+תעשה deploy ל-production אחרי שהבדיקות עוברות
+תמחק את ה-node_modules ותתקין מחדש
+ה-Docker container לא עולה
+תעדכן את הגרסה ב-package.json
+תשתמש ב-TypeScript במקום JavaScript
+יש memory leak ב-useEffect
+תכתוב query ב-SQL שמחזיר את כל המשתמשים
+תוסיף את ה-JWT ל-header של הבקשה
+ה-endpoint מחזיר 500
+תעשה rebase על main ותפתור את הקונפליקטים
+תבדוק את ה-PR ששלחתי
+תגדיר את ה-env vars ב-Vercel
+ה-cache לא מתנקה אחרי deploy
+תכתוב README קצר באנגלית
+תעביר את הלוגיקה ל-hook נפרד
+ה-CSS לא נטען בדף הבית
+אפשר להוסיף dark mode?
+תריץ את ה-linter על כל הפרויקט
+יש לי בעיה עם Git, אני לא מצליח לעשות push
+תחליף את axios ב-fetch
+ה-Python script נתקע באמצע
+תעשה merge רק אחרי review
+תוסיף לוגים ב-debug level
+השתמשתי ב-React Query אבל המידע לא מתעדכן
+תבנה Dockerfile קטן יותר
+תוסיף GitHub Action שמריץ את הטסטים
+הפגישה עם ה-PM נדחתה למחר
+שלחתי לך את הלינק ב-Slack
+ה-Wi-Fi במשרד שוב לא עובד
+תזמין לי פגישה ב-Zoom עם דני
+Исправь баг в API авторизации
+Запусти npm test и покажи, что упало
+Сделай рефакторинг компонента Header
+Добавь unit-тесты для этой функции
+Почему build падает в CI?
+Задеплой это на staging
+Обнови README и CHANGELOG
+Посмотри логи в Kubernetes
+Выкати новую версию через Docker
+Сделай commit и открой pull request
+Нужно поправить CORS на бэкенде
+У нас memory leak в React-компоненте
+Перепиши этот скрипт на Python
+Добавь JWT в заголовок запроса
+Endpoint возвращает 404, хотя маршрут есть
+Сделай rebase на main
+Почисти node_modules и переустанови зависимости
+Проверь, что TypeScript не ругается
+Настрой ESLint и Prettier
+Сервер отдаёт 500 после деплоя
+Добавь кэширование через Redis
+Обнови зависимости в package.json
+Сделай миграцию в PostgreSQL
+Скинь ссылку в Slack, пожалуйста
+Созвон в Zoom переносится на завтра
+Этот SQL-запрос слишком медленный
+Включи dark mode в настройках
+Сделай review моего PR
+Добавь GitHub Actions для тестов
+Запусти docker compose up и проверь
+أصلح الخطأ في API تسجيل الدخول
+شغل npm test وأخبرني بالنتيجة
+أضف unit tests لهذه الدالة
+لماذا يفشل build في CI؟
+انشر النسخة الجديدة على staging
+حدث ملف README من فضلك
+راجع الـ logs على الخادم
+أعد كتابة هذا السكربت بلغة Python
+أضف JWT إلى ترويسة الطلب
+الـ endpoint يعيد الخطأ 500
+اعمل commit وافتح pull request
+لدينا مشكلة CORS في الواجهة الخلفية
+استخدم TypeScript بدلا من JavaScript
+أضف التخزين المؤقت باستخدام Redis
+حدث الاعتماديات في package.json
+شغل Docker وتأكد أن الحاوية تعمل
+أرسل لي الرابط على Slack
+الاجتماع على Zoom تأجل إلى الغد
+أضف GitHub Actions لتشغيل الاختبارات
+اعمل rebase على main وحل التعارضات
+Виправ баг в API авторизації
+Запусти npm test і покажи, що впало
+Зроби рефакторинг компонента Header
+Додай unit-тести для цієї функції
+Чому build падає в CI?
+Задеплой це на staging, будь ласка
+Онови README і CHANGELOG
+Переглянь логи в Kubernetes
+Зроби commit і відкрий pull request
+Додай JWT у заголовок запиту
+Endpoint повертає 404, хоча маршрут є
+Перепиши цей скрипт на Python
+Налаштуй ESLint і Prettier
+Скинь посилання в Slack
+Додай кешування через Redis
+Διόρθωσε το bug στο API σύνδεσης
+Τρέξε npm test και δείξε μου τι απέτυχε
+Κάνε refactor στο component Header
+Πρόσθεσε unit tests σε αυτή τη συνάρτηση
+Γιατί αποτυγχάνει το build στο CI;
+Κάνε deploy στο staging
+Ενημέρωσε το README παρακαλώ
+Κάνε commit και άνοιξε pull request
+Στείλε μου το link στο Slack
+Το endpoint επιστρέφει 500
+Corrige le bug dans l'API de connexion
+Lance npm test et dis-moi ce qui échoue
+Fais un commit puis ouvre une pull request
+Le build plante sur la CI depuis ce matin
+Mets à jour le README avant la release
+Behebe den Bug im Login-Endpoint
+Führ npm install aus und starte den Dev-Server neu
+Der Docker-Container startet nicht mehr
+Kannst du einen Pull Request für den Hotfix erstellen?
+Bitte das Deployment auf Staging prüfen
+Arregla el bug en la API de login
+Haz un commit y abre un pull request
+El build falla en GitHub Actions
+Actualiza el README con las nuevas instrucciones
+Corrigi o bug no endpoint de login
+Faz deploy para staging, por favor
+Il build fallisce su CI da stamattina
+Aggiorna il README e fai il push
+Napraw buga w API logowania
+Zrób commit i otwórz pull request
+Oprav bug v API přihlášení
+Fixa buggen i login-API:et
+Kør npm install igen og genstart serveren
+Draai npm test en kijk wat er faalt
+Giriş API'sindeki bug'ı düzelt
+Let's have a quick standup, then the sprint retro is at the café downstairs
+Ask Jürgen to review the PR before Friday
+The client in São Paulo reported the bug
+Shalom, thanks for the quick fix yesterday
+I'll send the doc to François and Zoë
+That's the raison d'être of this module
+We had a déjà vu with that race condition
+Danke, the fix works perfectly now
+Thanks, gracias, merci, the release is out
+Can you ping Małgorzata about the Kraków office deploy?

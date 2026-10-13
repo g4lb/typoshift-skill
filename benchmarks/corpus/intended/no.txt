@@ -1,0 +1,30 @@
+takk
+fortsett
+kjør testene
+ja, bare kjør
+ser bra ut
+prøv igjen
+Fiks innloggingstesten som feiler.
+Hvorfor feiler byggingen på hovedgrenen?
+Skriv tester for betalingstjenesten.
+Forklar hva denne funksjonen gjør.
+Siden laster veldig tregt, kan du sjekke hvorfor?
+Legg til feilhåndtering når filer lastes opp.
+Gi variabelen et tydeligere navn.
+Kan du se over endringene mine før vi slår dem sammen?
+Jeg tror det er en minnelekkasje her et sted.
+Del opp denne filen i mindre moduler.
+Hva betyr egentlig denne feilmeldingen?
+Nedtrekksmenyen lukkes ikke når jeg klikker utenfor.
+Vær så snill, ikke endre det offentlige grensesnittet.
+Sjekk at vi håndterer tom inndata riktig.
+Oppdater dokumentasjonen slik at den passer med den nye oppførselen.
+Testene går gjennom lokalt, men feiler på serveren.
+Sørg for at passord aldri havner i loggene.
+Takk, forklaringen hjalp meg mye.
+Vent litt, jeg må sjekke noe først.
+Hvordan var helgen din?
+Kan du forklare trinn for trinn hvordan innloggingen fungerer, fra brukeren trykker på knappen?
+Etter gårsdagens sammenslåing har integrasjonstestene begynt å feile, så finn endringen som førte til det og foreslå en løsning.
+Før vi går i produksjon, kjør alle testene, se gjennom loggene og si fra hvis noe ser rart ut.
+Takk for at du ble så lenge i går, lanseringen gikk knirkefritt og kundene er allerede fornøyde.

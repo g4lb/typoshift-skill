@@ -1,0 +1,220 @@
+thanks
+continue
+run the tests
+yes, go ahead
+looks good
+try again
+ship it
+perfect, thank you
+nice work
+not quite
+undo that
+keep going
+stop
+fix it
+explain this
+good morning
+sounds good
+what happened?
+show me the diff
+commit please
+any questions?
+why?
+roll it back
+much better
+that's wrong
+deploy it
+review this
+hmm, interesting
+merge it
+never mind
+let's do it
+one more thing
+I'm back
+what's next?
+great catch
+still broken
+same error
+works now
+open a pull request
+format the code
+add comments
+clean this up
+lint everything
+good night
+Can you fix the failing login test?
+Please refactor this function to be more readable.
+Why is the build failing on the main branch?
+Write unit tests for the payment service.
+Explain what this regular expression does.
+The page loads really slowly, can you investigate?
+Add error handling to the upload handler.
+Rename the variable to something more descriptive.
+Can you review my changes before I merge?
+Deploy the latest version to staging.
+I think there's a memory leak somewhere here.
+Make the button disabled while the form submits.
+Split this file into smaller modules.
+What does this error message actually mean?
+Add a loading spinner to the dashboard.
+Please remove all the unused imports.
+Can you make this work on mobile too?
+The dropdown menu doesn't close when I click outside.
+Help me write a migration for the new table.
+Convert this class component into a function.
+Why does the date show up in the wrong timezone?
+Let's add pagination to the search results.
+Please don't change the public interface.
+Can you explain how the caching layer works?
+Check whether we handle empty input correctly.
+Write a short summary of what you changed.
+The tests pass locally but fail in the pipeline.
+Update the documentation to match the new behavior.
+I want the sidebar to collapse on small screens.
+Add a retry with exponential backoff.
+How do I run this project locally?
+Can you find where this value gets mutated?
+Simplify this nested loop if possible.
+Make sure the logs don't contain any passwords.
+Let's write an integration test for the checkout flow.
+Please revert the last commit.
+This query is way too slow on large tables.
+Add validation for the email field.
+Can you set up linting for the whole repository?
+What's the difference between these two approaches?
+Move the shared helpers into a separate folder.
+Use a map instead of an array here.
+I'm getting a null reference error on startup.
+The modal flickers when it opens.
+Please add types to these function parameters.
+Can you profile the startup time?
+Remove the debug logging before we ship.
+Make the error messages friendlier for users.
+Why is this request being sent twice?
+Add a dark mode toggle to the settings page.
+Can we cache the results of this call?
+Fix the typo in the welcome message.
+Write a script that cleans up old log files.
+Show me how to mock the network calls.
+The upload fails for files larger than a few megabytes.
+Let's handle the case where the user is offline.
+Please keep the changes minimal.
+How should I structure the folders for this project?
+Add a confirmation dialog before deleting an account.
+Can you check if there are any security issues here?
+I don't understand why this promise never resolves.
+Bump the dependencies and see if anything breaks.
+Make the table sortable by every column.
+Extract this logic into a reusable hook.
+The scroll position resets after every update.
+Can you write a commit message for these changes?
+Add an index to speed up this lookup.
+Please explain this like I'm new to the codebase.
+What happens if two users edit the same record?
+Let's add rate limiting to the public endpoints.
+Can you rewrite this without the external library?
+Fix the alignment of the icons in the header.
+The search should ignore upper and lower case.
+Please double check the edge cases.
+Generate some sample data for local testing.
+Why are the images blurry on retina screens?
+Add keyboard navigation to the menu.
+Can you trace where this event is coming from?
+The background job sometimes runs twice.
+Make the config load from environment variables.
+Let's remove the deprecated endpoints.
+Is this thread safe?
+Please add a test that reproduces the bug first.
+The notification badge shows the wrong count.
+Can you clean up the git history a bit?
+How long will the migration take on production?
+Write a function that validates phone numbers.
+I need the export to support spreadsheets as well.
+Can you make the animation smoother?
+Check the logs from last night's deployment.
+Add a health check for the database connection.
+That fixed it, thanks a lot!
+Hmm, the tests are still red.
+Let me know when the build finishes.
+Could you take another look at the edge case?
+Let's grab lunch after the standup.
+I'll be out of office tomorrow.
+Can we push the meeting to the afternoon?
+Sorry, I meant the other file.
+No, keep the old behavior for now.
+Okay, let's try your suggestion.
+Great, now do the same for the other page.
+I'm not sure that's the right approach.
+Did you remember to update the changelog?
+Please stop and wait for my review.
+How was your weekend?
+I'll send you the details later today.
+Thanks, that explanation really helped.
+That looks much cleaner than before.
+Why did you change that part?
+Can you summarize the discussion so far?
+Let's call it a day.
+Hold on, I need to check something first.
+Actually, ignore my last message.
+Everything works except the logout button.
+What would you name this function?
+Is there a simpler way to do this?
+Can you walk me through the authentication flow step by step, starting from the moment the user clicks the sign in button?
+I need you to refactor the order service so that each function does one thing and the error handling is consistent everywhere.
+The integration tests started failing after yesterday's merge, so please figure out which change caused it and suggest a fix.
+Before deploying to production, run the full test suite, check the logs for warnings, and let me know if anything looks off.
+Please review this pull request carefully and point out anything that could cause problems under heavy load or with bad input.
+Write a set of tests for the date parsing helper that cover leap years, different time zones, and invalid strings.
+The app crashes when the user rotates the phone during video playback, and I can't reproduce it on the simulator.
+Can you explain why we're using a queue here instead of just calling the service directly, and what the tradeoffs are?
+I'd like to migrate the old settings page to the new design system without breaking any of the existing keyboard shortcuts.
+When a customer cancels their subscription, we should send a confirmation email and keep their data for another month.
+Please go through the whole module, remove dead code, fix the obvious naming issues, and leave a short note about anything risky.
+The search results are correct but they take several seconds to show up, so let's find out where the time is going.
+Add proper logging around the payment flow so that next time something fails we can tell exactly which step went wrong.
+I'm not convinced the cache invalidation is correct, could you write a test that proves it either way?
+Let's set up a nightly job that backs up the database, compresses the archive, and deletes backups older than a week.
+The new hire is starting on Monday, so please write a clear guide on how to get the project running locally.
+Can you compare the two libraries we discussed and recommend one, keeping in mind bundle size and long term maintenance?
+Something in the latest release broke the dark theme on the settings screen, and the text is now almost invisible.
+Please make the form remember what the user typed if they accidentally navigate away and then come back.
+I want every public function in this package to have a short description and at least one example of how to use it.
+The deployment succeeded, but users are reporting that they get logged out every few minutes, so please look into the session handling.
+Explain the difference between optimistic and pessimistic locking, and tell me which one makes more sense for our booking system.
+Can you rewrite this script so it fails loudly on errors instead of silently continuing with half the data?
+Let's add a feature flag around the new checkout so we can turn it off quickly if something goes wrong.
+Please check whether the access rules are enforced on the server too, not just hidden in the user interface.
+The report generator runs out of memory on big accounts, so maybe we should stream the rows instead of loading everything.
+I was thinking we could meet tomorrow morning to go over the roadmap, does that work for you?
+Thanks for staying late yesterday, the release went smoothly and the customers are already happy with the new features.
+Sorry for the delay, I got pulled into another meeting and only just saw your message.
+Could you double check the translations on the onboarding screens before we send the build to the testers?
+We keep getting timeouts from the shipping provider, so please add a fallback and show a helpful message to the user.
+Go ahead and merge it once the checks pass, but ping me if the coverage drops noticeably.
+I need a quick explanation of how the background workers pick up jobs and what happens when one of them crashes.
+Please make the upload progress bar accurate, because right now it jumps to full long before the file is actually done.
+Can you look at the error reports from this week and group them by root cause so we know what to fix first?
+Write an end to end test that signs up a new user, confirms the email, and completes the first purchase.
+Let's simplify the onboarding so new users only have to fill in their name and email before they can start.
+The charts look fine on desktop, but on smaller phones the labels overlap and the legend gets cut off.
+Please don't touch the billing code in this change, it's being rewritten by another team right now.
+I noticed the same validation logic in three different places, so let's pull it into one shared function and reuse it.
+When you're done with the refactor, run the linter, run the tests, and then write a short summary of what changed and why.
+Can you help me understand what this old function was supposed to do, since nobody on the team remembers writing it?
+Let's make sure the app still works when the network is slow, the server returns errors, or the user is completely offline.
+We should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.
+Can you add a search box to the user list?
+The login page shows a blank screen in some browsers.
+Please make the tests run faster.
+Why does this function return undefined sometimes?
+Add a tooltip that explains each setting.
+Let's store the user's language preference.
+Could you write a quick benchmark for this?
+The footer overlaps the content on short pages.
+Please translate the error messages into plain language.
+Remind me what we decided about the folder structure.
+Can you make the import tolerate missing columns?
+I keep forgetting how to update the snapshots.
+Let's replace the polling with something event based.
+Who wrote this part, and why is it so complicated?
+Please check that the backup actually restores correctly.

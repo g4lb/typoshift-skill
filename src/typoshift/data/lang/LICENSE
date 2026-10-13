@@ -1,0 +1,19 @@
+Language model data in this directory (*.json.gz) is derived from
+FrequencyWords by Hermit Dave (https://github.com/hermitdave/FrequencyWords),
+commit 525f9b560de45753a5ea01069454e72e9aa541c6, content/2018/*/*_50k.txt,
+which is itself derived from OpenSubtitles 2018 (http://opus.nlpl.eu/OpenSubtitles2018.php).
+
+The FrequencyWords content is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Accordingly, the derived files in this directory (word lists, character
+trigram counts and normalization statistics) are distributed under
+CC BY-SA 4.0. Changes made: words were lower-cased, filtered to letters
+typeable on each language's keyboard layout, truncated to the 30,000 most
+frequent words, and character trigram statistics were computed from them
+(see tools/build_language_data.py). The English list additionally contains
+a hand-curated software vocabulary (tools/vocab/en.txt, MIT).
+
+The TypoShift source code is licensed separately under the MIT license
+(see LICENSE at the repository root).

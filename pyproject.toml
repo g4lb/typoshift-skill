@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typoshift"
+version = "0.1.0"
+description = "Type in the wrong language. Get the right words. Offline keyboard-layout mistake detection and reconstruction, with a Claude Code integration."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "src/typoshift/data/lang/LICENSE", "src/typoshift/layouts/data/COPYING-*"]
+authors = [{ name = "galb", email = "galevgi@gmail.com" }]
+keywords = ["keyboard", "layout", "typo", "hebrew", "russian", "arabic", "claude-code", "nlp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Natural Language :: Hebrew",
+    "Natural Language :: Russian",
+    "Natural Language :: Arabic",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6.100", "ruff>=0.6", "mypy>=1.10", "build>=1.2"]
+
+[project.scripts]
+typoshift = "typoshift.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/galb/typoshift"
+Issues = "https://github.com/galb/typoshift/issues"
+Changelog = "https://github.com/galb/typoshift/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+typoshift = [
+    "layouts/data/*.json",
+    "data/calibration.json",
+    "data/lang/*.json.gz",
+    "data/lang/LICENSE",
+    "integrations/claude_code/skill/*.md",
+    "py.typed",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["tools/cache"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "BLE"]
+ignore = ["S101", "S603", "S607", "S404", "B905", "UP042"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S", "B"]
+"tools/*" = ["S"]
+"benchmarks/*" = ["S"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = false

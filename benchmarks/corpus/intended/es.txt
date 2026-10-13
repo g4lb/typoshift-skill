@@ -1,0 +1,30 @@
+gracias
+sigue
+ejecuta las pruebas
+sí, adelante
+se ve bien
+inténtalo de nuevo
+Arregla la prueba de inicio de sesión que falla.
+¿Por qué falla la compilación en la rama principal?
+Escribe pruebas para el servicio de pagos.
+Explícame qué hace esta función.
+La página tarda muchísimo en cargar, ¿puedes revisarlo?
+Añade manejo de errores al subir archivos.
+Cambia el nombre de la variable por uno más claro.
+¿Puedes revisar mis cambios antes de fusionarlos?
+Creo que hay una fuga de memoria por aquí.
+Divide este archivo en módulos más pequeños.
+¿Qué significa exactamente este mensaje de error?
+El menú desplegable no se cierra al hacer clic fuera.
+Por favor, no cambies la interfaz pública.
+Comprueba que manejamos bien una entrada vacía.
+Actualiza la documentación según el nuevo comportamiento.
+En mi máquina las pruebas pasan, pero en el servidor fallan.
+Asegúrate de que las contraseñas no aparezcan en los registros.
+Gracias, la explicación me ayudó un montón.
+Espera, tengo que comprobar algo primero.
+¿Qué tal el fin de semana?
+¿Me puedes explicar paso a paso cómo funciona el inicio de sesión desde que el usuario pulsa el botón?
+Desde la fusión de ayer fallan las pruebas de integración, busca qué cambio lo provocó y propón una solución.
+Antes de pasar a producción, ejecuta todas las pruebas, revisa los registros y avísame si algo te parece raro.
+Gracias por quedarte hasta tarde ayer, el lanzamiento salió perfecto y los clientes ya están encantados.

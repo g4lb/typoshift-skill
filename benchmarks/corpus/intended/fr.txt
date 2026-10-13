@@ -1,0 +1,30 @@
+merci
+continue
+lance les tests
+oui, vas-y
+c'est parfait
+réessaie
+Corrige le test de connexion qui échoue.
+Pourquoi la compilation plante sur la branche principale ?
+Écris des tests pour le module de facturation.
+Explique-moi ce que fait cette fonction.
+La page met une éternité à charger, tu peux regarder ?
+Ajoute une gestion d'erreurs lors de l'envoi des fichiers.
+Renomme cette variable avec un nom plus clair.
+Peux-tu relire mes modifications avant la fusion ?
+J'ai l'impression qu'il y a une fuite de mémoire.
+Découpe ce fichier en plusieurs modules plus petits.
+Que veut dire ce message d'erreur, exactement ?
+Le menu déroulant ne se ferme pas quand je clique ailleurs.
+Ne touche surtout pas à l'interface publique.
+Vérifie qu'on gère bien une saisie vide.
+Mets à jour la documentation pour refléter le nouveau comportement.
+Les tests passent chez moi mais échouent sur le serveur.
+Assure-toi que les mots de passe n'apparaissent pas dans les journaux.
+Merci, ton explication m'a beaucoup aidé.
+Attends, je dois d'abord vérifier quelque chose.
+Tu as passé un bon week-end ?
+Peux-tu m'expliquer étape par étape comment fonctionne la connexion, à partir du moment où l'utilisateur clique sur le bouton ?
+Depuis la fusion d'hier, les tests d'intégration échouent, trouve la modification responsable et propose une correction.
+Avant la mise en production, lance tous les tests, parcours les journaux et dis-moi si quelque chose te paraît bizarre.
+Merci d'être resté tard hier soir, la mise à jour s'est très bien passée et les clients sont déjà ravis.

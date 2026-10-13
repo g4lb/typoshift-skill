@@ -1,0 +1,30 @@
+tack
+fortsätt
+kör testerna
+ja, kör på
+ser bra ut
+försök igen
+Fixa inloggningstestet som misslyckas.
+Varför går byggandet sönder på huvudgrenen?
+Skriv tester för betaltjänsten.
+Förklara vad den här funktionen gör.
+Sidan laddar jättelångsamt, kan du kolla varför?
+Lägg till felhantering när filer laddas upp.
+Byt namn på variabeln till något tydligare.
+Kan du granska mina ändringar innan vi slår ihop dem?
+Jag tror att det finns en minnesläcka någonstans här.
+Dela upp den här filen i mindre moduler.
+Vad betyder det här felmeddelandet egentligen?
+Rullgardinsmenyn stängs inte när jag klickar utanför.
+Snälla, ändra inte det publika gränssnittet.
+Kontrollera att vi hanterar tom inmatning på rätt sätt.
+Uppdatera dokumentationen så att den stämmer med det nya beteendet.
+Testerna går igenom lokalt men fallerar på servern.
+Se till att lösenord aldrig hamnar i loggarna.
+Tack, förklaringen hjälpte verkligen.
+Vänta, jag måste kolla en sak först.
+Hur var helgen?
+Kan du förklara steg för steg hur inloggningen fungerar, från att användaren trycker på knappen?
+Sedan gårdagens sammanslagning misslyckas integrationstesterna, hitta ändringen som orsakade det och föreslå en lösning.
+Innan vi släpper till produktion, kör alla tester, gå igenom loggarna och säg till om något ser konstigt ut.
+Tack för att du stannade så länge igår, lanseringen gick smidigt och kunderna är redan nöjda.

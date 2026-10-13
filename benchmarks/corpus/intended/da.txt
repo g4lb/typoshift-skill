@@ -1,0 +1,30 @@
+tak
+fortsæt
+kør testene
+ja, bare gør det
+ser godt ud
+prøv igen
+Ret testen af indlogningen, som fejler.
+Hvorfor fejler bygningen på hovedgrenen?
+Skriv test til betalingstjenesten.
+Forklar mig, hvad den her funktion gør.
+Siden indlæses meget langsomt, kan du kigge på det?
+Tilføj fejlhåndtering, når der uploades filer.
+Giv variablen et mere sigende navn.
+Kan du gennemgå mine ændringer, før vi fletter dem?
+Jeg tror, der er en hukommelseslækage et sted her.
+Del den her fil op i mindre moduler.
+Hvad betyder den fejlbesked egentlig?
+Rullemenuen lukker ikke, når jeg klikker udenfor.
+Lad være med at ændre den offentlige grænseflade.
+Tjek, at vi håndterer tomme felter korrekt.
+Opdater dokumentationen, så den passer til den nye adfærd.
+Testene består lokalt, men fejler på serveren.
+Sørg for, at adgangskoder aldrig havner i loggene.
+Tak, forklaringen hjalp mig rigtig meget.
+Vent lige, jeg skal tjekke noget først.
+Hvordan var din weekend?
+Kan du forklare trin for trin, hvordan indlogningen fungerer, fra brugeren trykker på knappen?
+Siden gårsdagens fletning er integrationstestene begyndt at fejle, så find ændringen, der forårsagede det, og foreslå en løsning.
+Før vi går i produktion, så kør alle testene, kig loggene igennem og sig til, hvis noget ser mærkeligt ud.
+Tak fordi du blev så længe i går, udgivelsen gik glat, og kunderne er allerede glade.

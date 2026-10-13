@@ -1,0 +1,30 @@
+obrigado
+continua
+roda os testes
+sim, pode ir
+está ótimo
+tenta de novo
+Corrige o teste de acesso que está a falhar.
+Por que é que a compilação falha no ramo principal?
+Escreve testes para o serviço de pagamentos.
+Me explica o que essa função faz.
+A página está demorando demais para carregar, pode ver?
+Adiciona tratamento de erros no envio de ficheiros.
+Renomeia essa variável para algo mais claro.
+Você pode revisar minhas alterações antes da junção?
+Acho que há uma fuga de memória algures aqui.
+Divide este ficheiro em módulos mais pequenos.
+O que significa exatamente essa mensagem de erro?
+O menu suspenso não fecha quando clico fora dele.
+Por favor, não mexa na interface pública.
+Verifica se tratamos bem uma entrada vazia.
+Atualize a documentação de acordo com o novo comportamento.
+Na minha máquina os testes passam, mas no servidor falham.
+Garante que as palavras-passe não aparecem nos registos.
+Valeu, a explicação ajudou muito.
+Espera aí, preciso conferir uma coisa antes.
+Como foi o fim de semana?
+Você consegue me explicar passo a passo como funciona o acesso, desde o momento em que o usuário clica no botão?
+Desde a junção de ontem os testes de integração estão a falhar, descobre qual alteração causou isto e propõe uma correção.
+Antes de subir para produção, roda todos os testes, dá uma olhada nos registros e me avisa se algo parecer estranho.
+Obrigado por teres ficado até tarde ontem, o lançamento correu bem e os clientes já estão satisfeitos.

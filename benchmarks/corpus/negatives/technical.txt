@@ -1,0 +1,200 @@
+ls -la
+cd ..
+rm -rf node_modules
+npm i
+jq .
+vim ~/.zshrc
+git status
+git diff --staged
+git log --oneline -n 20
+git push -u origin feature/login-form
+git rebase -i HEAD~3
+git checkout -b fix/null-pointer
+git cherry-pick a1b2c3d
+git reset --hard origin/main
+git stash pop
+npm run build
+npm install --save-dev typescript@5.4.5
+npx prettier --write .
+pnpm add zod
+yarn test --watch
+pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+pytest -k test_parse_date -x
+docker compose up -d
+docker build -t myapp:latest .
+docker ps -a
+kubectl get pods -n staging
+kubectl logs -f deploy/api-server
+kubectl apply -f k8s/deployment.yaml
+curl -sS -X POST https://api.example.com/v1/users -H "Content-Type: application/json" -d '{"name":"test"}'
+curl -I https://example.com
+brew install ripgrep
+rg -n "TODO" src/
+grep -rn "useEffect" src/components
+find . -name "*.pyc" -delete
+chmod +x ./scripts/build.sh
+./scripts/build.sh --release
+make clean && make
+cargo build --release
+go test ./...
+tail -f /var/log/nginx/error.log
+ssh deploy@staging.example.com
+export NODE_ENV=production
+echo $HOME
+echo %APPDATA%
+cat .env.local
+sudo systemctl restart nginx
+code .
+cd ~/projects/typoshift
+mkdir -p src/utils
+touch README.md
+mv old.ts new.ts
+cp .env.example .env
+du -sh *
+ps aux | grep node
+kill -9 4242
+lsof -i :3000
+open http://localhost:3000
+npm ci
+nvm use 20
+git fetch --all --prune
+gh pr create --fill
+gh pr checks
+terraform plan -out tfplan
+helm upgrade --install api ./charts/api
+fix the bug in src/components/Header.tsx where the logo overflows
+run ./scripts/build.sh and paste the output
+the script at C:\Users\dev\app\main.py crashes on startup
+open lib/utils/formatDate.ts and add a timezone param
+why does tests/test_api.py fail on CI but not locally?
+move the helpers from src/lib/helpers.js to src/utils/index.ts
+the config lives in ~/.config/typoshift/settings.json
+rename getUserById to fetchUserById everywhere
+make parse_config_file return None on missing keys
+the class UserProfileCard should accept an onClose prop
+set MAX_RETRY_COUNT to 5 in config.py
+why is useMemo not memoizing here?
+add a test for calculate_total_price with an empty cart
+the API returns 404 for /api/v2/orders/:id
+we get a 500 Internal Server Error after the deploy
+handle 429 Too Many Requests with a backoff
+the endpoint should return 201 Created, not 200
+CORS error when calling https://api.example.com from localhost:5173
+the JWT expires after 15m, make it 1h
+check that CI passes before merging
+bump version to 2.3.1 in package.json
+upgrade react from 18.2.0 to 18.3.1
+we're pinned to python 3.11.9 and node v20.11.1
+the regression started at commit 9f86d081
+revert e3b0c44298fc1c149afbf4c8996fb924
+cherry-pick 7c4a8d09ca3762af61e59520943dc26494f8941b onto release/1.4
+email me at dev@example.com when it's done
+send the report to qa-team@example.com
+the webhook posts to https://hooks.example.com/services/T000/B000/XXXX
+docs are at https://docs.example.com/guide/getting-started#install
+use the key sk-test-XXXXXXXXXXXXXXXXXXXXXXXX for local testing only
+GITHUB_TOKEN=ghp_exampleexampleexampleexample0000 npm run release
+set OPENAI_API_KEY=sk-test-placeholder-not-a-real-key in .env
+the token is dummy-token-1234 in the fixtures
+AWS_ACCESS_KEY_ID=AKIAEXAMPLEEXAMPLE00 is just a placeholder
+{"name": "typoshift", "version": "0.1.0", "private": true}
+{"error": "unauthorized", "status": 401}
+send {"query": "hello", "limit": 10} to the search endpoint
+{"retries": 3, "timeout_ms": 5000}
+replicas: 3
+image: nginx:1.27-alpine
+runs-on: ubuntu-latest
+on: [push, pull_request]
+env: {NODE_ENV: test}
+set restartPolicy: Always in the pod spec
+the regex ^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$ rejects valid emails
+match \d{3}-\d{4} instead
+use /^v?(\d+)\.(\d+)\.(\d+)$/ to parse the version
+s/foo/bar/g
+SELECT id, email FROM users WHERE created_at > NOW() - INTERVAL '7 days';
+UPDATE orders SET status = 'shipped' WHERE id = 42;
+DELETE FROM sessions WHERE expires_at < now();
+CREATE INDEX idx_users_email ON users(email);
+why is SELECT COUNT(*) FROM events so slow?
+run `npm test` and tell me what fails
+the `useState` hook isn't updating
+call `os.path.join` instead of string concat
+wrap it in `try/except ValueError`
+add `"strict": true` to tsconfig.json
+use `--no-verify` only if the hook is broken
+const user = await db.user.findUnique({ where: { id } });
+def handler(event, context): return {"statusCode": 200}
+for i in range(len(items)): print(items[i])
+if err != nil { return err }
+fn main() { println!("hello"); }
+import React, { useState } from 'react';
+from fastapi import FastAPI, HTTPException
+export default function App() { return <Main />; }
+console.log(JSON.stringify(data, null, 2))
+SELECT * FROM t;
+x = [i**2 for i in range(10)]
+<div className="flex items-center gap-2">
+@app.get("/health")
+#include <stdio.h>
+public static void main(String[] args)
+PascalCaseComponent vs camelCaseFunction vs snake_case_var vs SCREAMING_SNAKE
+the env var is DATABASE_URL=postgres://user:pass@localhost:5432/app_dev
+read %USERPROFILE%\AppData\Local\Temp
+$PATH doesn't include /usr/local/bin
+${HOME}/.ssh/id_ed25519.pub
+the CLI flag --dry-run doesn't do anything
+pass -v --no-cache --max-workers=4
+try -Xmx2g for the JVM
+OAuth2 PKCE flow with S256
+TLS 1.3 handshake fails on HTTP/2
+SSR vs CSR vs ISR
+the DNS TTL is 300
+REST API with RBAC and SSO via SAML
+add ARIA labels for a11y
+fix i18n keys in locales/en.json
+k8s HPA min=2 max=10
+UTF-8 BOM breaks the CSV parser
+WIP: refactor auth middleware
+feat(api): add pagination to /users
+fix: handle null in parseDate()
+chore(deps): bump lodash from 4.17.20 to 4.17.21
+v1.0.0-rc.2
+0.0.0.0:8080
+127.0.0.1
+localhost:8000/admin
+https://github.com/example-org/example-repo/pull/123
+http://example.com/search?q=hello&lang=en
+ftp://files.example.com/pub/readme.txt
+192.168.1.10
+mailto:support@example.com
+a1b2c3d
+HEAD~1
+origin/main
+main..feature
+npm ERR! code ERESOLVE
+TypeError: Cannot read properties of undefined (reading 'map')
+ModuleNotFoundError: No module named 'requests'
+Segmentation fault (core dumped)
+EADDRINUSE: address already in use :::3000
+FATAL: password authentication failed for user "postgres"
+Traceback (most recent call last):
+error[E0382]: borrow of moved value: `v`
+WARN deprecated uuid@3.4.0
+exit code 137
+OOMKilled
+SIGTERM
+ctrl+c
+cmd+shift+p
+:wq
+:q!
+./run.sh
+npm start
+pwd
+whoami
+git pull
+git add -A
+ls
+cd src
+cat package.json

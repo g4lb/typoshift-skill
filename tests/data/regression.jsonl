@@ -1,0 +1,13 @@
+{"id": "hyphen-compound", "input": "Sake he something you cook-off scare have want and you", "expected": "Sake he something you cook-off scare have want and you", "layouts": ["en-US", "de", "no"], "why": "'-' is on the slash key of QWERTZ layouts; punctuation-only rewrites are never corrections"}
+{"id": "counter-attack", "input": "the counter-attack failed", "expected": "the counter-attack failed", "layouts": ["en-US", "de"], "why": "hyphenated compounds are known when every part is"}
+{"id": "greek-capital-sigma", "input": "Σριτε α σηορτ σθμμαρυ", "expected": "Write a short summary", "layouts": ["en-US", "el"], "why": "Σ can be Shift+σ (S) or Shift+ς (W); variants are scored"}
+{"id": "russian-contraction", "input": "Дуеэы фвв ф еуые", "expected": "Let's add a test", "layouts": ["en-US", "ru"], "why": "apostrophes (э key) must not break the span"}
+{"id": "hebrew-contraction", "input": "אישא,ד םל", "expected": "that's ok", "layouts": ["en-US", "he"], "why": "the Hebrew comma is on the apostrophe key"}
+{"id": "arabic-edge-word", "input": "]هي غخع قثةثةلاثق فخ عحيشفث فاث ؤاشىلثمخل؟", "expected": "Did you remember to update the changelog?", "layouts": ["en-US", "ar"], "why": "a word valid in both languages at the edge of a long span joins it"}
+{"id": "arabic-backtick-letter", "input": "glh`h", "expected": "لماذا", "layouts": ["en-US", "ar"], "why": "ذ sits on the backtick key; not inline code"}
+{"id": "hebrew-real-word-at-edge", "input": "Cשמ טםו דוצצשרןזק איק גןדבודדןםמ דם כשר?", "expected": "Can you summarize the discussion so far?", "layouts": ["en-US", "he"], "why": "'כשר' is a Hebrew word but here it is 'far'"}
+{"id": "polish-unknown-language", "input": "Zmień nazwę tej zmiennej na bardziej czytelną.", "expected": "Zmień nazwę tej zmiennej na bardziej czytelną.", "why": "Latin text in a language that is not enabled must not be rewritten into Hebrew"}
+{"id": "lgtm", "input": "lgtm", "expected": "lgtm", "why": "known acronyms are not suspicious"}
+{"id": "code-fence-mid-line", "input": "fix the bug in ```\nghbdtn\n``` please", "expected": "fix the bug in ```\nghbdtn\n``` please", "why": "fences are protected even when they do not start a line"}
+{"id": "ru-uk-default", "input": "Еру гздщфв афшды ащк ашдуы дфкпук ерфт ф ауц ьупфинеуыю", "expected": "The upload fails for files larger than a few megabytes.", "why": "a full-span correction from one source layout supersedes a consistent partial one"}
+{"id": "dead-key-space", "input": "pr;vta ;ola", "expected": "πρώτα όλα", "layouts": ["en-US", "el"], "why": "the Greek tonos dead key composes with the next letter"}

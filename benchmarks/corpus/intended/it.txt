@@ -1,0 +1,30 @@
+grazie
+continua
+esegui i test
+sì, vai pure
+mi sembra perfetto
+riprova
+Sistema il test di accesso che fallisce.
+Perché la compilazione si rompe sul ramo principale?
+Scrivi dei test per il servizio dei pagamenti.
+Spiegami cosa fa questa funzione.
+La pagina è lentissima a caricare, puoi controllare?
+Aggiungi la gestione degli errori nel caricamento dei file.
+Rinomina la variabile con un nome più chiaro.
+Puoi rivedere le mie modifiche prima dell'unione?
+Credo che ci sia una perdita di memoria da qualche parte.
+Dividi questo file in moduli più piccoli.
+Che cosa significa esattamente questo messaggio d'errore?
+Il menu a tendina non si chiude quando clicco fuori.
+Per favore, non toccare l'interfaccia pubblica.
+Controlla che gestiamo correttamente un campo vuoto.
+Aggiorna la documentazione in base al nuovo comportamento.
+In locale i test passano, ma sul server falliscono.
+Assicurati che le credenziali non finiscano nei registri.
+Grazie, la spiegazione mi è stata molto utile.
+Aspetta, prima devo verificare una cosa.
+Com'è andato il fine settimana?
+Mi spieghi passo dopo passo come funziona l'accesso, dal momento in cui l'utente preme il pulsante?
+Da ieri, dopo l'unione, i test di integrazione falliscono, trova la modifica responsabile e proponi una correzione.
+Prima del rilascio in produzione, esegui tutti i test, guarda i registri e dimmi se qualcosa ti sembra strano.
+Grazie per essere rimasto fino a tardi ieri, il rilascio è andato liscio e i clienti sono già contenti.

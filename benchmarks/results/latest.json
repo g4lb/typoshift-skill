@@ -1,0 +1,4263 @@
+{
+ "date": "2026-10-13",
+ "version": "0.1.0",
+ "python": "3.14.6",
+ "platform": "Darwin arm64",
+ "overall": {
+  "positive_inputs": 3549,
+  "negative_inputs": 1720,
+  "precision": 0.9892,
+  "recall": 0.8755,
+  "false_positive_rate": 0.0,
+  "exact_correction_accuracy": 0.9892,
+  "suggest_mode_recall": 0.9372,
+  "negatives_with_uncertain_suggestion": 0.0058,
+  "exact": 3107,
+  "wrong": 34,
+  "missed": 408,
+  "untouched": 1720,
+  "false_positive": 0
+ },
+ "groups": [
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "n": 60,
+   "suggest_exact": 55,
+   "exact": 54,
+   "missed": 1,
+   "wrong": 5
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "n": 60,
+   "suggest_exact": 55,
+   "exact": 54,
+   "missed": 1,
+   "wrong": 5
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "n": 50,
+   "suggest_exact": 49,
+   "exact": 42,
+   "missed": 6,
+   "wrong": 2
+  },
+  {
+   "group": "full el->en-US",
+   "config": "pair",
+   "n": 50,
+   "suggest_exact": 49,
+   "exact": 49,
+   "wrong": 1
+  },
+  {
+   "group": "full en->ar",
+   "config": "default",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 218,
+   "missed": 2
+  },
+  {
+   "group": "full en->ar",
+   "config": "pair",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 219,
+   "missed": 1
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "n": 220,
+   "suggest_exact": 214,
+   "exact": 210,
+   "missed": 5,
+   "wrong": 5
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "n": 220,
+   "suggest_exact": 214,
+   "exact": 212,
+   "missed": 2,
+   "wrong": 6
+  },
+  {
+   "group": "full en->he",
+   "config": "default",
+   "n": 220,
+   "suggest_exact": 219,
+   "exact": 218,
+   "missed": 2
+  },
+  {
+   "group": "full en->he",
+   "config": "pair",
+   "n": 220,
+   "suggest_exact": 219,
+   "exact": 219,
+   "missed": 1
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 213,
+   "missed": 7
+  },
+  {
+   "group": "full en->ru",
+   "config": "pair",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 218,
+   "missed": 2
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 212,
+   "missed": 8
+  },
+  {
+   "group": "full en->uk",
+   "config": "pair",
+   "n": 220,
+   "suggest_exact": 220,
+   "exact": 217,
+   "missed": 3
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "n": 90,
+   "suggest_exact": 89,
+   "exact": 81,
+   "missed": 8,
+   "wrong": 1
+  },
+  {
+   "group": "full he->en-US",
+   "config": "pair",
+   "n": 90,
+   "suggest_exact": 89,
+   "exact": 88,
+   "missed": 1,
+   "wrong": 1
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "n": 332,
+   "suggest_exact": 162,
+   "missed": 332
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "default",
+   "n": 90,
+   "suggest_exact": 87,
+   "exact": 87,
+   "wrong": 3
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "pair",
+   "n": 90,
+   "suggest_exact": 88,
+   "exact": 88,
+   "wrong": 2
+  },
+  {
+   "group": "full uk->en-US",
+   "config": "default",
+   "n": 60,
+   "suggest_exact": 60,
+   "missed": 3,
+   "exact": 57
+  },
+  {
+   "group": "full uk->en-US",
+   "config": "pair",
+   "n": 60,
+   "suggest_exact": 60,
+   "exact": 60
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "n": 65,
+   "suggest_exact": 61,
+   "missed": 5,
+   "exact": 60
+  },
+  {
+   "group": "mixed en (fragment on he)",
+   "config": "default",
+   "n": 55,
+   "suggest_exact": 53,
+   "exact": 53,
+   "missed": 2
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "n": 58,
+   "suggest_exact": 53,
+   "exact": 52,
+   "missed": 6
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "n": 69,
+   "suggest_exact": 65,
+   "exact": 63,
+   "missed": 5,
+   "wrong": 1
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "n": 70,
+   "suggest_exact": 65,
+   "wrong": 2,
+   "exact": 63,
+   "missed": 5
+  },
+  {
+   "group": "negative multilingual",
+   "config": "default",
+   "n": 150,
+   "suggestion_noise": 3,
+   "untouched": 150
+  },
+  {
+   "group": "negative native sentences",
+   "config": "default",
+   "n": 930,
+   "suggestion_noise": 5,
+   "untouched": 930
+  },
+  {
+   "group": "negative native sentences",
+   "config": "pair",
+   "n": 360,
+   "suggestion_noise": 1,
+   "untouched": 360
+  },
+  {
+   "group": "negative short_ambiguous",
+   "config": "default",
+   "n": 80,
+   "suggestion_noise": 0,
+   "untouched": 80
+  },
+  {
+   "group": "negative technical",
+   "config": "default",
+   "n": 200,
+   "suggestion_noise": 1,
+   "untouched": 200
+  }
+ ],
+ "latency_ms": {
+  "p50": 0.23,
+  "p95": 1.48,
+  "max": 31.96
+ },
+ "cold_start": {
+  "runs": 5,
+  "median_ms": 89.9,
+  "max_ms": 94.6
+ },
+ "failures": [
+  {
+   "group": "full en->he",
+   "config": "default",
+   "input": "'יט?",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "'יט?",
+   "confidence": null
+  },
+  {
+   "group": "full en->he",
+   "config": "pair",
+   "input": "'יט?",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "'יט?",
+   "confidence": null
+  },
+  {
+   "group": "full en->he",
+   "config": "default",
+   "input": "I לקקפ כםרעקאאןמע ים' אם ופגשאק איק דמשפדיםאדץ",
+   "expected": "I keep forgetting how to update the snapshots.",
+   "outcome": "missed",
+   "output": "I לקקפ כםרעקאאןמע ים' אם ופגשאק איק דמשפדיםאדץ",
+   "confidence": 0.8588
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": ",xchr kh",
+   "expected": "תסביר לי",
+   "outcome": "missed",
+   "output": ",xchr kh",
+   "confidence": 0.6848
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": "gfahu zv gucs",
+   "expected": "עכשיו זה עובד",
+   "outcome": "missed",
+   "output": "gfahu zv gucs",
+   "confidence": 0.8729
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": "knv?",
+   "expected": "למה?",
+   "outcome": "missed",
+   "output": "knv?",
+   "confidence": 0.9607
+  },
+  {
+   "group": "full he->en-US",
+   "config": "pair",
+   "input": "knv?",
+   "expected": "למה?",
+   "outcome": "missed",
+   "output": "knv?",
+   "confidence": 0.9607
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": ",,ei t, vcshev abfak, cv,jcru,/",
+   "expected": "תתקן את הבדיקה שנכשלת בהתחברות.",
+   "outcome": "missed",
+   "output": ",,ei t, vcshev abfak, cv,jcru,/",
+   "confidence": 0.7021
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": ",nje t, fk vhhcutho akt cahnua/",
+   "expected": "תמחק את כל הייבואים שלא בשימוש.",
+   "outcome": "missed",
+   "output": ",nje t, fk vhhcutho akt cahnua/",
+   "confidence": 0.8986
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": ",csue to tbjbu nypkho bfui ceky rhe/",
+   "expected": "תבדוק אם אנחנו מטפלים נכון בקלט ריק.",
+   "outcome": "missed",
+   "output": ",csue to tbjbu nypkho bfui ceky rhe/",
+   "confidence": 0.8909
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": "vcsheu, gucru, tmkh tck bfaku, car,/",
+   "expected": "הבדיקות עוברות אצלי אבל נכשלות בשרת.",
+   "outcome": "wrong",
+   "output": "הבדיקות עוברות אצלי אבל נכשלות car,/",
+   "confidence": 0.9968
+  },
+  {
+   "group": "full he->en-US",
+   "config": "pair",
+   "input": "vcsheu, gucru, tmkh tck bfaku, car,/",
+   "expected": "הבדיקות עוברות אצלי אבל נכשלות בשרת.",
+   "outcome": "wrong",
+   "output": "הבדיקות עוברות אצלי אבל נכשלות car,/",
+   "confidence": 0.9455
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": "vathk,v vzt, thyh, nsh gk ycktu, dsuku,/",
+   "expected": "השאילתה הזאת איטית מדי על טבלאות גדולות.",
+   "outcome": "missed",
+   "output": "vathk,v vzt, thyh, nsh gk ycktu, dsuku,/",
+   "confidence": 0.878
+  },
+  {
+   "group": "full he->en-US",
+   "config": "default",
+   "input": "cceav ,anur gk ahbuhho nhbhnkhho/",
+   "expected": "בבקשה תשמור על שינויים מינימליים.",
+   "outcome": "missed",
+   "output": "cceav ,anur gk ahbuhho nhbhnkhho/",
+   "confidence": 0.8536
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "екн фпфшт",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "екн фпфшт",
+   "confidence": 0.8808
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "ырщц ьу еру вшаа",
+   "expected": "show me the diff",
+   "outcome": "missed",
+   "output": "ырщц ьу еру вшаа",
+   "confidence": 0.8916
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "црн,",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "црн,",
+   "confidence": 0.9054
+  },
+  {
+   "group": "full en->ru",
+   "config": "pair",
+   "input": "црн,",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "црн,",
+   "confidence": 0.9234
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "дуеэы вщ ше",
+   "expected": "let's do it",
+   "outcome": "missed",
+   "output": "дуеэы вщ ше",
+   "confidence": 0.688
+  },
+  {
+   "group": "full en->ru",
+   "config": "pair",
+   "input": "Шэь ифсл",
+   "expected": "I'm back",
+   "outcome": "missed",
+   "output": "Шэь ифсл",
+   "confidence": 0.8958
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "Кутфьу еру мфкшфиду ещ ыщьуерштп ьщку вуыскшзешмую",
+   "expected": "Rename the variable to something more descriptive.",
+   "outcome": "missed",
+   "output": "Кутфьу еру мфкшфиду ещ ыщьуерштп ьщку вуыскшзешмую",
+   "confidence": 0.801
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "Фвв фт штвуч ещ ызуув гз ершы дщщлгзю",
+   "expected": "Add an index to speed up this lookup.",
+   "outcome": "missed",
+   "output": "Фвв фт штвуч ещ ызуув гз ершы дщщлгзю",
+   "confidence": 0.8462
+  },
+  {
+   "group": "full en->ru",
+   "config": "default",
+   "input": "Здуфыу фвв ф еуые ерфе кузкщвгсуы еру игп ашкыею",
+   "expected": "Please add a test that reproduces the bug first.",
+   "outcome": "missed",
+   "output": "Здуфыу фвв ф еуые ерфе кузкщвгсуы еру игп ашкыею",
+   "confidence": 0.8489
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "default",
+   "input": "Cyfxfkf yfgbib ntcn? rjnjhsq djcghjbpdjlbn ,fu/",
+   "expected": "Сначала напиши тест, который воспроизводит баг.",
+   "outcome": "wrong",
+   "output": "Сначала напиши тест, который воспроизводит ,fu/",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "pair",
+   "input": "Cyfxfkf yfgbib ntcn? rjnjhsq djcghjbpdjlbn ,fu/",
+   "expected": "Сначала напиши тест, который воспроизводит баг.",
+   "outcome": "wrong",
+   "output": "Сначала напиши тест, который воспроизводит ,fu/",
+   "confidence": 0.9941
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "default",
+   "input": "Djj,ot-nj? pf,elm vj` gjcktlytt cjj,otybt/",
+   "expected": "Вообще-то, забудь моё последнее сообщение.",
+   "outcome": "wrong",
+   "output": "Вообще-то, забудь мо' последнее сообщение.",
+   "confidence": 0.9968
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "default",
+   "input": "Z yt edthty? xnj c,hjc r'if hf,jnftn ghfdbkmyj? vj;tim yfgbcfnm ntcn? rjnjhsq 'nj ljrf;tn&",
+   "expected": "Я не уверен, что сброс кэша работает правильно, можешь написать тест, который это докажет?",
+   "outcome": "wrong",
+   "output": "Я не уверен, что сброс r'if работает правильно, можешь написать тест, который это докажет?",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full ru->en-US",
+   "config": "pair",
+   "input": "Z yt edthty? xnj c,hjc r'if hf,jnftn ghfdbkmyj? vj;tim yfgbcfnm ntcn? rjnjhsq 'nj ljrf;tn&",
+   "expected": "Я не уверен, что сброс кэша работает правильно, можешь написать тест, который это докажет?",
+   "outcome": "wrong",
+   "output": "Я не уверен, что сброс r'if работает правильно, можешь написать тест, который это докажет?",
+   "confidence": 0.9745
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "екн фпфшт",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "екн фпфшт",
+   "confidence": 0.8808
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "ірщц ьу еру вшаа",
+   "expected": "show me the diff",
+   "outcome": "missed",
+   "output": "ірщц ьу еру вшаа",
+   "confidence": 0.8218
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "црн,",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "црн,",
+   "confidence": 0.9054
+  },
+  {
+   "group": "full en->uk",
+   "config": "pair",
+   "input": "црн,",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "црн,",
+   "confidence": 0.9108
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "дуеєі вщ ше",
+   "expected": "let's do it",
+   "outcome": "missed",
+   "output": "дуеєі вщ ше",
+   "confidence": 0.5503
+  },
+  {
+   "group": "full en->uk",
+   "config": "pair",
+   "input": "дуеєі вщ ше",
+   "expected": "let's do it",
+   "outcome": "missed",
+   "output": "дуеєі вщ ше",
+   "confidence": 0.8865
+  },
+  {
+   "group": "full en->uk",
+   "config": "pair",
+   "input": "црфеєі туче,",
+   "expected": "what's next?",
+   "outcome": "missed",
+   "output": "црфеєі туче,",
+   "confidence": 0.883
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "Кутфьу еру мфкшфиду ещ іщьуерштп ьщку вуіскшзешмую",
+   "expected": "Rename the variable to something more descriptive.",
+   "outcome": "missed",
+   "output": "Кутфьу еру мфкшфиду ещ іщьуерштп ьщку вуіскшзешмую",
+   "confidence": 0.7403
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "Еру гздщфв афшді ащк ашдуі дфкпук ерфт ф ауц ьупфинеуію",
+   "expected": "The upload fails for files larger than a few megabytes.",
+   "outcome": "missed",
+   "output": "Еру гздщфв афшді ащк ашдуі дфкпук ерфт ф ауц ьупфинеуію",
+   "confidence": 0.8948
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "Фвв фт штвуч ещ ізуув гз ерші дщщлгзю",
+   "expected": "Add an index to speed up this lookup.",
+   "outcome": "missed",
+   "output": "Фвв фт штвуч ещ ізуув гз ерші дщщлгзю",
+   "confidence": 0.7517
+  },
+  {
+   "group": "full en->uk",
+   "config": "default",
+   "input": "Здуфіу фвв ф еуіе ерфе кузкщвгсуі еру игп ашкіею",
+   "expected": "Please add a test that reproduces the bug first.",
+   "outcome": "missed",
+   "output": "Здуфіу фвв ф еуіе ерфе кузкщвгсуі еру игп ашкіею",
+   "confidence": 0.8013
+  },
+  {
+   "group": "full uk->en-US",
+   "config": "default",
+   "input": "lzre.",
+   "expected": "дякую",
+   "outcome": "missed",
+   "output": "lzre.",
+   "confidence": 0.6686
+  },
+  {
+   "group": "full uk->en-US",
+   "config": "default",
+   "input": "ghjljd;eq",
+   "expected": "продовжуй",
+   "outcome": "missed",
+   "output": "ghjljd;eq",
+   "confidence": 0.8405
+  },
+  {
+   "group": "full uk->en-US",
+   "config": "default",
+   "input": "nfr? lfdfq",
+   "expected": "так, давай",
+   "outcome": "missed",
+   "output": "nfr? lfdfq",
+   "confidence": 0.8876
+  },
+  {
+   "group": "full en->ar",
+   "config": "default",
+   "input": "ساخص ةث فاث يهبب",
+   "expected": "show me the diff",
+   "outcome": "missed",
+   "output": "ساخص ةث فاث يهبب",
+   "confidence": 0.7881
+  },
+  {
+   "group": "full en->ar",
+   "config": "default",
+   "input": "صاغ؟",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "صاغ؟",
+   "confidence": 0.9958
+  },
+  {
+   "group": "full en->ar",
+   "config": "pair",
+   "input": "صاغ؟",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "صاغ؟",
+   "confidence": 0.9961
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "jhfu",
+   "expected": "تابع",
+   "outcome": "missed",
+   "output": "jhfu",
+   "confidence": 0.779
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "kulK jtqg",
+   "expected": "نعم، تفضل",
+   "outcome": "missed",
+   "output": "kulK jtqg",
+   "confidence": 0.8672
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "Hqt luhg[m gGo'hx uk] vtu hglgthj>",
+   "expected": "أضف معالجة للأخطاء عند رفع الملفات.",
+   "outcome": "wrong",
+   "output": "أضف معالجة gGo'hx عند رفع الملفات.",
+   "confidence": 0.991
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "Hqt luhg[m gGo'hx uk] vtu hglgthj>",
+   "expected": "أضف معالجة للأخطاء عند رفع الملفات.",
+   "outcome": "wrong",
+   "output": "أضف معالجة gGo'hx عند رفع الملفات.",
+   "confidence": 0.9808
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "hkj/vK Hpjh[ Hk Hjprr lk adx H,b>",
+   "expected": "انتظر، أحتاج أن أتحقق من شيء أولا.",
+   "outcome": "wrong",
+   "output": "hkj/vK أحتاج أن أتحقق من شيء أولا.",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "hkj/vK Hpjh[ Hk Hjprr lk adx H,b>",
+   "expected": "انتظر، أحتاج أن أتحقق من شيء أولا.",
+   "outcome": "wrong",
+   "output": "hkj/vK أحتاج أن أتحقق من شيء أولا.",
+   "confidence": 0.997
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "ig j,[] 'vdrm Hfs' gtug `g;?",
+   "expected": "هل توجد طريقة أبسط لفعل ذلك؟",
+   "outcome": "wrong",
+   "output": "ig j,[] طريقة أبسط لفعل ذلك؟",
+   "confidence": 0.9803
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "ig j,[] 'vdrm Hfs' gtug `g;?",
+   "expected": "هل توجد طريقة أبسط لفعل ذلك؟",
+   "outcome": "wrong",
+   "output": "ig j,[] طريقة أبسط لفعل ذلك؟",
+   "confidence": 0.9894
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "kjhz[ hgfpe wpdpm g;kih jsjyvr u]m e,hk pjn j/ivK tgk;jat Hdk dqdu hg,rj>",
+   "expected": "نتائج البحث صحيحة لكنها تستغرق عدة ثوان حتى تظهر، فلنكتشف أين يضيع الوقت.",
+   "outcome": "wrong",
+   "output": "نتائج البحث صحيحة لكنها تستغرق عدة ثوان حتى j/ivK فلنكتشف أين يضيع الوقت.",
+   "confidence": 0.9955
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "kjhz[ hgfpe wpdpm g;kih jsjyvr u]m e,hk pjn j/ivK tgk;jat Hdk dqdu hg,rj>",
+   "expected": "نتائج البحث صحيحة لكنها تستغرق عدة ثوان حتى تظهر، فلنكتشف أين يضيع الوقت.",
+   "outcome": "wrong",
+   "output": "نتائج البحث صحيحة لكنها تستغرق عدة ثوان حتى j/ivK فلنكتشف أين يضيع الوقت.",
+   "confidence": 0.9875
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "default",
+   "input": "hgl,/t hg[]d] df]H d,l hGp]K th;jf ]gdb ,hqph gjaydg hglav,u lpgdh>",
+   "expected": "الموظف الجديد يبدأ يوم الأحد، فاكتب دليلا واضحا لتشغيل المشروع محليا.",
+   "outcome": "wrong",
+   "output": "الموظف الجديد يبدأ يوم hGp]K فاكتب دليلا واضحا لتشغيل المشروع محليا.",
+   "confidence": 0.9858
+  },
+  {
+   "group": "full ar->en-US",
+   "config": "pair",
+   "input": "hgl,/t hg[]d] df]H d,l hGp]K th;jf ]gdb ,hqph gjaydg hglav,u lpgdh>",
+   "expected": "الموظف الجديد يبدأ يوم الأحد، فاكتب دليلا واضحا لتشغيل المشروع محليا.",
+   "outcome": "wrong",
+   "output": "الموظف الجديد يبدأ يوم hGp]K فاكتب دليلا واضحا لتشغيل المشروع محليا.",
+   "confidence": 0.9857
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "τρυ αγαιν",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "τρυ αγαιν",
+   "confidence": 0.6847
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "στοπ",
+   "expected": "stop",
+   "outcome": "missed",
+   "output": "στοπ",
+   "confidence": null
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "στοπ",
+   "expected": "stop",
+   "outcome": "missed",
+   "output": "στοπ",
+   "confidence": null
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "ςηυ?",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "ςηυ?",
+   "confidence": 0.9942
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "ςηυ?",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "ςηυ?",
+   "confidence": 0.9946
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "λετ'σ δο ιτ",
+   "expected": "let's do it",
+   "outcome": "missed",
+   "output": "λετ'σ δο ιτ",
+   "confidence": 0.8285
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Ψαν υοθ προφιλε τηε σταρτθπ τιμε?",
+   "expected": "Can you profile the startup time?",
+   "outcome": "missed",
+   "output": "Ψαν υοθ προφιλε τηε σταρτθπ τιμε?",
+   "confidence": 0.8508
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Φιχ τηε τυπο ιν τηε ςελψομε μεσσαγε.",
+   "expected": "Fix the typo in the welcome message.",
+   "outcome": "wrong",
+   "output": "Φιχ τηε τυπο in the welcome message.",
+   "confidence": 0.9687
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Σορρυ, Ι μεαντ τηε οτηερ φιλε.",
+   "expected": "Sorry, I meant the other file.",
+   "outcome": "wrong",
+   "output": "Worry, I meant the other file.",
+   "confidence": 0.9993
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Σορρυ, Ι μεαντ τηε οτηερ φιλε.",
+   "expected": "Sorry, I meant the other file.",
+   "outcome": "wrong",
+   "output": "Worry, I meant the other file.",
+   "confidence": 0.9853
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Σορρυ φορ τηε δελαυ, Ι γοτ πθλλεδ ιντο ανοτηερ μεετινγ ανδ ονλυ ξθστ σας υοθρ μεσσαγε.",
+   "expected": "Sorry for the delay, I got pulled into another meeting and only just saw your message.",
+   "outcome": "wrong",
+   "output": "Worry for the delay, I got pulled into another meeting and only just saw your message.",
+   "confidence": 0.9994
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Σορρυ φορ τηε δελαυ, Ι γοτ πθλλεδ ιντο ανοτηερ μεετινγ ανδ ονλυ ξθστ σας υοθρ μεσσαγε.",
+   "expected": "Sorry for the delay, I got pulled into another meeting and only just saw your message.",
+   "outcome": "wrong",
+   "output": "Worry for the delay, I got pulled into another meeting and only just saw your message.",
+   "confidence": 0.9953
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Σε κεεπ γεττινγ τιμεοθτσ φρομ τηε σηιππινγ προωιδερ, σο πλεασε αδδ α φαλλβαψκ ανδ σηος α ηελπφθλ μεσσαγε το τηε θσερ.",
+   "expected": "We keep getting timeouts from the shipping provider, so please add a fallback and show a helpful message to the user.",
+   "outcome": "wrong",
+   "output": "Se keep getting timeouts from the shipping provider, so please add a fallback and show a helpful message to the user.",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Σε κεεπ γεττινγ τιμεοθτσ φρομ τηε σηιππινγ προωιδερ, σο πλεασε αδδ α φαλλβαψκ ανδ σηος α ηελπφθλ μεσσαγε το τηε θσερ.",
+   "expected": "We keep getting timeouts from the shipping provider, so please add a fallback and show a helpful message to the user.",
+   "outcome": "wrong",
+   "output": "Se keep getting timeouts from the shipping provider, so please add a fallback and show a helpful message to the user.",
+   "confidence": 0.996
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Σε σηοθλδ προβαβλυ ταλκ αβοθτ τηε δεαδλινε, βεψαθσε Ι δον'τ τηινκ ςε ψαν φινιση αλλ οφ τηισ βυ τηε ενδ οφ τηε ςεεκ.",
+   "expected": "We should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.",
+   "outcome": "wrong",
+   "output": "Se should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Σε σηοθλδ προβαβλυ ταλκ αβοθτ τηε δεαδλινε, βεψαθσε Ι δον'τ τηινκ ςε ψαν φινιση αλλ οφ τηισ βυ τηε ενδ οφ τηε ςεεκ.",
+   "expected": "We should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.",
+   "outcome": "wrong",
+   "output": "Se should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.",
+   "confidence": 0.9967
+  },
+  {
+   "group": "full en->el",
+   "config": "default",
+   "input": "Σηο ςροτε τηισ παρτ, ανδ ςηυ ισ ιτ σο ψομπλιψατεδ?",
+   "expected": "Who wrote this part, and why is it so complicated?",
+   "outcome": "wrong",
+   "output": "Sho wrote this part, and why is it so complicated?",
+   "confidence": 0.9992
+  },
+  {
+   "group": "full en->el",
+   "config": "pair",
+   "input": "Σηο ςροτε τηισ παρτ, ανδ ςηυ ισ ιτ σο ψομπλιψατεδ?",
+   "expected": "Who wrote this part, and why is it so complicated?",
+   "outcome": "wrong",
+   "output": "Sho wrote this part, and why is it so complicated?",
+   "confidence": 0.9942
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "tr;eje ta test",
+   "expected": "τρέξε τα τεστ",
+   "outcome": "missed",
+   "output": "tr;eje ta test",
+   "confidence": 0.8007
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "ti ;egineq",
+   "expected": "τι έγινε;",
+   "outcome": "missed",
+   "output": "ti ;egineq",
+   "confidence": 0.8323
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "Pr;osuese xeirism;o sfalm;atvn sto an;ebasma arxe;ivn.",
+   "expected": "Πρόσθεσε χειρισμό σφαλμάτων στο ανέβασμα αρχείων.",
+   "outcome": "missed",
+   "output": "Pr;osuese xeirism;o sfalm;atvn sto an;ebasma arxe;ivn.",
+   "confidence": 0.8999
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": ";Allaje to ;onoma thw metablht;hw se k;ati pio saf;ew.",
+   "expected": "Άλλαξε το όνομα της μεταβλητής σε κάτι πιο σαφές.",
+   "outcome": "missed",
+   "output": ";Allaje to ;onoma thw metablht;hw se k;ati pio saf;ew.",
+   "confidence": 0.6987
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "Se parakal;v, mhn all;ajeiw th dhm;osia diepaf;h.",
+   "expected": "Σε παρακαλώ, μην αλλάξεις τη δημόσια διεπαφή.",
+   "outcome": "missed",
+   "output": "Se parakal;v, mhn all;ajeiw th dhm;osia diepaf;h.",
+   "confidence": 0.8547
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "Ta test perno;yn topik;a all;a apotygx;anoyn ston diakomist;h.",
+   "expected": "Τα τεστ περνούν τοπικά αλλά αποτυγχάνουν στον διακομιστή.",
+   "outcome": "wrong",
+   "output": "Ta τεστ περνούν τοπικά αλλά αποτυγχάνουν στον διακομιστή.",
+   "confidence": 0.9964
+  },
+  {
+   "group": "full el->en-US",
+   "config": "pair",
+   "input": "Ta test perno;yn topik;a all;a apotygx;anoyn ston diakomist;h.",
+   "expected": "Τα τεστ περνούν τοπικά αλλά αποτυγχάνουν στον διακομιστή.",
+   "outcome": "wrong",
+   "output": "Ta τεστ περνούν τοπικά αλλά αποτυγχάνουν στον διακομιστή.",
+   "confidence": 0.9964
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "Enhm;ervse thn tekmhr;ivsh gia th n;ea symperifor;a.",
+   "expected": "Ενημέρωσε την τεκμηρίωση για τη νέα συμπεριφορά.",
+   "outcome": "missed",
+   "output": "Enhm;ervse thn tekmhr;ivsh gia th n;ea symperifor;a.",
+   "confidence": 0.7557
+  },
+  {
+   "group": "full el->en-US",
+   "config": "default",
+   "input": "Met;a th xuesin;h sygx;vneysh ;arxisan na apotygx;anoyn ta test, brew poia allag;h to prok;alese kai pr;oteine l;ysh.",
+   "expected": "Μετά τη χθεσινή συγχώνευση άρχισαν να αποτυγχάνουν τα τεστ, βρες ποια αλλαγή το προκάλεσε και πρότεινε λύση.",
+   "outcome": "wrong",
+   "output": "Met;a th xuesin;h sygx;vneysh ;arxisan na apotygx;anoyn ta test, βρες ποια αλλαγή το προκάλεσε και πρότεινε λύση.",
+   "confidence": 0.9993
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ";erci",
+   "expected": "merci",
+   "outcome": "missed",
+   "output": ";erci",
+   "confidence": 0.9091
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "lqnce les tests",
+   "expected": "lance les tests",
+   "outcome": "missed",
+   "output": "lqnce les tests",
+   "confidence": 0.9982
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "ouim vqs6y",
+   "expected": "oui, vas-y",
+   "outcome": "missed",
+   "output": "ouim vqs6y",
+   "confidence": 0.582
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "c4est pqrfqit",
+   "expected": "c'est parfait",
+   "outcome": "missed",
+   "output": "c4est pqrfqit",
+   "confidence": 0.8566
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "r2essqie",
+   "expected": "réessaie",
+   "outcome": "missed",
+   "output": "r2essqie",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Corrige le test de connexion aui 2choue<",
+   "expected": "Corrige le test de connexion qui échoue.",
+   "outcome": "missed",
+   "output": "Corrige le test de connexion aui 2choue<",
+   "confidence": 0.619
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Pourauoi lq co;pilqtion plqnte sur lq brqnche principqle M",
+   "expected": "Pourquoi la compilation plante sur la branche principale ?",
+   "outcome": "missed",
+   "output": "Pourauoi lq co;pilqtion plqnte sur lq brqnche principqle M",
+   "confidence": 0.8359
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Écris des tests pour le ;odule de fqcturqtion<",
+   "expected": "Écris des tests pour le module de facturation.",
+   "outcome": "missed",
+   "output": "Écris des tests pour le ;odule de fqcturqtion<",
+   "confidence": 0.993
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Expliaue6;oi ce aue fqit cette fonction<",
+   "expected": "Explique-moi ce que fait cette fonction.",
+   "outcome": "missed",
+   "output": "Expliaue6;oi ce aue fqit cette fonction<",
+   "confidence": 0.9527
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Lq pqge ;et une 2ternit2 0 chqrgerm tu peux regqrder M",
+   "expected": "La page met une éternité à charger, tu peux regarder ?",
+   "outcome": "missed",
+   "output": "Lq pqge ;et une 2ternit2 0 chqrgerm tu peux regqrder M",
+   "confidence": 0.9917
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Qjoute une gestion d4erreurs lors de l4envoi des fichiers<",
+   "expected": "Ajoute une gestion d'erreurs lors de l'envoi des fichiers.",
+   "outcome": "missed",
+   "output": "Qjoute une gestion d4erreurs lors de l4envoi des fichiers<",
+   "confidence": 0.6077
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Reno;;e cette vqriqble qvec un no; plus clqir<",
+   "expected": "Renomme cette variable avec un nom plus clair.",
+   "outcome": "missed",
+   "output": "Reno;;e cette vqriqble qvec un no; plus clqir<",
+   "confidence": 0.9917
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Peux6tu relire ;es ;odificqtions qvqnt lq fusion M",
+   "expected": "Peux-tu relire mes modifications avant la fusion ?",
+   "outcome": "missed",
+   "output": "Peux6tu relire ;es ;odificqtions qvqnt lq fusion M",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "J4qi l4i;pression au4il y q une fuite de ;2;oire<",
+   "expected": "J'ai l'impression qu'il y a une fuite de mémoire.",
+   "outcome": "missed",
+   "output": "J4qi l4i;pression au4il y q une fuite de ;2;oire<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "D2coupe ce fichier en plusieurs ;odules plus petits<",
+   "expected": "Découpe ce fichier en plusieurs modules plus petits.",
+   "outcome": "missed",
+   "output": "D2coupe ce fichier en plusieurs ;odules plus petits<",
+   "confidence": 0.9134
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Aue veut dire ce ;essqge d4erreurm exqcte;ent M",
+   "expected": "Que veut dire ce message d'erreur, exactement ?",
+   "outcome": "missed",
+   "output": "Aue veut dire ce ;essqge d4erreurm exqcte;ent M",
+   "confidence": 0.9853
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Le ;enu d2roulqnt ne se fer;e pqs auqnd je cliaue qilleurs<",
+   "expected": "Le menu déroulant ne se ferme pas quand je clique ailleurs.",
+   "outcome": "missed",
+   "output": "Le ;enu d2roulqnt ne se fer;e pqs auqnd je cliaue qilleurs<",
+   "confidence": 0.9967
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ne touche surtout pqs 0 l4interfqce publiaue<",
+   "expected": "Ne touche surtout pas à l'interface publique.",
+   "outcome": "missed",
+   "output": "Ne touche surtout pqs 0 l4interfqce publiaue<",
+   "confidence": 0.9905
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "V2rifie au4on g7re bien une sqisie vide<",
+   "expected": "Vérifie qu'on gère bien une saisie vide.",
+   "outcome": "missed",
+   "output": "V2rifie au4on g7re bien une sqisie vide<",
+   "confidence": 0.8016
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ":ets 0 jour lq docu;entqtion pour refl2ter le nouvequ co;porte;ent<",
+   "expected": "Mets à jour la documentation pour refléter le nouveau comportement.",
+   "outcome": "missed",
+   "output": ":ets 0 jour lq docu;entqtion pour refl2ter le nouvequ co;porte;ent<",
+   "confidence": 0.9979
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Les tests pqssent chew ;oi ;qis 2chouent sur le serveur<",
+   "expected": "Les tests passent chez moi mais échouent sur le serveur.",
+   "outcome": "missed",
+   "output": "Les tests pqssent chew ;oi ;qis 2chouent sur le serveur<",
+   "confidence": 0.9998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Qssure6toi aue les ;ots de pqsse n4qppqrqissent pqs dqns les journqux<",
+   "expected": "Assure-toi que les mots de passe n'apparaissent pas dans les journaux.",
+   "outcome": "missed",
+   "output": "Qssure6toi aue les ;ots de pqsse n4qppqrqissent pqs dqns les journqux<",
+   "confidence": 0.9819
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ":ercim ton explicqtion ;4q bequcoup qid2<",
+   "expected": "Merci, ton explication m'a beaucoup aidé.",
+   "outcome": "missed",
+   "output": ":ercim ton explicqtion ;4q bequcoup qid2<",
+   "confidence": 0.9257
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Qttendsm je dois d4qbord v2rifier auelaue chose<",
+   "expected": "Attends, je dois d'abord vérifier quelque chose.",
+   "outcome": "missed",
+   "output": "Qttendsm je dois d4qbord v2rifier auelaue chose<",
+   "confidence": 0.9027
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tu qs pqss2 un bon zeek6end M",
+   "expected": "Tu as passé un bon week-end ?",
+   "outcome": "missed",
+   "output": "Tu qs pqss2 un bon zeek6end M",
+   "confidence": 0.9927
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Peux6tu ;4expliauer 2tqpe pqr 2tqpe co;;ent fonctionne lq connexionm 0 pqrtir du ;o;ent o' l4utilisqteur cliaue sur le bouton M",
+   "expected": "Peux-tu m'expliquer étape par étape comment fonctionne la connexion, à partir du moment où l'utilisateur clique sur le bouton ?",
+   "outcome": "missed",
+   "output": "Peux6tu ;4expliauer 2tqpe pqr 2tqpe co;;ent fonctionne lq connexionm 0 pqrtir du ;o;ent o' l4utilisqteur cliaue sur le bouton M",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Depuis lq fusion d4hierm les tests d4int2grqtion 2chouentm trouve lq ;odificqtion responsqble et propose une correction<",
+   "expected": "Depuis la fusion d'hier, les tests d'intégration échouent, trouve la modification responsable et propose une correction.",
+   "outcome": "missed",
+   "output": "Depuis lq fusion d4hierm les tests d4int2grqtion 2chouentm trouve lq ;odificqtion responsqble et propose une correction<",
+   "confidence": 0.9995
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Qvqnt lq ;ise en productionm lqnce tous les testsm pqrcours les journqux et dis6;oi si auelaue chose te pqrq[it biwqrre<",
+   "expected": "Avant la mise en production, lance tous les tests, parcours les journaux et dis-moi si quelque chose te paraît bizarre.",
+   "outcome": "missed",
+   "output": "Qvqnt lq ;ise en productionm lqnce tous les testsm pqrcours les journqux et dis6;oi si auelaue chose te pqrq[it biwqrre<",
+   "confidence": 0.9567
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ":erci d4[etre rest2 tqrd hier soirm lq ;ise 0 jour s4est tr7s bien pqss2e et les clients sont d2j0 rqvis<",
+   "expected": "Merci d'être resté tard hier soir, la mise à jour s'est très bien passée et les clients sont déjà ravis.",
+   "outcome": "missed",
+   "output": ":erci d4[etre rest2 tqrd hier soirm lq ;ise 0 jour s4est tr7s bien pqss2e et les clients sont d2j0 rqvis<",
+   "confidence": 0.9979
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thqnks",
+   "expected": "thanks",
+   "outcome": "missed",
+   "output": "thqnks",
+   "confidence": 0.9602
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "yes; go qheqd",
+   "expected": "yes, go ahead",
+   "outcome": "missed",
+   "output": "yes; go qheqd",
+   "confidence": 0.9988
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "try qgqin",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "try qgqin",
+   "confidence": 0.9973
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "perfect; thqnk you",
+   "expected": "perfect, thank you",
+   "outcome": "missed",
+   "output": "perfect; thqnk you",
+   "confidence": 0.9965
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "nice zork",
+   "expected": "nice work",
+   "outcome": "missed",
+   "output": "nice zork",
+   "confidence": 0.9908
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "not auite",
+   "expected": "not quite",
+   "outcome": "missed",
+   "output": "not auite",
+   "confidence": 0.9924
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "undo thqt",
+   "expected": "undo that",
+   "outcome": "missed",
+   "output": "undo thqt",
+   "confidence": 0.9964
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "explqin this",
+   "expected": "explain this",
+   "outcome": "missed",
+   "output": "explqin this",
+   "confidence": 0.9969
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "good ,orning",
+   "expected": "good morning",
+   "outcome": "missed",
+   "output": "good ,orning",
+   "confidence": 0.992
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "zhqt hqppened§",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "zhqt hqppened§",
+   "confidence": 0.9939
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "shoz ,e the diff",
+   "expected": "show me the diff",
+   "outcome": "missed",
+   "output": "shoz ,e the diff",
+   "confidence": 0.9962
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "co,,it pleqse",
+   "expected": "commit please",
+   "outcome": "missed",
+   "output": "co,,it pleqse",
+   "confidence": 0.9975
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "qny auestions§",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "qny auestions§",
+   "confidence": 0.9884
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "zhy§",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "zhy§",
+   "confidence": 0.997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "roll it bqck",
+   "expected": "roll it back",
+   "outcome": "missed",
+   "output": "roll it bqck",
+   "confidence": 0.9987
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ",uch better",
+   "expected": "much better",
+   "outcome": "missed",
+   "output": ",uch better",
+   "confidence": 0.9925
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thqtùs zrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thqtùs zrong",
+   "confidence": 0.9488
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "reviez this",
+   "expected": "review this",
+   "outcome": "missed",
+   "output": "reviez this",
+   "confidence": 0.9892
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "h,,; interesting",
+   "expected": "hmm, interesting",
+   "outcome": "missed",
+   "output": "h,,; interesting",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ",erge it",
+   "expected": "merge it",
+   "outcome": "missed",
+   "output": ",erge it",
+   "confidence": 0.906
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "never ,ind",
+   "expected": "never mind",
+   "outcome": "missed",
+   "output": "never ,ind",
+   "confidence": 0.9881
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "f[hr die Tests aus",
+   "expected": "führ die Tests aus",
+   "outcome": "missed",
+   "output": "f[hr die Tests aus",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Warum bricht das Kompilieren auf dem Hauptyweig ab_",
+   "expected": "Warum bricht das Kompilieren auf dem Hauptzweig ab?",
+   "outcome": "missed",
+   "output": "Warum bricht das Kompilieren auf dem Hauptyweig ab_",
+   "confidence": 0.5763
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Schreib Tests f[r den Yahlungsdienst.",
+   "expected": "Schreib Tests für den Zahlungsdienst.",
+   "outcome": "missed",
+   "output": "Schreib Tests f[r den Yahlungsdienst.",
+   "confidence": 0.9916
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Erkl'r mir bitte, was diese Funktion macht.",
+   "expected": "Erklär mir bitte, was diese Funktion macht.",
+   "outcome": "missed",
+   "output": "Erkl'r mir bitte, was diese Funktion macht.",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Die Seite l'dt extrem langsam, kannst du nachsehen_",
+   "expected": "Die Seite lädt extrem langsam, kannst du nachsehen?",
+   "outcome": "missed",
+   "output": "Die Seite l'dt extrem langsam, kannst du nachsehen_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "F[ge eine Fehlerbehandlung beim Hochladen hinyu.",
+   "expected": "Füge eine Fehlerbehandlung beim Hochladen hinzu.",
+   "outcome": "missed",
+   "output": "F[ge eine Fehlerbehandlung beim Hochladen hinyu.",
+   "confidence": 0.928
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Benenne die Variable um, damit sie verst'ndlicher ist.",
+   "expected": "Benenne die Variable um, damit sie verständlicher ist.",
+   "outcome": "missed",
+   "output": "Benenne die Variable um, damit sie verst'ndlicher ist.",
+   "confidence": 0.8212
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kannst du dir meine \"nderungen vor dem Yusammenf[hren ansehen_",
+   "expected": "Kannst du dir meine Änderungen vor dem Zusammenführen ansehen?",
+   "outcome": "missed",
+   "output": "Kannst du dir meine \"nderungen vor dem Yusammenf[hren ansehen_",
+   "confidence": 0.9955
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Was bedeutet diese Fehlermeldung genau_",
+   "expected": "Was bedeutet diese Fehlermeldung genau?",
+   "outcome": "missed",
+   "output": "Was bedeutet diese Fehlermeldung genau_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Das Men[ schlie-t sich nicht, wenn ich daneben klicke.",
+   "expected": "Das Menü schließt sich nicht, wenn ich daneben klicke.",
+   "outcome": "missed",
+   "output": "Das Men[ schlie-t sich nicht, wenn ich daneben klicke.",
+   "confidence": 0.9958
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bitte 'ndere die ;ffentliche Schnittstelle nicht.",
+   "expected": "Bitte ändere die öffentliche Schnittstelle nicht.",
+   "outcome": "missed",
+   "output": "Bitte 'ndere die ;ffentliche Schnittstelle nicht.",
+   "confidence": 0.9315
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Pr[f, ob leere Eingaben richtig behandelt werden.",
+   "expected": "Prüf, ob leere Eingaben richtig behandelt werden.",
+   "outcome": "missed",
+   "output": "Pr[f, ob leere Eingaben richtig behandelt werden.",
+   "confidence": 0.9961
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Aktualisiere die Dokumentation f[r das neue Verhalten.",
+   "expected": "Aktualisiere die Dokumentation für das neue Verhalten.",
+   "outcome": "missed",
+   "output": "Aktualisiere die Dokumentation f[r das neue Verhalten.",
+   "confidence": 0.9974
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Stell sicher, dass keine Passw;rter in den Protokollen landen.",
+   "expected": "Stell sicher, dass keine Passwörter in den Protokollen landen.",
+   "outcome": "missed",
+   "output": "Stell sicher, dass keine Passw;rter in den Protokollen landen.",
+   "confidence": 0.989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Danke, die Erkl'rung hat mir sehr geholfen.",
+   "expected": "Danke, die Erklärung hat mir sehr geholfen.",
+   "outcome": "missed",
+   "output": "Danke, die Erkl'rung hat mir sehr geholfen.",
+   "confidence": 0.9993
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Moment, ich muss kury etwas [berpr[fen.",
+   "expected": "Moment, ich muss kurz etwas überprüfen.",
+   "outcome": "missed",
+   "output": "Moment, ich muss kury etwas [berpr[fen.",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Wie war dein Wochenende_",
+   "expected": "Wie war dein Wochenende?",
+   "outcome": "missed",
+   "output": "Wie war dein Wochenende_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kannst du mir Schritt f[r Schritt erkl'ren, wie die Anmeldung funktioniert, sobald der Nutyer auf den Knopf dr[ckt_",
+   "expected": "Kannst du mir Schritt für Schritt erklären, wie die Anmeldung funktioniert, sobald der Nutzer auf den Knopf drückt?",
+   "outcome": "missed",
+   "output": "Kannst du mir Schritt f[r Schritt erkl'ren, wie die Anmeldung funktioniert, sobald der Nutyer auf den Knopf dr[ckt_",
+   "confidence": 0.9993
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Seit dem gestrigen Yusammenf[hren schlagen die Integrationstests fehl, finde die Ursache und schlag eine L;sung vor.",
+   "expected": "Seit dem gestrigen Zusammenführen schlagen die Integrationstests fehl, finde die Ursache und schlag eine Lösung vor.",
+   "outcome": "missed",
+   "output": "Seit dem gestrigen Yusammenf[hren schlagen die Integrationstests fehl, finde die Ursache und schlag eine L;sung vor.",
+   "confidence": 0.9976
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Vor der Ver;ffentlichung lass bitte alle Tests laufen, schau dir die Protokolle an und sag mir, wenn dir etwas komisch vorkommt.",
+   "expected": "Vor der Veröffentlichung lass bitte alle Tests laufen, schau dir die Protokolle an und sag mir, wenn dir etwas komisch vorkommt.",
+   "outcome": "missed",
+   "output": "Vor der Ver;ffentlichung lass bitte alle Tests laufen, schau dir die Protokolle an und sag mir, wenn dir etwas komisch vorkommt.",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Danke, dass du gestern so lange geblieben bist, die Ver;ffentlichung lief reibungslos und die Kunden sind schon begeistert.",
+   "expected": "Danke, dass du gestern so lange geblieben bist, die Veröffentlichung lief reibungslos und die Kunden sind schon begeistert.",
+   "outcome": "missed",
+   "output": "Danke, dass du gestern so lange geblieben bist, die Ver;ffentlichung lief reibungslos und die Kunden sind schon begeistert.",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "zes, go ahead",
+   "expected": "yes, go ahead",
+   "outcome": "missed",
+   "output": "zes, go ahead",
+   "confidence": 0.9788
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "trz again",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "trz again",
+   "confidence": 0.9912
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "perfect, thank zou",
+   "expected": "perfect, thank you",
+   "outcome": "missed",
+   "output": "perfect, thank zou",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "anz questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "anz questions_",
+   "confidence": 0.9748
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "whz_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "whz_",
+   "confidence": 0.9988
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatäs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatäs wrong",
+   "confidence": 0.9719
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "deploz it",
+   "expected": "deploy it",
+   "outcome": "missed",
+   "output": "deploz it",
+   "confidence": 0.9432
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "s'i, adelante",
+   "expected": "sí, adelante",
+   "outcome": "missed",
+   "output": "s'i, adelante",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "int'entalo de nuevo",
+   "expected": "inténtalo de nuevo",
+   "outcome": "missed",
+   "output": "int'entalo de nuevo",
+   "confidence": 0.9982
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Arregla la prueba de inicio de sesi'on que falla.",
+   "expected": "Arregla la prueba de inicio de sesión que falla.",
+   "outcome": "missed",
+   "output": "Arregla la prueba de inicio de sesi'on que falla.",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "+Por qu'e falla la compilaci'on en la rama principal_",
+   "expected": "¿Por qué falla la compilación en la rama principal?",
+   "outcome": "missed",
+   "output": "+Por qu'e falla la compilaci'on en la rama principal_",
+   "confidence": 0.9799
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Expl'icame qu'e hace esta funci'on.",
+   "expected": "Explícame qué hace esta función.",
+   "outcome": "missed",
+   "output": "Expl'icame qu'e hace esta funci'on.",
+   "confidence": 0.992
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "La p'agina tarda much'isimo en cargar, +puedes revisarlo_",
+   "expected": "La página tarda muchísimo en cargar, ¿puedes revisarlo?",
+   "outcome": "missed",
+   "output": "La p'agina tarda much'isimo en cargar, +puedes revisarlo_",
+   "confidence": 0.999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "A;ade manejo de errores al subir archivos.",
+   "expected": "Añade manejo de errores al subir archivos.",
+   "outcome": "missed",
+   "output": "A;ade manejo de errores al subir archivos.",
+   "confidence": 0.9995
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Cambia el nombre de la variable por uno m'as claro.",
+   "expected": "Cambia el nombre de la variable por uno más claro.",
+   "outcome": "missed",
+   "output": "Cambia el nombre de la variable por uno m'as claro.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "+Puedes revisar mis cambios antes de fusionarlos_",
+   "expected": "¿Puedes revisar mis cambios antes de fusionarlos?",
+   "outcome": "missed",
+   "output": "+Puedes revisar mis cambios antes de fusionarlos_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Creo que hay una fuga de memoria por aqu'i.",
+   "expected": "Creo que hay una fuga de memoria por aquí.",
+   "outcome": "missed",
+   "output": "Creo que hay una fuga de memoria por aqu'i.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Divide este archivo en m'odulos m'as peque;os.",
+   "expected": "Divide este archivo en módulos más pequeños.",
+   "outcome": "missed",
+   "output": "Divide este archivo en m'odulos m'as peque;os.",
+   "confidence": 0.9898
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "+Qu'e significa exactamente este mensaje de error_",
+   "expected": "¿Qué significa exactamente este mensaje de error?",
+   "outcome": "missed",
+   "output": "+Qu'e significa exactamente este mensaje de error_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "El men'u desplegable no se cierra al hacer clic fuera.",
+   "expected": "El menú desplegable no se cierra al hacer clic fuera.",
+   "outcome": "missed",
+   "output": "El men'u desplegable no se cierra al hacer clic fuera.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Por favor, no cambies la interfaz p'ublica.",
+   "expected": "Por favor, no cambies la interfaz pública.",
+   "outcome": "missed",
+   "output": "Por favor, no cambies la interfaz p'ublica.",
+   "confidence": 0.9988
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Comprueba que manejamos bien una entrada vac'ia.",
+   "expected": "Comprueba que manejamos bien una entrada vacía.",
+   "outcome": "missed",
+   "output": "Comprueba que manejamos bien una entrada vac'ia.",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Actualiza la documentaci'on seg'un el nuevo comportamiento.",
+   "expected": "Actualiza la documentación según el nuevo comportamiento.",
+   "outcome": "missed",
+   "output": "Actualiza la documentaci'on seg'un el nuevo comportamiento.",
+   "confidence": 0.9945
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "En mi m'aquina las pruebas pasan, pero en el servidor fallan.",
+   "expected": "En mi máquina las pruebas pasan, pero en el servidor fallan.",
+   "outcome": "missed",
+   "output": "En mi m'aquina las pruebas pasan, pero en el servidor fallan.",
+   "confidence": 0.9987
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Aseg'urate de que las contrase;as no aparezcan en los registros.",
+   "expected": "Asegúrate de que las contraseñas no aparezcan en los registros.",
+   "outcome": "missed",
+   "output": "Aseg'urate de que las contrase;as no aparezcan en los registros.",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Gracias, la explicaci'on me ayud'o un mont'on.",
+   "expected": "Gracias, la explicación me ayudó un montón.",
+   "outcome": "missed",
+   "output": "Gracias, la explicaci'on me ayud'o un mont'on.",
+   "confidence": 0.9962
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "+Qu'e tal el fin de semana_",
+   "expected": "¿Qué tal el fin de semana?",
+   "outcome": "missed",
+   "output": "+Qu'e tal el fin de semana_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "+Me puedes explicar paso a paso c'omo funciona el inicio de sesi'on desde que el usuario pulsa el bot'on_",
+   "expected": "¿Me puedes explicar paso a paso cómo funciona el inicio de sesión desde que el usuario pulsa el botón?",
+   "outcome": "missed",
+   "output": "+Me puedes explicar paso a paso c'omo funciona el inicio de sesi'on desde que el usuario pulsa el bot'on_",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Desde la fusi'on de ayer fallan las pruebas de integraci'on, busca qu'e cambio lo provoc'o y prop'on una soluci'on.",
+   "expected": "Desde la fusión de ayer fallan las pruebas de integración, busca qué cambio lo provocó y propón una solución.",
+   "outcome": "missed",
+   "output": "Desde la fusi'on de ayer fallan las pruebas de integraci'on, busca qu'e cambio lo provoc'o y prop'on una soluci'on.",
+   "confidence": 0.9948
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Antes de pasar a producci'on, ejecuta todas las pruebas, revisa los registros y av'isame si algo te parece raro.",
+   "expected": "Antes de pasar a producción, ejecuta todas las pruebas, revisa los registros y avísame si algo te parece raro.",
+   "outcome": "missed",
+   "output": "Antes de pasar a producci'on, ejecuta todas las pruebas, revisa los registros y av'isame si algo te parece raro.",
+   "confidence": 0.999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Gracias por quedarte hasta tarde ayer, el lanzamiento sali'o perfecto y los clientes ya est'an encantados.",
+   "expected": "Gracias por quedarte hasta tarde ayer, el lanzamiento salió perfecto y los clientes ya están encantados.",
+   "outcome": "missed",
+   "output": "Gracias por quedarte hasta tarde ayer, el lanzamiento sali'o perfecto y los clientes ya est'an encantados.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatś wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatś wrong",
+   "confidence": 0.9839
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "s=, vai pure",
+   "expected": "sì, vai pure",
+   "outcome": "missed",
+   "output": "s=, vai pure",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Perch{ la compilazione si rompe sul ramo principale_",
+   "expected": "Perché la compilazione si rompe sul ramo principale?",
+   "outcome": "missed",
+   "output": "Perch{ la compilazione si rompe sul ramo principale_",
+   "confidence": 0.7512
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "La pagina [ lentissima a caricare, puoi controllare_",
+   "expected": "La pagina è lentissima a caricare, puoi controllare?",
+   "outcome": "missed",
+   "output": "La pagina [ lentissima a caricare, puoi controllare_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Rinomina la variabile con un nome pi\\ chiaro.",
+   "expected": "Rinomina la variabile con un nome più chiaro.",
+   "outcome": "missed",
+   "output": "Rinomina la variabile con un nome pi\\ chiaro.",
+   "confidence": 0.9937
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Puoi rivedere le mie modifiche prima dell-unione_",
+   "expected": "Puoi rivedere le mie modifiche prima dell'unione?",
+   "outcome": "missed",
+   "output": "Puoi rivedere le mie modifiche prima dell-unione_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Dividi questo file in moduli pi\\ piccoli.",
+   "expected": "Dividi questo file in moduli più piccoli.",
+   "outcome": "missed",
+   "output": "Dividi questo file in moduli pi\\ piccoli.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Che cosa significa esattamente questo messaggio d-errore_",
+   "expected": "Che cosa significa esattamente questo messaggio d'errore?",
+   "outcome": "missed",
+   "output": "Che cosa significa esattamente questo messaggio d-errore_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Per favore, non toccare l-interfaccia pubblica.",
+   "expected": "Per favore, non toccare l'interfaccia pubblica.",
+   "outcome": "missed",
+   "output": "Per favore, non toccare l-interfaccia pubblica.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Grazie, la spiegazione mi [ stata molto utile.",
+   "expected": "Grazie, la spiegazione mi è stata molto utile.",
+   "outcome": "missed",
+   "output": "Grazie, la spiegazione mi [ stata molto utile.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Com-[ andato il fine settimana_",
+   "expected": "Com'è andato il fine settimana?",
+   "outcome": "missed",
+   "output": "Com-[ andato il fine settimana_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Mi spieghi passo dopo passo come funziona l-accesso, dal momento in cui l-utente preme il pulsante_",
+   "expected": "Mi spieghi passo dopo passo come funziona l'accesso, dal momento in cui l'utente preme il pulsante?",
+   "outcome": "missed",
+   "output": "Mi spieghi passo dopo passo come funziona l-accesso, dal momento in cui l-utente preme il pulsante_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Da ieri, dopo l-unione, i test di integrazione falliscono, trova la modifica responsabile e proponi una correzione.",
+   "expected": "Da ieri, dopo l'unione, i test di integrazione falliscono, trova la modifica responsabile e proponi una correzione.",
+   "outcome": "missed",
+   "output": "Da ieri, dopo l-unione, i test di integrazione falliscono, trova la modifica responsabile e proponi una correzione.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Grazie per essere rimasto fino a tardi ieri, il rilascio [ andato liscio e i clienti sono gi' contenti.",
+   "expected": "Grazie per essere rimasto fino a tardi ieri, il rilascio è andato liscio e i clienti sono già contenti.",
+   "outcome": "missed",
+   "output": "Grazie per essere rimasto fino a tardi ieri, il rilascio [ andato liscio e i clienti sono gi' contenti.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatàs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatàs wrong",
+   "confidence": 0.9786
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "est]a ]otimo",
+   "expected": "está ótimo",
+   "outcome": "missed",
+   "output": "est]a ]otimo",
+   "confidence": 0.9852
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Corrige o teste de acesso que est]a a falhar.",
+   "expected": "Corrige o teste de acesso que está a falhar.",
+   "outcome": "missed",
+   "output": "Corrige o teste de acesso que est]a a falhar.",
+   "confidence": 0.9919
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Por que ]e que a compila;\\ao falha no ramo principal_",
+   "expected": "Por que é que a compilação falha no ramo principal?",
+   "outcome": "missed",
+   "output": "Por que ]e que a compila;\\ao falha no ramo principal_",
+   "confidence": 0.9963
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Escreve testes para o servi;o de pagamentos.",
+   "expected": "Escreve testes para o serviço de pagamentos.",
+   "outcome": "missed",
+   "output": "Escreve testes para o servi;o de pagamentos.",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Me explica o que essa fun;\\ao faz.",
+   "expected": "Me explica o que essa função faz.",
+   "outcome": "missed",
+   "output": "Me explica o que essa fun;\\ao faz.",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "A p]agina est]a demorando demais para carregar, pode ver_",
+   "expected": "A página está demorando demais para carregar, pode ver?",
+   "outcome": "missed",
+   "output": "A p]agina est]a demorando demais para carregar, pode ver_",
+   "confidence": 0.9995
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Renomeia essa vari]avel para algo mais claro.",
+   "expected": "Renomeia essa variável para algo mais claro.",
+   "outcome": "missed",
+   "output": "Renomeia essa vari]avel para algo mais claro.",
+   "confidence": 0.9862
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Voc|e pode revisar minhas altera;\\oes antes da jun;\\ao_",
+   "expected": "Você pode revisar minhas alterações antes da junção?",
+   "outcome": "missed",
+   "output": "Voc|e pode revisar minhas altera;\\oes antes da jun;\\ao_",
+   "confidence": 0.9966
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Acho que h]a uma fuga de mem]oria algures aqui.",
+   "expected": "Acho que há uma fuga de memória algures aqui.",
+   "outcome": "missed",
+   "output": "Acho que h]a uma fuga de mem]oria algures aqui.",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Divide este ficheiro em m]odulos mais pequenos.",
+   "expected": "Divide este ficheiro em módulos mais pequenos.",
+   "outcome": "missed",
+   "output": "Divide este ficheiro em m]odulos mais pequenos.",
+   "confidence": 0.9843
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "O que significa exatamente essa mensagem de erro_",
+   "expected": "O que significa exatamente essa mensagem de erro?",
+   "outcome": "missed",
+   "output": "O que significa exatamente essa mensagem de erro_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "O menu suspenso n\\ao fecha quando clico fora dele.",
+   "expected": "O menu suspenso não fecha quando clico fora dele.",
+   "outcome": "missed",
+   "output": "O menu suspenso n\\ao fecha quando clico fora dele.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Por favor, n\\ao mexa na interface p]ublica.",
+   "expected": "Por favor, não mexa na interface pública.",
+   "outcome": "missed",
+   "output": "Por favor, n\\ao mexa na interface p]ublica.",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Atualize a documenta;\\ao de acordo com o novo comportamento.",
+   "expected": "Atualize a documentação de acordo com o novo comportamento.",
+   "outcome": "missed",
+   "output": "Atualize a documenta;\\ao de acordo com o novo comportamento.",
+   "confidence": 0.9968
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Na minha m]aquina os testes passam, mas no servidor falham.",
+   "expected": "Na minha máquina os testes passam, mas no servidor falham.",
+   "outcome": "missed",
+   "output": "Na minha m]aquina os testes passam, mas no servidor falham.",
+   "confidence": 0.9988
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Garante que as palavras/passe n\\ao aparecem nos registos.",
+   "expected": "Garante que as palavras-passe não aparecem nos registos.",
+   "outcome": "missed",
+   "output": "Garante que as palavras/passe n\\ao aparecem nos registos.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Valeu, a explica;\\ao ajudou muito.",
+   "expected": "Valeu, a explicação ajudou muito.",
+   "outcome": "missed",
+   "output": "Valeu, a explica;\\ao ajudou muito.",
+   "confidence": 0.9996
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Espera a]i, preciso conferir uma coisa antes.",
+   "expected": "Espera aí, preciso conferir uma coisa antes.",
+   "outcome": "missed",
+   "output": "Espera a]i, preciso conferir uma coisa antes.",
+   "confidence": 0.9998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Como foi o fim de semana_",
+   "expected": "Como foi o fim de semana?",
+   "outcome": "missed",
+   "output": "Como foi o fim de semana_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Voc|e consegue me explicar passo a passo como funciona o acesso, desde o momento em que o usu]ario clica no bot\\ao_",
+   "expected": "Você consegue me explicar passo a passo como funciona o acesso, desde o momento em que o usuário clica no botão?",
+   "outcome": "missed",
+   "output": "Voc|e consegue me explicar passo a passo como funciona o acesso, desde o momento em que o usu]ario clica no bot\\ao_",
+   "confidence": 0.9738
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Desde a jun;\\ao de ontem os testes de integra;\\ao est\\ao a falhar, descobre qual altera;\\ao causou isto e prop\\oe uma corre;\\ao.",
+   "expected": "Desde a junção de ontem os testes de integração estão a falhar, descobre qual alteração causou isto e propõe uma correção.",
+   "outcome": "missed",
+   "output": "Desde a jun;\\ao de ontem os testes de integra;\\ao est\\ao a falhar, descobre qual altera;\\ao causou isto e prop\\oe uma corre;\\ao.",
+   "confidence": 0.9995
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Antes de subir para produ;\\ao, roda todos os testes, d]a uma olhada nos registros e me avisa se algo parecer estranho.",
+   "expected": "Antes de subir para produção, roda todos os testes, dá uma olhada nos registros e me avisa se algo parecer estranho.",
+   "outcome": "missed",
+   "output": "Antes de subir para produ;\\ao, roda todos os testes, d]a uma olhada nos registros e me avisa se algo parecer estranho.",
+   "confidence": 0.9994
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Obrigado por teres ficado at]e tarde ontem, o lan;amento correu bem e os clientes j]a est\\ao satisfeitos.",
+   "expected": "Obrigado por teres ficado até tarde ontem, o lançamento correu bem e os clientes já estão satisfeitos.",
+   "outcome": "missed",
+   "output": "Obrigado por teres ficado at]e tarde ontem, o lan;amento correu bem e os clientes j]a est\\ao satisfeitos.",
+   "confidence": 0.9992
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatºs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatºs wrong",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "te;ekk]rler",
+   "expected": "teşekkürler",
+   "outcome": "missed",
+   "output": "te;ekk]rler",
+   "confidence": 0.9976
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "testler' .ali;tir",
+   "expected": "testleri çalıştır",
+   "outcome": "missed",
+   "output": "testler' .ali;tir",
+   "confidence": 0.9579
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "evet\\ devam",
+   "expected": "evet, devam",
+   "outcome": "missed",
+   "output": "evet\\ devam",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "g]zel g,r]n]yor",
+   "expected": "güzel görünüyor",
+   "outcome": "missed",
+   "output": "g]zel g,r]n]yor",
+   "confidence": 0.9996
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ba;arisiz olan g'r'; test'n' d]zelt/",
+   "expected": "Başarısız olan giriş testini düzelt.",
+   "outcome": "missed",
+   "output": "Ba;arisiz olan g'r'; test'n' d]zelt/",
+   "confidence": 0.9982
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ana dalda derleme neden ba;arisiz oluyor_",
+   "expected": "Ana dalda derleme neden başarısız oluyor?",
+   "outcome": "missed",
+   "output": "Ana dalda derleme neden ba;arisiz oluyor_",
+   "confidence": 0.9743
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "<deme serv's' '.'n testler yaz/",
+   "expected": "Ödeme servisi için testler yaz.",
+   "outcome": "missed",
+   "output": "<deme serv's' '.'n testler yaz/",
+   "confidence": 0.9992
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bu fonks'yonun ne yapti[ini a.iklar misin_",
+   "expected": "Bu fonksiyonun ne yaptığını açıklar mısın?",
+   "outcome": "missed",
+   "output": "Bu fonks'yonun ne yapti[ini a.iklar misin_",
+   "confidence": 0.9941
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sayfa .ok yava; y]klen'yor\\ bakab'l'r m's'n_",
+   "expected": "Sayfa çok yavaş yükleniyor, bakabilir misin?",
+   "outcome": "missed",
+   "output": "Sayfa .ok yava; y]klen'yor\\ bakab'l'r m's'n_",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Dosya y]klerken hata y,net'm' ekle/",
+   "expected": "Dosya yüklerken hata yönetimi ekle.",
+   "outcome": "missed",
+   "output": "Dosya y]klerken hata y,net'm' ekle/",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bu de[';kene daha anla;ilir b'r 's'm ver/",
+   "expected": "Bu değişkene daha anlaşılır bir isim ver.",
+   "outcome": "missed",
+   "output": "Bu de[';kene daha anla;ilir b'r 's'm ver/",
+   "confidence": 0.9988
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "B'rle;t'rmeden ,nce de[';'kl'kler'me g,z atar misin_",
+   "expected": "Birleştirmeden önce değişikliklerime göz atar mısın?",
+   "outcome": "missed",
+   "output": "B'rle;t'rmeden ,nce de[';'kl'kler'me g,z atar misin_",
+   "confidence": 0.9998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sanirim burada b'r yerde bellek sizintisi var/",
+   "expected": "Sanırım burada bir yerde bellek sızıntısı var.",
+   "outcome": "missed",
+   "output": "Sanirim burada b'r yerde bellek sizintisi var/",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bu dosyayi daha k].]k par.alara b,l/",
+   "expected": "Bu dosyayı daha küçük parçalara böl.",
+   "outcome": "missed",
+   "output": "Bu dosyayi daha k].]k par.alara b,l/",
+   "confidence": 0.9983
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bu hata mesaji tam olarak ne anlama gel'yor_",
+   "expected": "Bu hata mesajı tam olarak ne anlama geliyor?",
+   "outcome": "missed",
+   "output": "Bu hata mesaji tam olarak ne anlama gel'yor_",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "A.ilir men] di;ari tiklayinca kapanmiyor/",
+   "expected": "Açılır menü dışarı tıklayınca kapanmıyor.",
+   "outcome": "missed",
+   "output": "A.ilir men] di;ari tiklayinca kapanmiyor/",
+   "confidence": 0.9912
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "L]tfen genel aray]z] de[';t'rme/",
+   "expected": "Lütfen genel arayüzü değiştirme.",
+   "outcome": "missed",
+   "output": "L]tfen genel aray]z] de[';t'rme/",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Bo; g'r';' do[ru ';ley'p ';lemed'['m'z' kontrol et/",
+   "expected": "Boş girişi doğru işleyip işlemediğimizi kontrol et.",
+   "outcome": "missed",
+   "output": "Bo; g'r';' do[ru ';ley'p ';lemed'['m'z' kontrol et/",
+   "confidence": 0.9998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Belgeler' yen' davrani;a g,re g]ncelle/",
+   "expected": "Belgeleri yeni davranışa göre güncelle.",
+   "outcome": "missed",
+   "output": "Belgeler' yen' davrani;a g,re g]ncelle/",
+   "confidence": 0.9857
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Testler bende ge.'yor ama sunucuda ba;arisiz oluyor/",
+   "expected": "Testler bende geçiyor ama sunucuda başarısız oluyor.",
+   "outcome": "missed",
+   "output": "Testler bende ge.'yor ama sunucuda ba;arisiz oluyor/",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": ":'freler'n g]nl]klere yazilmadi[indan em'n ol/",
+   "expected": "Şifrelerin günlüklere yazılmadığından emin ol.",
+   "outcome": "missed",
+   "output": ":'freler'n g]nl]klere yazilmadi[indan em'n ol/",
+   "confidence": 0.9769
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sa[ ol\\ a.iklaman .ok ';'me yaradi/",
+   "expected": "Sağ ol, açıklaman çok işime yaradı.",
+   "outcome": "missed",
+   "output": "Sa[ ol\\ a.iklaman .ok ';'me yaradi/",
+   "confidence": 0.9973
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "B'r san'ye\\ ,nce b'r ;ey' kontrol etmem lazim/",
+   "expected": "Bir saniye, önce bir şeyi kontrol etmem lazım.",
+   "outcome": "missed",
+   "output": "B'r san'ye\\ ,nce b'r ;ey' kontrol etmem lazim/",
+   "confidence": 0.9975
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hafta sonun nasil ge.t'_",
+   "expected": "Hafta sonun nasıl geçti?",
+   "outcome": "missed",
+   "output": "Hafta sonun nasil ge.t'_",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kullanicinin d][meye basti[i andan 't'baren g'r'; ';lem'n'n nasil .ali;ti[ini adim adim anlatir misin_",
+   "expected": "Kullanıcının düğmeye bastığı andan itibaren giriş işleminin nasıl çalıştığını adım adım anlatır mısın?",
+   "outcome": "missed",
+   "output": "Kullanicinin d][meye basti[i andan 't'baren g'r'; ';lem'n'n nasil .ali;ti[ini adim adim anlatir misin_",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "D]nk] b'rle;t'rmeden sonra entegrasyon testler' patlamaya ba;ladi\\ hang' de[';'kl'['n buna yol a.ti[ini bul ve b'r .,z]m ,ner/",
+   "expected": "Dünkü birleştirmeden sonra entegrasyon testleri patlamaya başladı, hangi değişikliğin buna yol açtığını bul ve bir çözüm öner.",
+   "outcome": "missed",
+   "output": "D]nk] b'rle;t'rmeden sonra entegrasyon testler' patlamaya ba;ladi\\ hang' de[';'kl'['n buna yol a.ti[ini bul ve b'r .,z]m ,ner/",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Canliya .ikmadan ,nce b]t]n testler' .ali;tir\\ g]nl]klere bak ve tuhaf g,r]nen b'r ;ey varsa bana haber ver/",
+   "expected": "Canlıya çıkmadan önce bütün testleri çalıştır, günlüklere bak ve tuhaf görünen bir şey varsa bana haber ver.",
+   "outcome": "missed",
+   "output": "Canliya .ikmadan ,nce b]t]n testler' .ali;tir\\ g]nl]klere bak ve tuhaf g,r]nen b'r ;ey varsa bana haber ver/",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "D]n ge. saate kadar kaldi[in '.'n te;ekk]rler\\ s]r]m sorunsuz .ikti ve m];ter'ler ;'md'den memnun/",
+   "expected": "Dün geç saate kadar kaldığın için teşekkürler, sürüm sorunsuz çıktı ve müşteriler şimdiden memnun.",
+   "outcome": "missed",
+   "output": "D]n ge. saate kadar kaldi[in '.'n te;ekk]rler\\ s]r]m sorunsuz .ikti ve m];ter'ler ;'md'den memnun/",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "contınue",
+   "expected": "continue",
+   "outcome": "missed",
+   "output": "contınue",
+   "confidence": 0.9607
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "yesö go ahead",
+   "expected": "yes, go ahead",
+   "outcome": "missed",
+   "output": "yesö go ahead",
+   "confidence": 0.9939
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "try agaın",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "try agaın",
+   "confidence": 0.997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "shıp ıt",
+   "expected": "ship it",
+   "outcome": "missed",
+   "output": "shıp ıt",
+   "confidence": 0.9752
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "perfectö thank you",
+   "expected": "perfect, thank you",
+   "outcome": "missed",
+   "output": "perfectö thank you",
+   "confidence": 0.9977
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "nıce work",
+   "expected": "nice work",
+   "outcome": "missed",
+   "output": "nıce work",
+   "confidence": 0.9966
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "not quıte",
+   "expected": "not quite",
+   "outcome": "missed",
+   "output": "not quıte",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "keep goıng",
+   "expected": "keep going",
+   "outcome": "missed",
+   "output": "keep goıng",
+   "confidence": 0.9981
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "fıx ıt",
+   "expected": "fix it",
+   "outcome": "missed",
+   "output": "fıx ıt",
+   "confidence": 0.9839
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "explaın thıs",
+   "expected": "explain this",
+   "outcome": "missed",
+   "output": "explaın thıs",
+   "confidence": 0.984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "good mornıng",
+   "expected": "good morning",
+   "outcome": "missed",
+   "output": "good mornıng",
+   "confidence": 0.9957
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened:",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened:",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "show me the dıff",
+   "expected": "show me the diff",
+   "outcome": "missed",
+   "output": "show me the dıff",
+   "confidence": 0.9977
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "commıt please",
+   "expected": "commit please",
+   "outcome": "missed",
+   "output": "commıt please",
+   "confidence": 0.9972
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questıons:",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questıons:",
+   "confidence": 0.998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why:",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why:",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "roll ıt back",
+   "expected": "roll it back",
+   "outcome": "missed",
+   "output": "roll ıt back",
+   "confidence": 0.9926
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatis wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatis wrong",
+   "confidence": 0.8983
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "deploy ıt",
+   "expected": "deploy it",
+   "outcome": "missed",
+   "output": "deploy ıt",
+   "confidence": 0.9926
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "revıew thıs",
+   "expected": "review this",
+   "outcome": "missed",
+   "output": "revıew thıs",
+   "confidence": 0.9844
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "hmmö ınterestıng",
+   "expected": "hmm, interesting",
+   "outcome": "missed",
+   "output": "hmmö ınterestıng",
+   "confidence": 0.9778
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "merge ıt",
+   "expected": "merge it",
+   "outcome": "missed",
+   "output": "merge ıt",
+   "confidence": 0.9926
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "never mınd",
+   "expected": "never mind",
+   "outcome": "missed",
+   "output": "never mınd",
+   "confidence": 0.9923
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "d9kz",
+   "expected": "díky",
+   "outcome": "missed",
+   "output": "d9kz",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "pokra4uj",
+   "expected": "pokračuj",
+   "outcome": "missed",
+   "output": "pokra4uj",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "spus+t testz",
+   "expected": "spusť testy",
+   "outcome": "missed",
+   "output": "spus+t testz",
+   "confidence": 0.9878
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "vzpad8 to dob5e",
+   "expected": "vypadá to dobře",
+   "outcome": "missed",
+   "output": "vzpad8 to dob5e",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "ykus to ynovu",
+   "expected": "zkus to znovu",
+   "outcome": "missed",
+   "output": "ykus to ynovu",
+   "confidence": 0.9635
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Oprav test p5ihl83en9, kter7 pad8.",
+   "expected": "Oprav test přihlášení, který padá.",
+   "outcome": "missed",
+   "output": "Oprav test p5ihl83en9, kter7 pad8.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Pro4 na hlavn9 v2tvi selh8v8 sestaven9<",
+   "expected": "Proč na hlavní větvi selhává sestavení?",
+   "outcome": "missed",
+   "output": "Pro4 na hlavn9 v2tvi selh8v8 sestaven9<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Napi3 testz pro platebn9 slu6bu.",
+   "expected": "Napiš testy pro platební službu.",
+   "outcome": "missed",
+   "output": "Napi3 testz pro platebn9 slu6bu.",
+   "confidence": 0.9946
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Vzsv2tli mi, co d2l8 tahle funkce.",
+   "expected": "Vysvětli mi, co dělá tahle funkce.",
+   "outcome": "missed",
+   "output": "Vzsv2tli mi, co d2l8 tahle funkce.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Str8nka se na49t8 stra3n2 pomalu, m;6e3 se pod9vat<",
+   "expected": "Stránka se načítá strašně pomalu, můžeš se podívat?",
+   "outcome": "missed",
+   "output": "Str8nka se na49t8 stra3n2 pomalu, m;6e3 se pod9vat<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "P5idej o3et5en9 chzb p5i nahr8v8n9 soubor;.",
+   "expected": "Přidej ošetření chyb při nahrávání souborů.",
+   "outcome": "missed",
+   "output": "P5idej o3et5en9 chzb p5i nahr8v8n9 soubor;.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "P5ejmenuj tu prom2nnou na n2co sroyumiteln2j39ho.",
+   "expected": "Přejmenuj tu proměnnou na něco srozumitelnějšího.",
+   "outcome": "missed",
+   "output": "P5ejmenuj tu prom2nnou na n2co sroyumiteln2j39ho.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "M;6e3 proj9t moje ym2nz p5ed slou4en9m<",
+   "expected": "Můžeš projít moje změny před sloučením?",
+   "outcome": "missed",
+   "output": "M;6e3 proj9t moje ym2nz p5ed slou4en9m<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Mzsl9m, 6e tadz n2kde unik8 pam2+t.",
+   "expected": "Myslím, že tady někde uniká paměť.",
+   "outcome": "missed",
+   "output": "Mzsl9m, 6e tadz n2kde unik8 pam2+t.",
+   "confidence": 0.5538
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Royd2l tenhle soubor na men39 modulz.",
+   "expected": "Rozděl tenhle soubor na menší moduly.",
+   "outcome": "missed",
+   "output": "Royd2l tenhle soubor na men39 modulz.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Co p5esn2 ynamen8 tahle chzbov8 hl83ka<",
+   "expected": "Co přesně znamená tahle chybová hláška?",
+   "outcome": "missed",
+   "output": "Co p5esn2 ynamen8 tahle chzbov8 hl83ka<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Roybalovac9 nab9dka se neyav5e, kdz6 kliknu mimo ni.",
+   "expected": "Rozbalovací nabídka se nezavře, když kliknu mimo ni.",
+   "outcome": "missed",
+   "output": "Roybalovac9 nab9dka se neyav5e, kdz6 kliknu mimo ni.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Pros9m, nem2+n ve5ejn0 royhran9.",
+   "expected": "Prosím, neměň veřejné rozhraní.",
+   "outcome": "missed",
+   "output": "Pros9m, nem2+n ve5ejn0 royhran9.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ykontroluj, jestli spr8vn2 5e39me pr8ydn7 vstup.",
+   "expected": "Zkontroluj, jestli správně řešíme prázdný vstup.",
+   "outcome": "missed",
+   "output": "Ykontroluj, jestli spr8vn2 5e39me pr8ydn7 vstup.",
+   "confidence": 0.9953
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Aktualiyuj dokumentaci podle nov0ho chov8n9.",
+   "expected": "Aktualizuj dokumentaci podle nového chování.",
+   "outcome": "missed",
+   "output": "Aktualiyuj dokumentaci podle nov0ho chov8n9.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "U m2 testz proch8yej9, ale na serveru ne.",
+   "expected": "U mě testy procházejí, ale na serveru ne.",
+   "outcome": "missed",
+   "output": "U m2 testz proch8yej9, ale na serveru ne.",
+   "confidence": 0.9729
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ujisti se, 6e se hesla nedostanou do y8ynam;.",
+   "expected": "Ujisti se, že se hesla nedostanou do záznamů.",
+   "outcome": "missed",
+   "output": "Ujisti se, 6e se hesla nedostanou do y8ynam;.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "D9kz, to vzsv2tlen9 mi hodn2 pomohlo.",
+   "expected": "Díky, to vysvětlení mi hodně pomohlo.",
+   "outcome": "missed",
+   "output": "D9kz, to vzsv2tlen9 mi hodn2 pomohlo.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Po4kej, mus9m si nejd59v n2co ov25it.",
+   "expected": "Počkej, musím si nejdřív něco ověřit.",
+   "outcome": "missed",
+   "output": "Po4kej, mus9m si nejd59v n2co ov25it.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Jak sis u6il v9kend<",
+   "expected": "Jak sis užil víkend?",
+   "outcome": "missed",
+   "output": "Jak sis u6il v9kend<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "M;6e3 mi krok ya krokem vzsv2tlit, jak funguje p5ihl83en9 od chv9le, kdz u6ivatel klikne na tla49tko<",
+   "expected": "Můžeš mi krok za krokem vysvětlit, jak funguje přihlášení od chvíle, kdy uživatel klikne na tlačítko?",
+   "outcome": "missed",
+   "output": "M;6e3 mi krok ya krokem vzsv2tlit, jak funguje p5ihl83en9 od chv9le, kdz u6ivatel klikne na tla49tko<",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Od v4erej39ho slou4en9 padaj9 integra4n9 testz, najdi ym2nu, kter8 to yp;sobila, a navrhni opravu.",
+   "expected": "Od včerejšího sloučení padají integrační testy, najdi změnu, která to způsobila, a navrhni opravu.",
+   "outcome": "missed",
+   "output": "Od v4erej39ho slou4en9 padaj9 integra4n9 testz, najdi ym2nu, kter8 to yp;sobila, a navrhni opravu.",
+   "confidence": 0.9872
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Ne6 to nasad9me do ostr0ho provoyu, spus+t v3echnz testz, projdi y8ynamz a dej v2d2t, jestli n2co vzpad8 divn2.",
+   "expected": "Než to nasadíme do ostrého provozu, spusť všechny testy, projdi záznamy a dej vědět, jestli něco vypadá divně.",
+   "outcome": "missed",
+   "output": "Ne6 to nasad9me do ostr0ho provoyu, spus+t v3echnz testz, projdi y8ynamz a dej v2d2t, jestli n2co vzpad8 divn2.",
+   "confidence": 0.9974
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "D9kz, 6e jsi v4era y;stal tak dlouho, vzd8n9 prob2hlo hladce a y8kayn9ci jsou u6 spokojen9.",
+   "expected": "Díky, že jsi včera zůstal tak dlouho, vydání proběhlo hladce a zákazníci jsou už spokojení.",
+   "outcome": "missed",
+   "output": "D9kz, 6e jsi v4era y;stal tak dlouho, vzd8n9 prob2hlo hladce a y8kayn9ci jsou u6 spokojen9.",
+   "confidence": 0.9998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "zes, go ahead",
+   "expected": "yes, go ahead",
+   "outcome": "missed",
+   "output": "zes, go ahead",
+   "confidence": 0.979
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "trz again",
+   "expected": "try again",
+   "outcome": "missed",
+   "output": "trz again",
+   "confidence": 0.9909
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "perfect, thank zou",
+   "expected": "perfect, thank you",
+   "outcome": "missed",
+   "output": "perfect, thank zou",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "anz questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "anz questions_",
+   "confidence": 0.9822
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "whz_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "whz_",
+   "confidence": 0.9975
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "that§s wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "that§s wrong",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "deploz it",
+   "expected": "deploy it",
+   "outcome": "missed",
+   "output": "deploz it",
+   "confidence": 0.9293
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "forts'tt",
+   "expected": "fortsätt",
+   "outcome": "missed",
+   "output": "forts'tt",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "k;r testerna",
+   "expected": "kör testerna",
+   "outcome": "missed",
+   "output": "k;r testerna",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "ja, k;r p[",
+   "expected": "ja, kör på",
+   "outcome": "missed",
+   "output": "ja, k;r p[",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "f;rs;k igen",
+   "expected": "försök igen",
+   "outcome": "missed",
+   "output": "f;rs;k igen",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Varf;r g[r byggandet s;nder p[ huvudgrenen_",
+   "expected": "Varför går byggandet sönder på huvudgrenen?",
+   "outcome": "missed",
+   "output": "Varf;r g[r byggandet s;nder p[ huvudgrenen_",
+   "confidence": 0.9591
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Skriv tester f;r betaltj'nsten.",
+   "expected": "Skriv tester för betaltjänsten.",
+   "outcome": "missed",
+   "output": "Skriv tester f;r betaltj'nsten.",
+   "confidence": 0.9971
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "F;rklara vad den h'r funktionen g;r.",
+   "expected": "Förklara vad den här funktionen gör.",
+   "outcome": "missed",
+   "output": "F;rklara vad den h'r funktionen g;r.",
+   "confidence": 0.9883
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sidan laddar j'ttel[ngsamt, kan du kolla varf;r_",
+   "expected": "Sidan laddar jättelångsamt, kan du kolla varför?",
+   "outcome": "missed",
+   "output": "Sidan laddar j'ttel[ngsamt, kan du kolla varf;r_",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "L'gg till felhantering n'r filer laddas upp.",
+   "expected": "Lägg till felhantering när filer laddas upp.",
+   "outcome": "missed",
+   "output": "L'gg till felhantering n'r filer laddas upp.",
+   "confidence": 0.9975
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Byt namn p[ variabeln till n[got tydligare.",
+   "expected": "Byt namn på variabeln till något tydligare.",
+   "outcome": "missed",
+   "output": "Byt namn p[ variabeln till n[got tydligare.",
+   "confidence": 0.9951
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du granska mina 'ndringar innan vi sl[r ihop dem_",
+   "expected": "Kan du granska mina ändringar innan vi slår ihop dem?",
+   "outcome": "missed",
+   "output": "Kan du granska mina 'ndringar innan vi sl[r ihop dem_",
+   "confidence": 0.9986
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Jag tror att det finns en minnesl'cka n[gonstans h'r.",
+   "expected": "Jag tror att det finns en minnesläcka någonstans här.",
+   "outcome": "missed",
+   "output": "Jag tror att det finns en minnesl'cka n[gonstans h'r.",
+   "confidence": 0.999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Dela upp den h'r filen i mindre moduler.",
+   "expected": "Dela upp den här filen i mindre moduler.",
+   "outcome": "missed",
+   "output": "Dela upp den h'r filen i mindre moduler.",
+   "confidence": 0.9977
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Vad betyder det h'r felmeddelandet egentligen_",
+   "expected": "Vad betyder det här felmeddelandet egentligen?",
+   "outcome": "missed",
+   "output": "Vad betyder det h'r felmeddelandet egentligen_",
+   "confidence": 0.9953
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Rullgardinsmenyn st'ngs inte n'r jag klickar utanf;r.",
+   "expected": "Rullgardinsmenyn stängs inte när jag klickar utanför.",
+   "outcome": "missed",
+   "output": "Rullgardinsmenyn st'ngs inte n'r jag klickar utanf;r.",
+   "confidence": 0.9381
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sn'lla, 'ndra inte det publika gr'nssnittet.",
+   "expected": "Snälla, ändra inte det publika gränssnittet.",
+   "outcome": "missed",
+   "output": "Sn'lla, 'ndra inte det publika gr'nssnittet.",
+   "confidence": 0.9863
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kontrollera att vi hanterar tom inmatning p[ r'tt s'tt.",
+   "expected": "Kontrollera att vi hanterar tom inmatning på rätt sätt.",
+   "outcome": "missed",
+   "output": "Kontrollera att vi hanterar tom inmatning p[ r'tt s'tt.",
+   "confidence": 0.9979
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Uppdatera dokumentationen s[ att den st'mmer med det nya beteendet.",
+   "expected": "Uppdatera dokumentationen så att den stämmer med det nya beteendet.",
+   "outcome": "missed",
+   "output": "Uppdatera dokumentationen s[ att den st'mmer med det nya beteendet.",
+   "confidence": 0.976
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Testerna g[r igenom lokalt men fallerar p[ servern.",
+   "expected": "Testerna går igenom lokalt men fallerar på servern.",
+   "outcome": "missed",
+   "output": "Testerna g[r igenom lokalt men fallerar p[ servern.",
+   "confidence": 0.9967
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Se till att l;senord aldrig hamnar i loggarna.",
+   "expected": "Se till att lösenord aldrig hamnar i loggarna.",
+   "outcome": "missed",
+   "output": "Se till att l;senord aldrig hamnar i loggarna.",
+   "confidence": 0.9894
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tack, f;rklaringen hj'lpte verkligen.",
+   "expected": "Tack, förklaringen hjälpte verkligen.",
+   "outcome": "missed",
+   "output": "Tack, f;rklaringen hj'lpte verkligen.",
+   "confidence": 0.9996
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "V'nta, jag m[ste kolla en sak f;rst.",
+   "expected": "Vänta, jag måste kolla en sak först.",
+   "outcome": "missed",
+   "output": "V'nta, jag m[ste kolla en sak f;rst.",
+   "confidence": 0.9957
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hur var helgen_",
+   "expected": "Hur var helgen?",
+   "outcome": "missed",
+   "output": "Hur var helgen_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du f;rklara steg f;r steg hur inloggningen fungerar, fr[n att anv'ndaren trycker p[ knappen_",
+   "expected": "Kan du förklara steg för steg hur inloggningen fungerar, från att användaren trycker på knappen?",
+   "outcome": "missed",
+   "output": "Kan du f;rklara steg f;r steg hur inloggningen fungerar, fr[n att anv'ndaren trycker p[ knappen_",
+   "confidence": 0.9989
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sedan g[rdagens sammanslagning misslyckas integrationstesterna, hitta 'ndringen som orsakade det och f;resl[ en l;sning.",
+   "expected": "Sedan gårdagens sammanslagning misslyckas integrationstesterna, hitta ändringen som orsakade det och föreslå en lösning.",
+   "outcome": "missed",
+   "output": "Sedan g[rdagens sammanslagning misslyckas integrationstesterna, hitta 'ndringen som orsakade det och f;resl[ en l;sning.",
+   "confidence": 0.998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Innan vi sl'pper till produktion, k;r alla tester, g[ igenom loggarna och s'g till om n[got ser konstigt ut.",
+   "expected": "Innan vi släpper till produktion, kör alla tester, gå igenom loggarna och säg till om något ser konstigt ut.",
+   "outcome": "missed",
+   "output": "Innan vi sl'pper till produktion, k;r alla tester, g[ igenom loggarna och s'g till om n[got ser konstigt ut.",
+   "confidence": 0.9993
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tack f;r att du stannade s[ l'nge ig[r, lanseringen gick smidigt och kunderna 'r redan n;jda.",
+   "expected": "Tack för att du stannade så länge igår, lanseringen gick smidigt och kunderna är redan nöjda.",
+   "outcome": "missed",
+   "output": "Tack f;r att du stannade s[ l'nge ig[r, lanseringen gick smidigt och kunderna 'r redan n;jda.",
+   "confidence": 0.9994
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatäs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatäs wrong",
+   "confidence": 0.9679
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "kj;r testene",
+   "expected": "kjør testene",
+   "outcome": "missed",
+   "output": "kj;r testene",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "ja, bare kj;r",
+   "expected": "ja, bare kjør",
+   "outcome": "missed",
+   "output": "ja, bare kj;r",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "pr;v igjen",
+   "expected": "prøv igjen",
+   "outcome": "missed",
+   "output": "pr;v igjen",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hvorfor feiler byggingen p[ hovedgrenen_",
+   "expected": "Hvorfor feiler byggingen på hovedgrenen?",
+   "outcome": "missed",
+   "output": "Hvorfor feiler byggingen p[ hovedgrenen_",
+   "confidence": 0.5321
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Forklar hva denne funksjonen gj;r.",
+   "expected": "Forklar hva denne funksjonen gjør.",
+   "outcome": "missed",
+   "output": "Forklar hva denne funksjonen gj;r.",
+   "confidence": 0.994
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Siden laster veldig tregt, kan du sjekke hvorfor_",
+   "expected": "Siden laster veldig tregt, kan du sjekke hvorfor?",
+   "outcome": "missed",
+   "output": "Siden laster veldig tregt, kan du sjekke hvorfor_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Legg til feilh[ndtering n[r filer lastes opp.",
+   "expected": "Legg til feilhåndtering når filer lastes opp.",
+   "outcome": "missed",
+   "output": "Legg til feilh[ndtering n[r filer lastes opp.",
+   "confidence": 0.9959
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du se over endringene mine f;r vi sl[r dem sammen_",
+   "expected": "Kan du se over endringene mine før vi slår dem sammen?",
+   "outcome": "missed",
+   "output": "Kan du se over endringene mine f;r vi sl[r dem sammen_",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hva betyr egentlig denne feilmeldingen_",
+   "expected": "Hva betyr egentlig denne feilmeldingen?",
+   "outcome": "missed",
+   "output": "Hva betyr egentlig denne feilmeldingen_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Nedtrekksmenyen lukkes ikke n[r jeg klikker utenfor.",
+   "expected": "Nedtrekksmenyen lukkes ikke når jeg klikker utenfor.",
+   "outcome": "missed",
+   "output": "Nedtrekksmenyen lukkes ikke n[r jeg klikker utenfor.",
+   "confidence": 0.9958
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "V'r s[ snill, ikke endre det offentlige grensesnittet.",
+   "expected": "Vær så snill, ikke endre det offentlige grensesnittet.",
+   "outcome": "missed",
+   "output": "V'r s[ snill, ikke endre det offentlige grensesnittet.",
+   "confidence": 0.9966
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Sjekk at vi h[ndterer tom inndata riktig.",
+   "expected": "Sjekk at vi håndterer tom inndata riktig.",
+   "outcome": "missed",
+   "output": "Sjekk at vi h[ndterer tom inndata riktig.",
+   "confidence": 0.9932
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Oppdater dokumentasjonen slik at den passer med den nye oppf;rselen.",
+   "expected": "Oppdater dokumentasjonen slik at den passer med den nye oppførselen.",
+   "outcome": "missed",
+   "output": "Oppdater dokumentasjonen slik at den passer med den nye oppf;rselen.",
+   "confidence": 0.9867
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Testene g[r gjennom lokalt, men feiler p[ serveren.",
+   "expected": "Testene går gjennom lokalt, men feiler på serveren.",
+   "outcome": "missed",
+   "output": "Testene g[r gjennom lokalt, men feiler p[ serveren.",
+   "confidence": 0.9984
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "S;rg for at passord aldri havner i loggene.",
+   "expected": "Sørg for at passord aldri havner i loggene.",
+   "outcome": "missed",
+   "output": "S;rg for at passord aldri havner i loggene.",
+   "confidence": 0.9999
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Vent litt, jeg m[ sjekke noe f;rst.",
+   "expected": "Vent litt, jeg må sjekke noe først.",
+   "outcome": "missed",
+   "output": "Vent litt, jeg m[ sjekke noe f;rst.",
+   "confidence": 0.9987
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hvordan var helgen din_",
+   "expected": "Hvordan var helgen din?",
+   "outcome": "missed",
+   "output": "Hvordan var helgen din_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du forklare trinn for trinn hvordan innloggingen fungerer, fra brukeren trykker p[ knappen_",
+   "expected": "Kan du forklare trinn for trinn hvordan innloggingen fungerer, fra brukeren trykker på knappen?",
+   "outcome": "missed",
+   "output": "Kan du forklare trinn for trinn hvordan innloggingen fungerer, fra brukeren trykker p[ knappen_",
+   "confidence": 0.6294
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Etter g[rsdagens sammensl[ing har integrasjonstestene begynt [ feile, s[ finn endringen som f;rte til det og foresl[ en l;sning.",
+   "expected": "Etter gårsdagens sammenslåing har integrasjonstestene begynt å feile, så finn endringen som førte til det og foreslå en løsning.",
+   "outcome": "missed",
+   "output": "Etter g[rsdagens sammensl[ing har integrasjonstestene begynt [ feile, s[ finn endringen som f;rte til det og foresl[ en l;sning.",
+   "confidence": 0.9987
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "F;r vi g[r i produksjon, kj;r alle testene, se gjennom loggene og si fra hvis noe ser rart ut.",
+   "expected": "Før vi går i produksjon, kjør alle testene, se gjennom loggene og si fra hvis noe ser rart ut.",
+   "outcome": "missed",
+   "output": "F;r vi g[r i produksjon, kj;r alle testene, se gjennom loggene og si fra hvis noe ser rart ut.",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Takk for at du ble s[ lenge i g[r, lanseringen gikk knirkefritt og kundene er allerede forn;yde.",
+   "expected": "Takk for at du ble så lenge i går, lanseringen gikk knirkefritt og kundene er allerede fornøyde.",
+   "outcome": "missed",
+   "output": "Takk for at du ble s[ lenge i g[r, lanseringen gikk knirkefritt og kundene er allerede forn;yde.",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatæs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatæs wrong",
+   "confidence": 0.9743
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "forts;t",
+   "expected": "fortsæt",
+   "outcome": "missed",
+   "output": "forts;t",
+   "confidence": 0.9905
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "k'r testene",
+   "expected": "kør testene",
+   "outcome": "missed",
+   "output": "k'r testene",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "ja, bare g'r det",
+   "expected": "ja, bare gør det",
+   "outcome": "missed",
+   "output": "ja, bare g'r det",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "pr'v igen",
+   "expected": "prøv igen",
+   "outcome": "missed",
+   "output": "pr'v igen",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hvorfor fejler bygningen p[ hovedgrenen_",
+   "expected": "Hvorfor fejler bygningen på hovedgrenen?",
+   "outcome": "missed",
+   "output": "Hvorfor fejler bygningen p[ hovedgrenen_",
+   "confidence": 0.5296
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Forklar mig, hvad den her funktion g'r.",
+   "expected": "Forklar mig, hvad den her funktion gør.",
+   "outcome": "missed",
+   "output": "Forklar mig, hvad den her funktion g'r.",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Siden indl;ses meget langsomt, kan du kigge p[ det_",
+   "expected": "Siden indlæses meget langsomt, kan du kigge på det?",
+   "outcome": "missed",
+   "output": "Siden indl;ses meget langsomt, kan du kigge p[ det_",
+   "confidence": 0.997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tilf'j fejlh[ndtering, n[r der uploades filer.",
+   "expected": "Tilføj fejlhåndtering, når der uploades filer.",
+   "outcome": "missed",
+   "output": "Tilf'j fejlh[ndtering, n[r der uploades filer.",
+   "confidence": 0.9816
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du gennemg[ mine ;ndringer, f'r vi fletter dem_",
+   "expected": "Kan du gennemgå mine ændringer, før vi fletter dem?",
+   "outcome": "missed",
+   "output": "Kan du gennemg[ mine ;ndringer, f'r vi fletter dem_",
+   "confidence": 0.9865
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Jeg tror, der er en hukommelsesl;kage et sted her.",
+   "expected": "Jeg tror, der er en hukommelseslækage et sted her.",
+   "outcome": "missed",
+   "output": "Jeg tror, der er en hukommelsesl;kage et sted her.",
+   "confidence": 0.9788
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hvad betyder den fejlbesked egentlig_",
+   "expected": "Hvad betyder den fejlbesked egentlig?",
+   "outcome": "missed",
+   "output": "Hvad betyder den fejlbesked egentlig_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Rullemenuen lukker ikke, n[r jeg klikker udenfor.",
+   "expected": "Rullemenuen lukker ikke, når jeg klikker udenfor.",
+   "outcome": "missed",
+   "output": "Rullemenuen lukker ikke, n[r jeg klikker udenfor.",
+   "confidence": 0.9973
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Lad v;re med at ;ndre den offentlige gr;nseflade.",
+   "expected": "Lad være med at ændre den offentlige grænseflade.",
+   "outcome": "missed",
+   "output": "Lad v;re med at ;ndre den offentlige gr;nseflade.",
+   "confidence": 0.998
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tjek, at vi h[ndterer tomme felter korrekt.",
+   "expected": "Tjek, at vi håndterer tomme felter korrekt.",
+   "outcome": "missed",
+   "output": "Tjek, at vi h[ndterer tomme felter korrekt.",
+   "confidence": 0.9991
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Opdater dokumentationen, s[ den passer til den nye adf;rd.",
+   "expected": "Opdater dokumentationen, så den passer til den nye adfærd.",
+   "outcome": "missed",
+   "output": "Opdater dokumentationen, s[ den passer til den nye adf;rd.",
+   "confidence": 0.7092
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Testene best[r lokalt, men fejler p[ serveren.",
+   "expected": "Testene består lokalt, men fejler på serveren.",
+   "outcome": "missed",
+   "output": "Testene best[r lokalt, men fejler p[ serveren.",
+   "confidence": 0.9983
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "S'rg for, at adgangskoder aldrig havner i loggene.",
+   "expected": "Sørg for, at adgangskoder aldrig havner i loggene.",
+   "outcome": "missed",
+   "output": "S'rg for, at adgangskoder aldrig havner i loggene.",
+   "confidence": 0.9837
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Vent lige, jeg skal tjekke noget f'rst.",
+   "expected": "Vent lige, jeg skal tjekke noget først.",
+   "outcome": "missed",
+   "output": "Vent lige, jeg skal tjekke noget f'rst.",
+   "confidence": 0.9997
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hvordan var din weekend_",
+   "expected": "Hvordan var din weekend?",
+   "outcome": "missed",
+   "output": "Hvordan var din weekend_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kan du forklare trin for trin, hvordan indlogningen fungerer, fra brugeren trykker p[ knappen_",
+   "expected": "Kan du forklare trin for trin, hvordan indlogningen fungerer, fra brugeren trykker på knappen?",
+   "outcome": "missed",
+   "output": "Kan du forklare trin for trin, hvordan indlogningen fungerer, fra brugeren trykker p[ knappen_",
+   "confidence": 0.6188
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Siden g[rsdagens fletning er integrationstestene begyndt at fejle, s[ find ;ndringen, der for[rsagede det, og foresl[ en l'sning.",
+   "expected": "Siden gårsdagens fletning er integrationstestene begyndt at fejle, så find ændringen, der forårsagede det, og foreslå en løsning.",
+   "outcome": "missed",
+   "output": "Siden g[rsdagens fletning er integrationstestene begyndt at fejle, s[ find ;ndringen, der for[rsagede det, og foresl[ en l'sning.",
+   "confidence": 0.9987
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "F'r vi g[r i produktion, s[ k'r alle testene, kig loggene igennem og sig til, hvis noget ser m;rkeligt ud.",
+   "expected": "Før vi går i produktion, så kør alle testene, kig loggene igennem og sig til, hvis noget ser mærkeligt ud.",
+   "outcome": "missed",
+   "output": "F'r vi g[r i produktion, s[ k'r alle testene, kig loggene igennem og sig til, hvis noget ser m;rkeligt ud.",
+   "confidence": 0.9918
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Tak fordi du blev s[ l;nge i g[r, udgivelsen gik glat, og kunderne er allerede glade.",
+   "expected": "Tak fordi du blev så længe i går, udgivelsen gik glat, og kunderne er allerede glade.",
+   "outcome": "missed",
+   "output": "Tak fordi du blev s[ l;nge i g[r, udgivelsen gik glat, og kunderne er allerede glade.",
+   "confidence": 0.9985
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened_",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions_",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why_",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatøs wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatøs wrong",
+   "confidence": 0.9301
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Waarom mislukt het bouwen op de hoofdtak_",
+   "expected": "Waarom mislukt het bouwen op de hoofdtak?",
+   "outcome": "missed",
+   "output": "Waarom mislukt het bouwen op de hoofdtak_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "De pagina laadt heel traag, kun je kijken waarom_",
+   "expected": "De pagina laadt heel traag, kun je kijken waarom?",
+   "outcome": "missed",
+   "output": "De pagina laadt heel traag, kun je kijken waarom_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kun je mijn wijzigingen bekijken voordat we ze samenvoegen_",
+   "expected": "Kun je mijn wijzigingen bekijken voordat we ze samenvoegen?",
+   "outcome": "missed",
+   "output": "Kun je mijn wijzigingen bekijken voordat we ze samenvoegen_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Wat betekent deze foutmelding precies_",
+   "expected": "Wat betekent deze foutmelding precies?",
+   "outcome": "missed",
+   "output": "Wat betekent deze foutmelding precies_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Hoe was je weekend_",
+   "expected": "Hoe was je weekend?",
+   "outcome": "missed",
+   "output": "Hoe was je weekend_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "Kun je stap voor stap uitleggen hoe het inloggen werkt, vanaf het moment dat de gebruiker op de knop drukt_",
+   "expected": "Kun je stap voor stap uitleggen hoe het inloggen werkt, vanaf het moment dat de gebruiker op de knop drukt?",
+   "outcome": "missed",
+   "output": "Kun je stap voor stap uitleggen hoe het inloggen werkt, vanaf het moment dat de gebruiker op de knop drukt_",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "what happened=",
+   "expected": "what happened?",
+   "outcome": "missed",
+   "output": "what happened=",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "any questions=",
+   "expected": "any questions?",
+   "outcome": "missed",
+   "output": "any questions=",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "why=",
+   "expected": "why?",
+   "outcome": "missed",
+   "output": "why=",
+   "confidence": null
+  },
+  {
+   "group": "full latin<->latin",
+   "config": "pair",
+   "input": "thatś wrong",
+   "expected": "that's wrong",
+   "outcome": "missed",
+   "output": "thatś wrong",
+   "confidence": 0.9839
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "input": "open ش pull request",
+   "expected": "open a pull request",
+   "outcome": "missed",
+   "output": "open ش pull request",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "Rename the variable ещ something more descriptive.",
+   "expected": "Rename the variable to something more descriptive.",
+   "outcome": "missed",
+   "output": "Rename the variable ещ something more descriptive.",
+   "confidence": 0.5549
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "Help me write a migration for еру new table.",
+   "expected": "Help me write a migration for the new table.",
+   "outcome": "missed",
+   "output": "Help me write a migration for еру new table.",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "The tests pass locally but fail in еру pipeline.",
+   "expected": "The tests pass locally but fail in the pipeline.",
+   "outcome": "missed",
+   "output": "The tests pass locally but fail in еру pipeline.",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "input": "Make the table سخقفشلامث لاغ every column.",
+   "expected": "Make the table sortable by every column.",
+   "outcome": "missed",
+   "output": "Make the table سخقفشلامث لاغ every column.",
+   "confidence": 0.6386
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "Еру scroll position resets after every update.",
+   "expected": "The scroll position resets after every update.",
+   "outcome": "missed",
+   "output": "Еру scroll position resets after every update.",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "input": "Please add ش test that reproduces the bug first.",
+   "expected": "Please add a test that reproduces the bug first.",
+   "outcome": "missed",
+   "output": "Please add ش test that reproduces the bug first.",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "input": "]هي you remember to update the changelog?",
+   "expected": "Did you remember to update the changelog?",
+   "outcome": "missed",
+   "output": "]هي you remember to update the changelog?",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on he)",
+   "config": "default",
+   "input": "Can you compare the א'ם libraries we discussed and recommend one, keeping in mind bundle size and long term maintenance?",
+   "expected": "Can you compare the two libraries we discussed and recommend one, keeping in mind bundle size and long term maintenance?",
+   "outcome": "missed",
+   "output": "Can you compare the א'ם libraries we discussed and recommend one, keeping in mind bundle size and long term maintenance?",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "The report generator runs out of memory щт big accounts, so maybe we should stream the rows instead of loading everything.",
+   "expected": "The report generator runs out of memory on big accounts, so maybe we should stream the rows instead of loading everything.",
+   "outcome": "missed",
+   "output": "The report generator runs out of memory щт big accounts, so maybe we should stream the rows instead of loading everything.",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on he)",
+   "config": "default",
+   "input": "I was thinking we could meet tomorrow morning אם go over the roadmap, does that work for you?",
+   "expected": "I was thinking we could meet tomorrow morning to go over the roadmap, does that work for you?",
+   "outcome": "missed",
+   "output": "I was thinking we could meet tomorrow morning אם go over the roadmap, does that work for you?",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ar)",
+   "config": "default",
+   "input": "Can you look at the error reports from this week and group them by root cause so we know what فخ fix first?",
+   "expected": "Can you look at the error reports from this week and group them by root cause so we know what to fix first?",
+   "outcome": "missed",
+   "output": "Can you look at the error reports from this week and group them by root cause so we know what فخ fix first?",
+   "confidence": null
+  },
+  {
+   "group": "mixed en (fragment on ru)",
+   "config": "default",
+   "input": "We should probably talk about еру deadline, because I don't think we can finish all of this by the end of the week.",
+   "expected": "We should probably talk about the deadline, because I don't think we can finish all of this by the end of the week.",
+   "outcome": "missed",
+   "output": "We should probably talk about еру deadline, because I don't think we can finish all of this by the end of the week.",
+   "confidence": null
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": ",prux את הגרסה האחרונה לסביבת הבדיקות.",
+   "expected": "תפרוס את הגרסה האחרונה לסביבת הבדיקות.",
+   "outcome": "missed",
+   "output": ",prux את הגרסה האחרונה לסביבת הבדיקות.",
+   "confidence": 0.827
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": "תמחק t, fk vhhcutho שלא בשימוש.",
+   "expected": "תמחק את כל הייבואים שלא בשימוש.",
+   "outcome": "missed",
+   "output": "תמחק t, fk vhhcutho שלא בשימוש.",
+   "confidence": 0.8567
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": "הבדיקות עוברות אצלי tck bfaku, car,/",
+   "expected": "הבדיקות עוברות אצלי אבל נכשלות בשרת.",
+   "outcome": "wrong",
+   "output": "הבדיקות עוברות אצלי אבל נכשלות car,/",
+   "confidence": 0.994
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": "תתקן את adht, הכתיב בהודעת הפתיחה.",
+   "expected": "תתקן את שגיאת הכתיב בהודעת הפתיחה.",
+   "outcome": "missed",
+   "output": "תתקן את adht, הכתיב בהודעת הפתיחה.",
+   "confidence": null
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": "אפשר להזיז t, הפגישה לאחר הצהריים?",
+   "expected": "אפשר להזיז את הפגישה לאחר הצהריים?",
+   "outcome": "missed",
+   "output": "אפשר להזיז t, הפגישה לאחר הצהריים?",
+   "confidence": null
+  },
+  {
+   "group": "mixed he (fragment on en-US)",
+   "config": "default",
+   "input": "סליחה על העיכוב, נתקעתי בפגישה אחרת ורק עכשיו ראיתי t, ההודעה שלך.",
+   "expected": "סליחה על העיכוב, נתקעתי בפגישה אחרת ורק עכשיו ראיתי את ההודעה שלך.",
+   "outcome": "missed",
+   "output": "סליחה על העיכוב, נתקעתי בפגישה אחרת ורק עכשיו ראיתי t, ההודעה שלך.",
+   "confidence": null
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "всё to` yt работает",
+   "expected": "всё ещё не работает",
+   "outcome": "wrong",
+   "output": "всё to` не работает",
+   "confidence": 0.9991
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "Добавь обработку ошибок ghb загрузке файлов.",
+   "expected": "Добавь обработку ошибок при загрузке файлов.",
+   "outcome": "missed",
+   "output": "Добавь обработку ошибок ghb загрузке файлов.",
+   "confidence": null
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "Выложи последнюю dthcb. yf ntcnjdsq сервер.",
+   "expected": "Выложи последнюю версию на тестовый сервер.",
+   "outcome": "wrong",
+   "output": "Выложи последнюю версию на тестовій сервер.",
+   "confidence": 0.9624
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "Elfkb все неиспользуемые импорты.",
+   "expected": "Удали все неиспользуемые импорты.",
+   "outcome": "missed",
+   "output": "Elfkb все неиспользуемые импорты.",
+   "confidence": 0.6469
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "Объясни по шагам, как работает вход в систему, начиная c момента, когда пользователь нажимает кнопку.",
+   "expected": "Объясни по шагам, как работает вход в систему, начиная с момента, когда пользователь нажимает кнопку.",
+   "outcome": "missed",
+   "output": "Объясни по шагам, как работает вход в систему, начиная c момента, когда пользователь нажимает кнопку.",
+   "confidence": null
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "Перед dsrkflrjq d ghjlfrity прогони все тесты, просмотри логи и скажи, если что-то выглядит подозрительно.",
+   "expected": "Перед выкладкой в продакшен прогони все тесты, просмотри логи и скажи, если что-то выглядит подозрительно.",
+   "outcome": "missed",
+   "output": "Перед dsrkflrjq d ghjlfrity прогони все тесты, просмотри логи и скажи, если что-то выглядит подозрительно.",
+   "confidence": 0.828
+  },
+  {
+   "group": "mixed ru (fragment on en-US)",
+   "config": "default",
+   "input": "D понедельник выходит новый сотрудник, напиши понятную инструкцию, как развернуть проект локально.",
+   "expected": "В понедельник выходит новый сотрудник, напиши понятную инструкцию, как развернуть проект локально.",
+   "outcome": "missed",
+   "output": "D понедельник выходит новый сотрудник, напиши понятную инструкцию, как развернуть проект локально.",
+   "confidence": null
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+teşekkürler
+devam et
+testleri çalıştır
+evet, devam
+güzel görünüyor
+tekrar dene
+Başarısız olan giriş testini düzelt.
+Ana dalda derleme neden başarısız oluyor?
+Ödeme servisi için testler yaz.
+Bu fonksiyonun ne yaptığını açıklar mısın?
+Sayfa çok yavaş yükleniyor, bakabilir misin?
+Dosya yüklerken hata yönetimi ekle.
+Bu değişkene daha anlaşılır bir isim ver.
+Birleştirmeden önce değişikliklerime göz atar mısın?
+Sanırım burada bir yerde bellek sızıntısı var.
+Bu dosyayı daha küçük parçalara böl.
+Bu hata mesajı tam olarak ne anlama geliyor?
+Açılır menü dışarı tıklayınca kapanmıyor.
+Lütfen genel arayüzü değiştirme.
+Boş girişi doğru işleyip işlemediğimizi kontrol et.
+Belgeleri yeni davranışa göre güncelle.
+Testler bende geçiyor ama sunucuda başarısız oluyor.
+Şifrelerin günlüklere yazılmadığından emin ol.
+Sağ ol, açıklaman çok işime yaradı.
+Bir saniye, önce bir şeyi kontrol etmem lazım.
+Hafta sonun nasıl geçti?
+Kullanıcının düğmeye bastığı andan itibaren giriş işleminin nasıl çalıştığını adım adım anlatır mısın?
+Dünkü birleştirmeden sonra entegrasyon testleri patlamaya başladı, hangi değişikliğin buna yol açtığını bul ve bir çözüm öner.
+Canlıya çıkmadan önce bütün testleri çalıştır, günlüklere bak ve tuhaf görünen bir şey varsa bana haber ver.
+Dün geç saate kadar kaldığın için teşekkürler, sürüm sorunsuz çıktı ve müşteriler şimdiden memnun.

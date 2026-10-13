@@ -1,0 +1,30 @@
+danke
+weiter
+führ die Tests aus
+ja, mach das
+sieht gut aus
+nochmal bitte
+Behebe den fehlschlagenden Anmeldetest.
+Warum bricht das Kompilieren auf dem Hauptzweig ab?
+Schreib Tests für den Zahlungsdienst.
+Erklär mir bitte, was diese Funktion macht.
+Die Seite lädt extrem langsam, kannst du nachsehen?
+Füge eine Fehlerbehandlung beim Hochladen hinzu.
+Benenne die Variable um, damit sie verständlicher ist.
+Kannst du dir meine Änderungen vor dem Zusammenführen ansehen?
+Ich glaube, hier gibt es irgendwo ein Speicherleck.
+Teil diese Datei in kleinere Module auf.
+Was bedeutet diese Fehlermeldung genau?
+Das Menü schließt sich nicht, wenn ich daneben klicke.
+Bitte ändere die öffentliche Schnittstelle nicht.
+Prüf, ob leere Eingaben richtig behandelt werden.
+Aktualisiere die Dokumentation für das neue Verhalten.
+Lokal laufen die Tests durch, aber auf dem Server nicht.
+Stell sicher, dass keine Passwörter in den Protokollen landen.
+Danke, die Erklärung hat mir sehr geholfen.
+Moment, ich muss kurz etwas überprüfen.
+Wie war dein Wochenende?
+Kannst du mir Schritt für Schritt erklären, wie die Anmeldung funktioniert, sobald der Nutzer auf den Knopf drückt?
+Seit dem gestrigen Zusammenführen schlagen die Integrationstests fehl, finde die Ursache und schlag eine Lösung vor.
+Vor der Veröffentlichung lass bitte alle Tests laufen, schau dir die Protokolle an und sag mir, wenn dir etwas komisch vorkommt.
+Danke, dass du gestern so lange geblieben bist, die Veröffentlichung lief reibungslos und die Kunden sind schon begeistert.
