@@ -2,7 +2,7 @@
 
 **Type in the wrong language. Get the right words.**
 
-[![CI](https://github.com/galb/typoshift/actions/workflows/ci.yml/badge.svg)](https://github.com/galb/typoshift/actions/workflows/ci.yml)
+[![CI](https://github.com/g4lb/typoshift/actions/workflows/ci.yml/badge.svg)](https://github.com/g4lb/typoshift/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -125,21 +125,21 @@ TypoShift needs Python 3.11 or newer and has no runtime dependencies.
 **From GitHub (macOS / Linux):**
 
 ```bash
-pipx install git+https://github.com/galb/typoshift.git     # recommended: isolated CLI
+pipx install git+https://github.com/g4lb/typoshift.git     # recommended: isolated CLI
 # or
-python3 -m pip install --user git+https://github.com/galb/typoshift.git
+python3 -m pip install --user git+https://github.com/g4lb/typoshift.git
 ```
 
 **From GitHub (Windows, PowerShell):**
 
 ```powershell
-py -m pip install --user git+https://github.com/galb/typoshift.git
+py -m pip install --user git+https://github.com/g4lb/typoshift.git
 ```
 
 **From a clone:**
 
 ```bash
-git clone https://github.com/galb/typoshift.git
+git clone https://github.com/g4lb/typoshift.git
 cd typoshift
 python3 -m pip install .
 ```
