@@ -15,6 +15,11 @@ All notable changes to this project are documented here. The format follows
 - Added a Claude Code plugin (`.claude-plugin/`) that bundles the skill and the automatic hook.
 - Installable from skills.sh: `npx skills add g4lb/typoshift-skill`.
 
+### Removed
+
+- The PyPI release workflow. TypoShift ships as a skill and plugin from GitHub; the optional CLI
+  installs with `pipx install git+https://github.com/g4lb/typoshift-skill.git`.
+
 ## [0.1.0] - 2026-10-13
 
 Initial release.

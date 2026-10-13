@@ -57,8 +57,10 @@ add to `src/typoshift/data/lang` is compatible with CC BY-SA 4.0.
 
 ## Releasing
 
-1. Bump `version` in `pyproject.toml` and `src/typoshift/__init__.py`, and update `CHANGELOG.md`.
+1. Bump `version` in `pyproject.toml`, `src/typoshift/__init__.py` and both files in
+   `.claude-plugin/`, and update `CHANGELOG.md`.
 2. Commit, then create a GitHub release with the tag `vX.Y.Z` (for example
    `gh release create v0.1.1 --generate-notes`).
-3. `.github/workflows/release.yml` tests, builds, checks that the tag matches the version, and
-   publishes to PyPI through trusted publishing (the `pypi` environment). No token is involved.
+
+skills.sh and the Claude Code plugin install straight from the GitHub repository, so a pushed
+commit is all it takes to ship. Nothing is published to PyPI.
