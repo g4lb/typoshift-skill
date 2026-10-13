@@ -20,10 +20,12 @@ without touching anything.
 
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 import re
 import shutil
+import stat
 import sys
 import tempfile
 from dataclasses import dataclass, field
@@ -113,15 +115,21 @@ def _load(path: Path) -> dict[str, Any]:
 
 
 def _write(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if path.exists():
-        shutil.copy2(path, path.with_name(path.name + ".typoshift.bak"))
-    fd, tmp = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=path.parent)
+    # Write through symlinks (dotfile managers) and keep the file's permissions.
+    target = path.resolve() if path.is_symlink() else path
+    target.parent.mkdir(parents=True, exist_ok=True)
+    mode = None
+    if target.exists():
+        shutil.copy2(target, path.with_name(path.name + ".typoshift.bak"))
+        mode = stat.S_IMODE(target.stat().st_mode)
+    fd, tmp = tempfile.mkstemp(prefix=target.name + ".", suffix=".tmp", dir=target.parent)
     try:
         with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as fh:
             json.dump(data, fh, indent=2, ensure_ascii=False)
             fh.write("\n")
-        os.replace(tmp, path)
+        if mode is not None:
+            os.chmod(tmp, mode)
+        os.replace(tmp, target)
     except BaseException:
         Path(tmp).unlink(missing_ok=True)
         raise
@@ -142,7 +150,10 @@ def _merge_hook(settings: dict[str, Any], command: str) -> str:
     found = False
     state = "unchanged"
     for group in groups:
-        for handler in group.get("hooks", []) if isinstance(group, dict) else []:
+        handlers = group.get("hooks", []) if isinstance(group, dict) else []
+        if not isinstance(handlers, list):
+            raise InstallError(f"a 'hooks.{EVENT}' entry has non-list 'hooks'; refusing to modify settings")
+        for handler in handlers:
             if _is_ours(handler):
                 if found:
                     continue
@@ -184,32 +195,45 @@ def install(scope: str = "user", *, project_dir: Path | None = None, hook: bool 
             dry_run: bool = False, force: bool = False, python: str | None = None) -> Report:
     settings_path, skill_dir = paths(scope, project_dir)
     report = Report(scope, dry_run, settings_path, skill_dir)
+    # Validate everything before writing anything, so a refusal changes nothing.
+    settings: dict[str, Any] | None = None
+    state = "unchanged"
+    if hook:
+        settings = _load(settings_path)
+        state = _merge_hook(settings, hook_command(python))
+    marker = skill_dir / MARKER
+    skill_changed = False
+    wanted: dict[str, str] = {}
     if skill:
-        marker = skill_dir / MARKER
         if skill_dir.exists() and not marker.exists() and not force:
             raise InstallError(f"{skill_dir} exists and was not created by TypoShift; use --force to replace it")
         source = _skill_source()
         current = {name: (skill_dir / name).read_text(encoding="utf-8") if (skill_dir / name).exists() else None
                    for name in SKILL_FILES}
         wanted = {name: (source / name).read_text(encoding="utf-8") for name in SKILL_FILES}
-        if current == wanted and marker.exists():
-            report.actions.append(f"unchanged skill {skill_dir}")
-        else:
+        skill_changed = not (current == wanted and marker.exists())
+        if skill_changed:
             report.actions.append(f"{'update' if skill_dir.exists() else 'create'} skill {skill_dir}")
-            if not dry_run:
-                skill_dir.mkdir(parents=True, exist_ok=True)
-                for name, text in wanted.items():
-                    (skill_dir / name).write_text(text, encoding="utf-8", newline="\n")
-                marker.write_text(f"typoshift {__version__}\n", encoding="utf-8")
+        else:
+            report.actions.append(f"unchanged skill {skill_dir}")
     if hook:
-        settings = _load(settings_path)
-        state = _merge_hook(settings, hook_command(python))
         if state == "unchanged":
             report.actions.append(f"unchanged hook in {settings_path}")
         else:
             report.actions.append(f"{'add' if state == 'added' else 'update'} {EVENT} hook in {settings_path}")
-            if not dry_run:
-                _write(settings_path, settings)
+    if dry_run:
+        return report
+    if skill_changed:
+        skill_dir.mkdir(parents=True, exist_ok=True)
+        unmanaged = not marker.exists()
+        for name, text in wanted.items():
+            target = skill_dir / name
+            if unmanaged and target.exists():
+                shutil.copy2(target, target.with_name(name + ".typoshift.bak"))  # --force keeps a copy
+            target.write_text(text, encoding="utf-8", newline="\n")
+        marker.write_text(f"typoshift {__version__}\n", encoding="utf-8")
+    if settings is not None and state != "unchanged":
+        _write(settings_path, settings)
     return report
 
 
@@ -226,9 +250,13 @@ def uninstall(scope: str = "user", *, project_dir: Path | None = None, dry_run: 
         else:
             report.actions.append(f"unchanged {settings_path} (no TypoShift hook)")
     if (skill_dir / MARKER).exists():
-        report.actions.append(f"remove skill {skill_dir}")
+        report.actions.append(f"remove skill files from {skill_dir}")
         if not dry_run:
-            shutil.rmtree(skill_dir)
+            # Only the files TypoShift wrote; anything the user added stays.
+            for name in (*SKILL_FILES, MARKER):
+                (skill_dir / name).unlink(missing_ok=True)
+            with contextlib.suppress(OSError):
+                skill_dir.rmdir()  # only succeeds if now empty
     elif skill_dir.exists():
         report.actions.append(f"unchanged {skill_dir} (not managed by TypoShift)")
     return report
@@ -240,8 +268,11 @@ def status(scope: str = "user", project_dir: Path | None = None) -> dict[str, An
     error = None
     try:
         settings = _load(settings_path)
-        for group in settings.get("hooks", {}).get(EVENT, []) or []:
-            for handler in group.get("hooks", []) if isinstance(group, dict) else []:
+        hooks = settings.get("hooks", {})
+        groups = hooks.get(EVENT, []) if isinstance(hooks, dict) else []
+        for group in groups if isinstance(groups, list) else []:
+            handlers = group.get("hooks", []) if isinstance(group, dict) else []
+            for handler in handlers if isinstance(handlers, list) else []:
                 if _is_ours(handler):
                     commands.append(handler.get("command", ""))
     except InstallError as exc:

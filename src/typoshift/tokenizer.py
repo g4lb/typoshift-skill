@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from .protection import Protector
+from .protection import Protector, Span
 
 __all__ = ["Token", "tokenize"]
 
@@ -48,11 +48,32 @@ def _chunk(text: str, start: int, protector: Protector) -> Token:
     return Token(start, start + len(text), text, PROTECTED if rule else CHUNK, rule)
 
 
+def _widen(text: str, spans: list[Span]) -> list[Span]:
+    """Extend spans that start or end inside a whitespace chunk to the whole chunk.
+
+    Converting half a word ("ghbdtn$rfr" with only "$rfr" protected) would
+    corrupt it; the whole chunk is left alone instead.
+    """
+    widened: list[Span] = []
+    for span in spans:
+        start, end = span.start, span.end
+        while start > 0 and not text[start - 1].isspace():
+            start -= 1
+        while end < len(text) and not text[end].isspace():
+            end += 1
+        if widened and start <= widened[-1].end:
+            last = widened[-1]
+            widened[-1] = Span(last.start, max(last.end, end), last.rule)
+        else:
+            widened.append(Span(start, end, span.rule))
+    return widened
+
+
 def tokenize(text: str, protector: Protector) -> list[Token]:
     """Tokenize ``text``; concatenating token texts reproduces ``text`` exactly."""
     tokens: list[Token] = []
     pos = 0
-    for span in protector.find_spans(text):
+    for span in _widen(text, protector.find_spans(text)):
         if span.start > pos:
             tokens.extend(_split_plain(text[pos : span.start], pos, protector))
         tokens.append(Token(span.start, span.end, text[span.start : span.end], PROTECTED, span.rule))

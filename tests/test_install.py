@@ -167,3 +167,54 @@ def test_hook_command_quotes_paths_with_spaces():
 def test_unknown_scope():
     with pytest.raises(InstallError):
         install("global")
+
+
+# --- review findings -------------------------------------------------------------------------------------
+
+
+def test_symlinked_settings_written_through_with_mode(tmp_path):
+    real = tmp_path / "dotfiles" / "settings.json"
+    real.parent.mkdir()
+    real.write_text('{"theme": "dark"}', encoding="utf-8")
+    real.chmod(0o644)
+    claude_home().mkdir(parents=True)
+    link = claude_home() / "settings.json"
+    link.symlink_to(real)
+    install("user", skill=False)
+    assert link.is_symlink()
+    data = json.loads(real.read_text(encoding="utf-8"))
+    assert data["theme"] == "dark" and ours(data)
+    assert oct(real.stat().st_mode & 0o777) == oct(0o644)
+
+
+def test_uninstall_keeps_user_files_in_skill_dir():
+    install("user", hook=False)
+    skill = claude_home() / "skills" / "typoshift"
+    (skill / "my-notes.md").write_text("mine", encoding="utf-8")
+    uninstall("user")
+    assert (skill / "my-notes.md").read_text(encoding="utf-8") == "mine"
+    assert not (skill / "SKILL.md").exists() and not (skill / ".typoshift-managed").exists()
+
+
+def test_force_backs_up_replaced_skill():
+    skill = claude_home() / "skills" / "typoshift"
+    skill.mkdir(parents=True)
+    (skill / "SKILL.md").write_text("my own skill", encoding="utf-8")
+    install("user", hook=False, force=True)
+    assert (skill / "SKILL.md.typoshift.bak").read_text(encoding="utf-8") == "my own skill"
+
+
+def test_refused_install_changes_nothing():
+    claude_home().mkdir(parents=True)
+    (claude_home() / "settings.json").write_text("{bad", encoding="utf-8")
+    with pytest.raises(InstallError):
+        install("user")
+    assert not (claude_home() / "skills").exists()
+
+
+def test_malformed_hook_structures_raise_install_error():
+    write_settings({"hooks": {"UserPromptSubmit": [{"hooks": None}]}})
+    with pytest.raises(InstallError):
+        install("user")
+    write_settings({"hooks": []})
+    assert status("user")["hook_installed"] is False

@@ -85,6 +85,15 @@ def decode(text: str, layout: Layout) -> list[list[list[Item]]]:
         if matched:
             continue
         ch = text[i]
+        if i + 1 < len(text) and unicodedata.combining(text[i + 1]):
+            # Decomposed input (base letter + combining accent): same keystrokes as the
+            # precomposed letter, i.e. dead key then base.
+            dead = layout.dead_stroke_for(text[i + 1])
+            base = layout.strokes_for(ch)
+            if dead and base:
+                slots.append([[dead, base[0]]])
+                i += 2
+                continue
         items = _decode_char(ch, layout)
         alternatives = _ambiguous_letter(ch, layout)
         if alternatives:

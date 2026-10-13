@@ -114,3 +114,15 @@ def test_arabic_garble_not_mistaken_for_code():
     assert p.check_chunk("hg[]d]") is None
     assert p.check_chunk("fHkd") is None
     assert p.check_chunk("getUserName") == "identifier"
+
+
+def test_protected_span_inside_chunk_protects_whole_chunk(engine, make_engine):
+    assert engine.fix("ghbdtn$rfr ltkf ckjdj").corrected.startswith("ghbdtn$rfr ")
+    eng = make_engine("en-US", "ru", protection={"extra_patterns": ["b"], "disabled_rules": []})
+    out = eng.fix("ghbdtn rfr ltkf").corrected
+    assert out.startswith("ghbdtn ") or "ghb" not in out
+
+
+def test_confirm_destructive_can_be_disabled(make_engine):
+    eng = make_engine("en-US", "he", confirm_destructive=False)
+    assert not eng.fix("פךקשדק גקךקאק איק ךםע כןךקד").requires_confirmation

@@ -13,6 +13,7 @@ Configuration is layered (later layers win):
 from __future__ import annotations
 
 import os
+import re
 import sys
 import tomllib
 from dataclasses import asdict, dataclass, field, fields
@@ -70,6 +71,39 @@ class Config:
             self.hook = HookSettings(**self.hook)
 
     def validate(self) -> Config:
+        def need(cond: bool, message: str) -> None:
+            if not cond:
+                raise ConfigError(message)
+
+        def str_list(value: Any) -> bool:
+            return isinstance(value, list) and all(isinstance(v, str) for v in value)
+
+        def integer(value: Any) -> bool:
+            return isinstance(value, int) and not isinstance(value, bool)
+
+        need(isinstance(self.mode, str), f"mode must be a string; got {self.mode!r}")
+        need(str_list(self.layouts), f"layouts must be a list of layout ids; got {self.layouts!r}")
+        need(integer(self.min_letters), f"min_letters must be an integer; got {self.min_letters!r}")
+        need(integer(self.min_auto_letters), f"min_auto_letters must be an integer; got {self.min_auto_letters!r}")
+        for name in ("confirm_destructive", "same_script_auto"):
+            need(isinstance(getattr(self, name), bool), f"{name} must be true or false; got {getattr(self, name)!r}")
+        need(self.layouts_dir is None or isinstance(self.layouts_dir, str), "layouts_dir must be a string path")
+        for name in ("manual_source", "manual_target"):
+            need(getattr(self, name) is None or isinstance(getattr(self, name), str), f"{name} must be a layout id")
+        need(isinstance(self.layout_languages, dict) and all(
+            isinstance(k, str) and str_list(v) for k, v in self.layout_languages.items()),
+            "layout_languages must map layout ids to lists of language codes")
+        need(str_list(self.protection.extra_patterns), "protection.extra_patterns must be a list of regexes")
+        need(str_list(self.protection.disabled_rules), "protection.disabled_rules must be a list of rule names")
+        for pattern in self.protection.extra_patterns:
+            try:
+                re.compile(pattern)
+            except re.error as exc:
+                raise ConfigError(f"protection.extra_patterns: invalid regex {pattern!r}: {exc}") from None
+        for name in ("enabled", "show_message"):
+            need(isinstance(getattr(self.hook, name), bool), f"hook.{name} must be true or false")
+        need(integer(self.hook.max_prompt_chars) and self.hook.max_prompt_chars > 0,
+             "hook.max_prompt_chars must be a positive integer")
         if self.mode not in MODES:
             raise ConfigError(f"mode must be one of {', '.join(MODES)}; got {self.mode!r}")
         for name in ("auto_threshold", "suggest_threshold"):
@@ -131,7 +165,7 @@ def _apply(config: Config, data: dict[str, Any], origin: str) -> None:
             for k, v in value.items():
                 if not hasattr(config.protection, k):
                     raise ConfigError(f"{origin}: unknown setting protection.{k}")
-                setattr(config.protection, k, list(v))
+                setattr(config.protection, k, v)
         elif key == "hook":
             if not isinstance(value, dict):
                 raise ConfigError(f"{origin}: [hook] must be a table")
@@ -140,7 +174,9 @@ def _apply(config: Config, data: dict[str, Any], origin: str) -> None:
                     raise ConfigError(f"{origin}: unknown setting hook.{k}")
                 setattr(config.hook, k, v)
         elif key == "layout_languages":
-            config.layout_languages.update({str(k): list(v) for k, v in value.items()})
+            if not isinstance(value, dict):
+                raise ConfigError(f"{origin}: layout_languages must be a table")
+            config.layout_languages.update(value)
         else:
             setattr(config, key, value)
 

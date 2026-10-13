@@ -79,3 +79,20 @@ def test_parse_linux():
 
 def test_parse_windows():
     assert parse_windows("0409:00000409\r\n040D:0002040D\r\n0419:00000419\r\n") == ["en-US", "he", "ru"]
+
+
+@pytest.mark.parametrize("text", [
+    '[hook]\nenabled = "false"',
+    '[hook]\nmax_prompt_chars = "20k"',
+    '[protection]\nextra_patterns = "abc"',
+    '[protection]\nextra_patterns = ["(unclosed"]',
+    '[layout_languages]\nhe = "he"',
+    'layout_languages = "x"',
+    'layouts = ["en-US", 5]',
+    'min_letters = "2"',
+    'same_script_auto = "yes"',
+])
+def test_wrong_types_rejected(text):
+    write_user(text)
+    with pytest.raises(ConfigError):
+        load_config()

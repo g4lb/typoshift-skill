@@ -125,3 +125,10 @@ def test_identity_conversion(layout_id):
     text = "".join(v[0] for k, v in lay.keys.items() if v[0] and not lay.is_dead((k, 0)))
     expected = text.replace("\ufefb", "\u0644\u0627")  # the Arabic B key is emitted as lam + alef
     assert convert_text(text, lay, lay).text == expected
+
+
+def test_nfd_input_matches_nfc():
+    import unicodedata
+
+    word = "άλφα"
+    assert conv(unicodedata.normalize("NFD", word), "el", "en-US") == conv(word, "el", "en-US") == ";alfa"

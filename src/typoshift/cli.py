@@ -104,11 +104,11 @@ def cmd_detect(args: argparse.Namespace) -> int:
         data = result.to_dict(verbose=args.verbose)
         data["detected"] = found
         if found:
-            data["would_auto_correct"] = [c.confidence >= engine.config.auto_threshold for c in result.suggestions]
+            data["would_auto_correct"] = [c.auto_eligible for c in result.suggestions]
         _print_json(data)
     elif found:
         for c in result.suggestions:
-            auto = "auto" if c.confidence >= engine.config.auto_threshold else "suggest"
+            auto = "auto" if c.auto_eligible else "suggest"
             print(f"{_describe(c)} ({auto})")
             if c.equivalent_layouts:
                 print(f"  equivalent layouts: {', '.join(c.equivalent_layouts)}")
@@ -216,16 +216,9 @@ def cmd_config(args: argparse.Namespace) -> int:
         if target.exists():
             data = tomllib.loads(target.read_text(encoding="utf-8"))
         key, raw = args.key, args.value
-        value: Any
-        if key in ("layouts",) or key.endswith("_rules") or key.endswith("_patterns"):
-            value = [v.strip() for v in raw.split(",") if v.strip()]
-        elif raw.lower() in ("true", "false"):
-            value = raw.lower() == "true"
-        else:
-            try:
-                value = float(raw) if "." in raw else int(raw)
-            except ValueError:
-                value = raw
+        if key is None or raw is None:
+            raise UsageError("usage: typoshift config set KEY VALUE")
+        value = _parse_setting(key, raw)
         section, _, name = key.rpartition(".")
         if section:
             data.setdefault(section, {})[name] = value
@@ -244,6 +237,43 @@ def cmd_config(args: argparse.Namespace) -> int:
         print(f"set {key} = {value!r} in {target}")
         return EXIT_OK
     raise UsageError(f"unknown config action {action!r}")
+
+
+_BOOL = {"true": True, "yes": True, "on": True, "1": True, "false": False, "no": False, "off": False, "0": False}
+_INT_KEYS = {"min_letters", "min_auto_letters", "hook.max_prompt_chars"}
+_FLOAT_KEYS = {"auto_threshold", "suggest_threshold"}
+_BOOL_KEYS = {"confirm_destructive", "same_script_auto", "hook.enabled", "hook.show_message"}
+_ID_LIST_KEYS = {"layouts", "protection.disabled_rules"}
+
+
+def _parse_setting(key: str, raw: str) -> Any:
+    """Convert a `config set` value to the setting's type."""
+    if key in _BOOL_KEYS:
+        if raw.lower() not in _BOOL:
+            raise UsageError(f"{key} must be true or false")
+        return _BOOL[raw.lower()]
+    if key in _INT_KEYS:
+        try:
+            return int(raw)
+        except ValueError:
+            raise UsageError(f"{key} must be an integer") from None
+    if key in _FLOAT_KEYS:
+        try:
+            return float(raw)
+        except ValueError:
+            raise UsageError(f"{key} must be a number") from None
+    if key in _ID_LIST_KEYS or key.startswith("layout_languages."):
+        return [v.strip() for v in raw.split(",") if v.strip()]
+    if key == "protection.extra_patterns":
+        # Regexes may contain commas, so a list must be given as a JSON array.
+        if raw.lstrip().startswith("["):
+            try:
+                value = json.loads(raw)
+            except json.JSONDecodeError as exc:
+                raise UsageError(f"{key}: invalid JSON list: {exc}") from None
+            return value
+        return [raw]
+    return raw
 
 
 def cmd_doctor(args: argparse.Namespace) -> int:

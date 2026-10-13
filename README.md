@@ -378,7 +378,7 @@ The evaluation corpus is hand-written:
 | False-positive rate: correctly typed inputs changed (1,720 negatives) | **0.00%** |
 | Recall with suggestions included (`suggest` mode) | 93.72% |
 | Correct inputs that got an "uncertain" hook note (no change) | 0.58% |
-| Latency per prompt, warm (p50 / p95) | 0.23 ms / 1.48 ms |
+| Latency per prompt, warm (p50 / p95) | 0.24 ms / 1.52 ms |
 | Hook cold start: new Python process, Hebrew prompt | ~90 ms |
 
 These were measured on an Apple Silicon Mac with Python 3.14, on 2026-10-13.

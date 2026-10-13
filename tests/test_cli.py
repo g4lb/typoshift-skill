@@ -163,3 +163,24 @@ def test_module_entry_point():
     proc = subprocess.run([sys.executable, "-m", "typoshift", "fix", SPEC], capture_output=True, text=True)
     assert proc.returncode == 0
     assert proc.stdout.strip() == "please develop the next feature"
+
+
+def test_config_set_types(capsys):
+    assert run(capsys, "config", "set", "hook.enabled", "no")[0] == 0
+    assert run(capsys, "config", "set", "hook.max_prompt_chars", "20k")[0] == 2
+    assert run(capsys, "config", "set", "protection.extra_patterns", r"\d{1,3}x")[0] == 0
+    assert run(capsys, "config", "set", "layout_languages.he", "he")[0] == 0
+    _, out, _ = run(capsys, "config", "show", "--json")
+    cfg = json.loads(out)["config"]
+    assert cfg["hook"]["enabled"] is False
+    assert cfg["protection"]["extra_patterns"] == [r"\d{1,3}x"]
+    assert cfg["layout_languages"] == {"he": ["he"]}
+
+
+def test_detect_agrees_with_fix(capsys):
+    # Short span: confident but below min_auto_letters, so neither applies it.
+    _, out, _ = run(capsys, "detect", "--json", "--layouts", "en-US,he", "nv")
+    data = json.loads(out)
+    _, fixed, _ = run(capsys, "fix", "--layouts", "en-US,he", "nv")
+    for flag in data.get("would_auto_correct", []):
+        assert flag == (fixed.strip() != "nv")

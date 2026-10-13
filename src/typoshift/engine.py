@@ -61,6 +61,7 @@ class Correction:
     applied: bool
     equivalent_layouts: list[str] = field(default_factory=list)
     features: dict[str, float] | None = None
+    auto_eligible: bool = False  # would be applied in automatic mode
 
     def to_dict(self, verbose: bool = False) -> dict[str, Any]:
         data: dict[str, Any] = {
@@ -89,6 +90,7 @@ class FixResult:
     corrections: list[Correction] = field(default_factory=list)
     suggestions: list[Correction] = field(default_factory=list)
     method: str = METHOD
+    confirm_destructive: bool = True
 
     @property
     def was_corrected(self) -> bool:
@@ -101,6 +103,8 @@ class FixResult:
 
     @property
     def requires_confirmation(self) -> bool:
+        if not self.confirm_destructive:
+            return False
         texts = [c.replacement for c in self.corrections + self.suggestions]
         return any(_DESTRUCTIVE.search(t) for t in texts)
 
@@ -174,14 +178,15 @@ class Engine:
             conf = prop.confidence
             if conf < self.config.suggest_threshold:
                 continue
-            apply = (mode is Mode.AUTO and conf >= self.config.auto_threshold and self._long_enough(prop)
-                     and self._script_policy_allows(prop))
+            eligible = self.would_apply(prop)
+            apply = mode is Mode.AUTO and eligible
             item = Correction(prop.start, prop.end, prop.original, prop.replacement, prop.source_layout,
                               prop.target_layout, prop.language, conf, apply, prop.equivalent_layouts,
-                              prop.features)
+                              prop.features, auto_eligible=eligible)
             (corrections if apply else suggestions).append(item)
         corrected = _apply(text, corrections)
-        return FixResult(text, corrected, mode.value, corrections, suggestions)
+        return FixResult(text, corrected, mode.value, corrections, suggestions,
+                         confirm_destructive=self.config.confirm_destructive)
 
     def detect(self, text: str) -> FixResult:
         """Report candidate corrections without applying any."""
@@ -192,7 +197,7 @@ class Engine:
         return convert_text(text, self.registry.get(source), self.registry.get(target)).text
 
     def proposals(self, text: str) -> list[Proposal]:
-        # Offsets refer to the caller's string; chunks are NFC-normalized during conversion.
+        # Offsets refer to the caller's string; text is analysed exactly as given (no normalization).
         tokens = tokenize(text, self.protector)
         props = self.detector.propose(text, tokens)
         for p in props:
@@ -223,6 +228,11 @@ class Engine:
                         and p.target_layout != c.target_layout:
                     c.equivalent_layouts.append(p.target_layout)
         return sorted(chosen, key=lambda p: p.start)
+
+    def would_apply(self, prop: Proposal) -> bool:
+        """The automatic-mode decision: confidence threshold plus the safety policy."""
+        return (prop.confidence >= self.config.auto_threshold and self._long_enough(prop)
+                and self._script_policy_allows(prop))
 
     def _script_policy_allows(self, prop: Proposal) -> bool:
         if self.config.same_script_auto:

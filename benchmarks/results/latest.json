@@ -271,14 +271,14 @@
   }
  ],
  "latency_ms": {
-  "p50": 0.23,
-  "p95": 1.48,
-  "max": 31.96
+  "p50": 0.24,
+  "p95": 1.52,
+  "max": 32.64
  },
  "cold_start": {
   "runs": 5,
   "median_ms": 89.9,
-  "max_ms": 94.6
+  "max_ms": 90.9
  },
  "failures": [
   {
